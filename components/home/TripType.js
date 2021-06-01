@@ -12,7 +12,7 @@ export default function TripType({ filename, title, altDescription }) {
             alt={altDescription}
           />
         </div>
-        <h2 className='type__header'>{title}</h2>
+        <h3 className='type__header'>{title}</h3>
       </div>
     </>
   );

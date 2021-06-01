@@ -15,7 +15,7 @@ export default function Location({ filename, place, link, altDesciption }) {
             alt={altDesciption}
           />
         </div>
-        <h2 className='location__header'>{place}</h2>
+        <h3 className='location__header'>{place}</h3>
         <Link href='/'>
           <a className='location__link'>View Details</a>
         </Link>
