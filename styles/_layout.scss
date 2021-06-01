@@ -1,0 +1,28 @@
+.section {
+  padding: 1.5rem 0rem 1.5rem 0rem;
+  font-weight: bold;
+  //   background-color: green;
+
+  &--testimonial {
+    background-color: hsl(0, 0%, 90%);
+  }
+
+  &__header {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    // background-color: red;
+  }
+}
+
+// body {
+//   background-color: white;
+//   @include media('>sm') {
+//     background-color: yellow;
+//   }
+//   @include media('>md') {
+//     background-color: orange;
+//   }
+//   @include media('>lg') {
+//     background-color: red;
+//   }
+// }

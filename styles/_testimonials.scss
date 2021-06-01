@@ -1,0 +1,48 @@
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+  @include media('>sm') {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  @include media('>md') {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  @include media('>xl') {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+.testimonial {
+  padding: 2rem;
+  background-color: white;
+  // border: 1px solid gray;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+
+  &__citations {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__quote {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  &__author {
+    margin: 0rem auto;
+    text-align: center;
+  }
+  &__position {
+    margin: 0rem auto;
+    text-align: center;
+  }
+}

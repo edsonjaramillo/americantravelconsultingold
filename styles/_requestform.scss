@@ -1,0 +1,35 @@
+.form {
+  border: 1px solid lightgrey;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+
+  &__input {
+    outline: 1px solid lightgrey;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    resize: none;
+  }
+
+  &__inputContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-size: 0.75rem;
+  }
+
+  &__button {
+    background-color: $secondary-color;
+    color: white;
+    border-radius: 10px;
+    padding: 0.5rem 0rem;
+    font-weight: bold;
+  }
+
+  &__required {
+    color: red;
+  }
+}

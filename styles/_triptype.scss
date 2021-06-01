@@ -1,0 +1,67 @@
+.typeGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+
+  @include media('>sm') {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  @include media('>lg') {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+.type {
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  border: 2px solid $secondary-color;
+  border-radius: 10px;
+
+  &__icon {
+    width: 12rem;
+    margin: 0rem auto;
+  }
+
+  &__header {
+    display: block;
+    width: 75%;
+    margin: 0rem auto;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  &__imageWrapper {
+    width: 12rem;
+    margin: 0rem auto;
+  }
+
+  @include media('>sm') {
+    &__imageWrapper {
+      width: 10rem;
+    }
+    &__header {
+      width: 100%;
+    }
+  }
+
+  @include media('>lg') {
+    &__imageWrapper {
+      width: 10rem;
+    }
+
+    &__header {
+      width: 100%;
+    }
+  }
+
+  @include media('>xl') {
+    &__imageWrapper {
+      width: 12rem;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+.navbar {
+  height: 3.5rem;
+  position: sticky;
+  background-color: $primary-color;
+  top: 0;
+  z-index: 1;
+  // box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  //   0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  &__boundary {
+    display: flex;
+    background-color: $primary-color;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__empty {
+    height: 20px;
+    width: 30px;
+  }
+
+  &__hamburger {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  &__logo {
+    width: 6rem;
+  }
+
+  &__hb1,
+  &__hb2,
+  &__hb3 {
+    height: 2.75px;
+    background-color: white;
+    transition: all $animationSpeed ease;
+  }
+
+  &__payonline {
+    background-color: $secondary-color;
+    text-decoration: none;
+    padding: 0.5rem;
+    color: white;
+    // border-radius: 10px;
+    // font-size: 0.75rem;
+    font-weight: bold;
+  }
+
+  &__items {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-color;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 100%;
+    transition: all 0.3s ease;
+    padding-top: 3rem;
+  }
+
+  &__links {
+    display: block;
+    padding: 0.75rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    margin: 0rem auto;
+    width: 90%;
+    // border-bottom: 1px solid $secondary-color;
+  }
+
+  @include media('>md') {
+    height: 3.5rem;
+    &__hamburger {
+      display: none;
+    }
+
+    &__logo {
+      width: 6.5rem;
+    }
+
+    &__items {
+      position: static;
+      display: flex;
+      height: auto;
+      width: auto;
+      flex-direction: row;
+      padding-top: 0rem;
+    }
+
+    &__links {
+      padding: 1rem;
+      font-size: 1rem;
+      color: white;
+      border: none;
+      width: auto;
+      transition: all 0.3s ease;
+    }
+
+    // &__links:hover {
+    //   background-color: $primary-color;
+    // }
+  }
+}
+
+.open {
+  transform: translateX(100%);
+}
+
+.menutoggle .navbar__hb1 {
+  transform-origin: center center;
+  transform: translateY($hamburgerMove) rotate(-45deg);
+}
+
+.menutoggle .navbar__hb2 {
+  opacity: 0;
+}
+
+.menutoggle .navbar__hb3 {
+  transform-origin: center center;
+  transform: translateY(-$hamburgerMove) rotate(45deg);
+}
