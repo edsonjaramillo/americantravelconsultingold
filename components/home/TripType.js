@@ -1,5 +1,5 @@
 import Image from 'next/image';
-export default function TripType({ filename, title }) {
+export default function TripType({ filename, title, altDescription }) {
   return (
     <>
       <div className='type'>
@@ -9,9 +9,9 @@ export default function TripType({ filename, title }) {
             height='40'
             width='40'
             layout='responsive'
+            alt={altDescription}
           />
         </div>
-        {/* <img className='type__icon' src={`/images/home/${filename}`} alt='' /> */}
         <h2 className='type__header'>{title}</h2>
       </div>
     </>

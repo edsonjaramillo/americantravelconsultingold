@@ -18,12 +18,36 @@ export default function Home() {
         <div className='section'>
           <h2 className='responsive-width section__header'>Trip Types</h2>
           <div className='responsive-width typeGrid'>
-            <TripType filename='orchestra.svg' title='PERFORMANCE ARTS TOURS' />
-            <TripType filename='group.svg' title='CORPORATE RETREATS' />
-            <TripType filename='teamwork.svg' title='LARGE GROUP VACATIONS' />
-            <TripType filename='sports.svg' title='ATHLETIC TEAM TOURS' />
-            <TripType filename='student.svg' title='EDUCATIONAL TRIPS' />
-            <TripType filename='family.svg' title='LARGE FAMILY RETREATS' />
+            <TripType
+              filename='orchestra.svg'
+              title='PERFORMANCE ARTS TOURS'
+              altDescription='icon of a man orchestrating'
+            />
+            <TripType
+              filename='group.svg'
+              title='CORPORATE RETREATS'
+              altDescription='icon of three people in buisness clothing'
+            />
+            <TripType
+              filename='teamwork.svg'
+              title='LARGE GROUP VACATIONS'
+              altDescription='icon of three people in casual clothing'
+            />
+            <TripType
+              filename='sports.svg'
+              title='ATHLETIC TEAM TOURS'
+              altDescription='icon with a basketball and football'
+            />
+            <TripType
+              filename='student.svg'
+              title='EDUCATIONAL TRIPS'
+              altDescription='icon of three students in a blue uniform'
+            />
+            <TripType
+              filename='family.svg'
+              title='LARGE FAMILY RETREATS'
+              altDescription='icon of a family'
+            />
           </div>
         </div>
         <div className='section'>
@@ -31,12 +55,36 @@ export default function Home() {
             Popular Destinations
           </h2>
           <div className='responsive-width locationGrid'>
-            <Location filename='fff.jpg' place='San Francisco, California' />
-            <Location filename='fff.jpg' place='Washington D.C.' />
-            <Location filename='fff.jpg' place='Orlando, Florida' />
-            <Location filename='fff.jpg' place='Austin, Texas' />
-            <Location filename='fff.jpg' place='Orlando, Florida' />
-            <Location filename='fff.jpg' place='Austin, Texas' />
+            <Location
+              filename='fff.jpg'
+              place='San Francisco, California'
+              altDesciption='image of'
+            />
+            <Location
+              filename='fff.jpg'
+              place='Washington D.C.'
+              altDesciption='image of'
+            />
+            <Location
+              filename='fff.jpg'
+              place='Orlando, Florida'
+              altDesciption='image of'
+            />
+            <Location
+              filename='fff.jpg'
+              place='Austin, Texas'
+              altDesciption='image of'
+            />
+            <Location
+              filename='fff.jpg'
+              place='Orlando, Florida'
+              altDesciption='image of'
+            />
+            <Location
+              filename='fff.jpg'
+              place='Austin, Texas'
+              altDesciption='image of'
+            />
           </div>
         </div>
 
