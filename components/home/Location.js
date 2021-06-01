@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Location({ filename, place, link }) {
+export default function Location({ filename, place, link, altDesciption }) {
   return (
     <>
       <div className='location'>
@@ -12,6 +12,7 @@ export default function Location({ filename, place, link }) {
             height='400'
             width='800'
             layout='responsive'
+            alt={altDesciption}
           />
         </div>
         <h2 className='location__header'>{place}</h2>
