@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Navbar from '@/components/shared/NavigationBar/Navbar';
 import TripType from '@/components/home/TripType';
+import Location from '@/components/home/Location';
+import Testimonial from '@/components/home/Testimonial';
 
 export default function Home() {
   return (
@@ -22,6 +24,31 @@ export default function Home() {
             <TripType filename='sports.svg' title='ATHLETIC TEAM TOURS' />
             <TripType filename='student.svg' title='EDUCATIONAL TRIPS' />
             <TripType filename='family.svg' title='LARGE FAMILY RETREATS' />
+          </div>
+        </div>
+        <div className='section'>
+          <h2 className='responsive-width section__header'>
+            Popular Destinations
+          </h2>
+          <div className='responsive-width locationGrid'>
+            <Location filename='fff.jpg' place='San Francisco, California' />
+            <Location filename='fff.jpg' place='Washington D.C.' />
+            <Location filename='fff.jpg' place='Orlando, Florida' />
+            <Location filename='fff.jpg' place='Austin, Texas' />
+            <Location filename='fff.jpg' place='Orlando, Florida' />
+            <Location filename='fff.jpg' place='Austin, Texas' />
+          </div>
+        </div>
+
+        <div className='section section--testimonial'>
+          <h2 className='responsive-width section__header'>Testimonials</h2>
+          <div className='responsive-width testimonialGrid'>
+            <Testimonial />
+            <Testimonial />
+            <Testimonial />
+            <Testimonial />
+            <Testimonial />
+            <Testimonial />
           </div>
         </div>
       </main>
