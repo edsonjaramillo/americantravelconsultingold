@@ -1,6 +1,6 @@
 import Hamburger from '@/components/shared/NavigationBar/Hamburger';
 import Link from 'next/link';
-const pages = ['Home', 'Destinations', 'About', 'Contact', 'Payment'];
+const pages = ['Home', 'Destinations', 'Payment', 'About', 'Contact'];
 // const links = pages.map((lnk) => (
 //   <Link key={lnk} href={`/${String(lnk).toLowerCase()}`}>
 //     <a className='navbar__links'>{lnk}</a>
@@ -19,6 +19,8 @@ export default function Navbar() {
               <h1>LOGO</h1>
             </a>
           </Link>
+
+          <div className='navbar__empty'></div>
 
           <div className='navbar__items'>
             {pages.map((lnk) => (
