@@ -1,0 +1,30 @@
+.cta {
+  background-color: rgb(50, 57, 65);
+  color: white;
+  // text-align: center;
+
+  &__boundary {
+    padding: 4rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__link {
+    padding: 0.5rem 0rem;
+    background-color: $secondary-color;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+
+  &--newline {
+    white-space: pre-line;
+  }
+}

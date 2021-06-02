@@ -104,8 +104,9 @@ object {
 }
 
 .section {
-  padding: 1.5rem 0rem 1.5rem 0rem;
+  padding: 2rem 0rem;
   font-weight: bold;
+  border-bottom: 1px solid lightgrey;
 }
 
 .section--testimonial {
@@ -273,11 +274,43 @@ object {
           transform: translateY(-8.5px) rotate(45deg);
 }
 
-.typeGrid {
+.cta {
+  background-color: #323941;
+  color: white;
+}
+
+.cta__boundary {
+  padding: 4rem 0rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(0, 1fr))[1];
       grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.cta__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cta__link {
+  padding: 0.5rem 0rem;
+  background-color: #ff7f00;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.cta--newline {
+  white-space: pre-line;
+}
+
+.typeGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -304,8 +337,9 @@ object {
   -ms-grid-columns: (minmax(0, 1fr))[1];
       grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1.5rem;
-  border: 2px solid #ff7f00;
+  border: 2px solid #1e3a8a;
   border-radius: 10px;
+  background-color: white;
 }
 
 .type__icon {
@@ -315,14 +349,13 @@ object {
 
 .type__header {
   display: block;
-  width: 75%;
   margin: 0rem auto;
-  font-size: 1.5rem;
+  font-size: 0.95rem;
   text-align: center;
 }
 
 .type__imageWrapper {
-  width: 12rem;
+  width: 7rem;
   margin: 0rem auto;
 }
 
@@ -362,6 +395,7 @@ object {
 }
 
 .location__header {
+  font-size: 1rem;
   padding: 1rem;
   position: absolute;
   color: white;
@@ -369,7 +403,8 @@ object {
 }
 
 .location__link {
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -465,6 +500,25 @@ object {
 
 .testimonial__position {
   margin: 0rem auto;
+  text-align: center;
+}
+
+.contactheader {
+  margin: 1rem auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[1];
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contactheader__title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contactheader__subtitle {
   text-align: center;
 }
 

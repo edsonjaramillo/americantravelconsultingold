@@ -1,0 +1,15 @@
+.contactheader {
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+
+  &__title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  &__subtitle {
+    text-align: center;
+  }
+}

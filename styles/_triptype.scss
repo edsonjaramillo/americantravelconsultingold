@@ -1,6 +1,6 @@
 .typeGrid {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 
   @include media('>sm') {
@@ -19,8 +19,9 @@
   padding: 2rem;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1.5rem;
-  border: 2px solid $secondary-color;
+  border: 2px solid $primary-color;
   border-radius: 10px;
+  background-color: white;
 
   &__icon {
     width: 12rem;
@@ -29,14 +30,14 @@
 
   &__header {
     display: block;
-    width: 75%;
+    // width: 75%;
     margin: 0rem auto;
-    font-size: 1.5rem;
+    font-size: 0.95rem;
     text-align: center;
   }
 
   &__imageWrapper {
-    width: 12rem;
+    width: 7rem;
     margin: 0rem auto;
   }
 
