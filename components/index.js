@@ -12,3 +12,4 @@ export { default as Testimonial } from '@/components/home/Testimonial';
 
 // Contact Components
 export { default as RequestForm } from '@/components/contact/RequestForm';
+export { default as Input } from '@/components/contact/Input';
