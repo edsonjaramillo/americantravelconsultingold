@@ -13,7 +13,7 @@ export default function Home() {
       <div className='cta'>
         <div className='responsive-width cta__boundary'>
           <h1 className='cta__title cta--newline'>
-            {`TRAVEL EASIER.\nTRAVEL STRESS-FREE.\nLET US DO THE WORK FOR YOU.`}
+            {`TRAVEL EASIER.\nTRAVEL STRESS-FREE.\nLET US DO THE WORK.`}
           </h1>
           <p className='cta__subtitle'>
             Enjoy your next group trip from start to finish without a worry in
@@ -81,17 +81,17 @@ export default function Home() {
             altDesciption='image of'
           />
           <Location
-            filename='fff.jpg'
+            filename='nyc.jpg'
             place='New York City, New York'
             altDesciption='image of'
           />
           <Location
-            filename='fff.jpg'
+            filename='sanantonio.jpg'
             place='San Antonio, Texas'
             altDesciption='image of'
           />
           <Location
-            filename='fff.jpg'
+            filename='philadelphia.jpg'
             place='Philadelphia, Pennsylvania'
             altDesciption='image of'
           />
