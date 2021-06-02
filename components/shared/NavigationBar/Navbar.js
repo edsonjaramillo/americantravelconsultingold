@@ -3,6 +3,13 @@ import Link from 'next/link';
 const pages = ['Home', 'Destinations', 'Payment', 'About', 'Contact'];
 
 export default function Navbar() {
+  function closeMobileNavigation() {
+    const burger = document.querySelector('.navbar__hamburger');
+    const nav = document.querySelector('.navbar__items');
+    burger.classList.remove('menutoggle');
+    nav.classList.remove('open');
+  }
+
   return (
     <>
       <nav className='navbar'>
@@ -24,7 +31,9 @@ export default function Navbar() {
                 key={lnk}
                 href={`/${String(lnk === 'Home' ? '' : lnk).toLowerCase()}`}
               >
-                <a className='navbar__links'>{lnk}</a>
+                <a className='navbar__links' onClick={closeMobileNavigation}>
+                  {lnk}
+                </a>
               </Link>
             ))}
           </div>
