@@ -1,5 +1,6 @@
-import '../styles/main.css';
+import '@/styles/main.css';
 import Head from 'next/head';
+import { Navbar } from '@/components/index';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,7 +11,10 @@ function MyApp({ Component, pageProps }) {
           content='width=device-width, initial-scale=1.0'
         ></meta>
       </Head>
-      <Component {...pageProps} />
+      <Navbar />
+      <main>
+        <Component {...pageProps} />
+      </main>
     </>
   );
 }
