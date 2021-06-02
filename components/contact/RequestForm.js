@@ -59,6 +59,20 @@ export default function RequestForm() {
             />
           </div>
           <div className='form__inputContainer'>
+            <label className='form__label' htmlFor='destination'>
+              Destination
+              <span className='form__required'>* Required</span>
+            </label>
+            <input
+              className='form__input'
+              type='text'
+              name='destination'
+              id='destination'
+              placeholder='ex. Orlando, Florida'
+              required
+            />
+          </div>
+          <div className='form__inputContainer'>
             <label className='form__label' htmlFor='phone'>
               Phone Number <span className='form__required'>* Required</span>
             </label>
@@ -93,7 +107,7 @@ export default function RequestForm() {
               className='form__input'
               name='message'
               id='message'
-              rows='12'
+              rows='15'
               required
             ></textarea>
           </div>
