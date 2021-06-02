@@ -1,107 +1,57 @@
 import emailjs from 'emailjs-com';
+import { Input } from '@/components/index';
 
 export default function RequestForm() {
   function sendEmail(e) {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
+    try {
+      emailjs.sendForm(
         'service_pdeufkb',
         'template_e5ir1o2',
         e.target,
         'user_nP0ri4IytysxtBiIFWg6M'
-      )
-      .then(
-        (result) => {
-          //   console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
       );
-    e.target.reset();
+      e.target.reset();
+      alert(
+        'Thank you for submitting. We will get back to you as soon as we can.'
+      );
+    } catch (error) {
+      alert(error);
+    }
+    e.preventDefault();
   }
 
   return (
     <>
-      <div className='responsive-width-half'>
-        <form
-          className='form'
-          type='submit'
-          onSubmit={sendEmail}
-          id='requestform'
-        >
-          <div className='form__inputContainer'>
-            <label className='form__label' htmlFor='name'>
-              Name <span className='form__required'>* Required</span>
-            </label>
-            <input
-              className='form__input'
-              type='text'
-              name='name'
-              id='name'
-              placeholder='ex. Jane Doe'
-              required
-            />
-          </div>
-          <div className='form__inputContainer'>
-            <label className='form__label' htmlFor='organization'>
-              School/Organization
-              <span className='form__required'>* Required</span>
-            </label>
-            <input
-              className='form__input'
-              type='text'
-              name='organization'
-              id='organization'
-              placeholder='ex. Jane Doe High School'
-              required
-            />
-          </div>
-          <div className='form__inputContainer'>
-            <label className='form__label' htmlFor='destination'>
-              Destination
-              <span className='form__required'>* Required</span>
-            </label>
-            <input
-              className='form__input'
-              type='text'
-              name='destination'
-              id='destination'
-              placeholder='ex. Orlando, Florida'
-              required
-            />
-          </div>
-          <div className='form__inputContainer'>
-            <label className='form__label' htmlFor='phone'>
-              Phone Number <span className='form__required'>* Required</span>
-            </label>
-            <input
-              className='form__input'
-              type='text'
-              name='phone'
-              id='phone'
-              placeholder='ex. 1234567890'
-              required
-            />
-          </div>
-          <div className='form__inputContainer'>
-            <label className='form__label' htmlFor='email'>
-              Email <span className='form__required'>* Required</span>
-            </label>
-            <input
-              className='form__input'
-              type='email'
-              name='email'
-              id='email'
-              placeholder='ex. janedoe@domain.com'
-              required
-            />
-          </div>
-
+      <div className='responsive-width-form'>
+        <form className='form' type='submit' onSubmit={sendEmail}>
+          <Input label='Name' type='text' name='name' example='Jane Doe' />
+          <Input
+            label='School/Organization'
+            type='text'
+            name='organization'
+            example='Jane Doe High School'
+          />
+          <Input
+            label='Destination'
+            type='text'
+            name='destination'
+            example='Orlando, Florida'
+          />
+          <Input
+            label='Phone Number'
+            type='text'
+            name='phone'
+            example='1234567890'
+          />
+          <Input
+            label='Email'
+            type='email'
+            name='email'
+            example='janedoe@domain.com'
+          />
           <div className='form__inputContainer'>
             <label className='form__label' htmlFor='message'>
-              Message <span className='form__required'>* Required</span>
+              Message<span className='form__required'> * Required</span>
             </label>
             <textarea
               className='form__input'
