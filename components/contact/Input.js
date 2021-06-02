@@ -2,7 +2,7 @@ export default function Input({ label, type, name, example }) {
   return (
     <>
       <div className='form__inputContainer'>
-        <label className='form__label' htmlFor='organization'>
+        <label className='form__label' htmlFor={name}>
           {label}
           <span className='form__required'> * Required</span>
         </label>
