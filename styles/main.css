@@ -103,6 +103,41 @@ object {
   }
 }
 
+.responsive-width-form {
+  width: 90%;
+  margin: auto;
+}
+
+@media (min-width: 481px) {
+  .responsive-width-form {
+    width: 90%;
+  }
+}
+
+@media (min-width: 769px) {
+  .responsive-width-form {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .responsive-width-form {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1367px) {
+  .responsive-width-form {
+    width: 50%;
+  }
+}
+
+@media (min-width: 2161px) {
+  .responsive-width-form {
+    max-width: 55rem;
+  }
+}
+
 .section {
   padding: 2rem 0rem;
   font-weight: bold;
@@ -513,7 +548,7 @@ object {
 }
 
 .contactheader__title {
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: bold;
   text-align: center;
 }
@@ -524,7 +559,7 @@ object {
 
 .form {
   border: 1px solid lightgrey;
-  padding: 1rem;
+  padding: 1.5rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(0, 1fr))[1];
@@ -557,8 +592,9 @@ object {
   background-color: #ff7f00;
   color: white;
   border-radius: 10px;
-  padding: 0.5rem 0rem;
+  padding: 0.75rem 0rem;
   font-weight: bold;
+  font-size: 1rem;
 }
 
 .form__required {

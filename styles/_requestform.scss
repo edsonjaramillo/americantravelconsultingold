@@ -1,6 +1,6 @@
 .form {
   border: 1px solid lightgrey;
-  padding: 1rem;
+  padding: 1.5rem;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
@@ -25,8 +25,9 @@
     background-color: $secondary-color;
     color: white;
     border-radius: 10px;
-    padding: 0.5rem 0rem;
+    padding: 0.75rem 0rem;
     font-weight: bold;
+    font-size: 1rem;
   }
 
   &__required {

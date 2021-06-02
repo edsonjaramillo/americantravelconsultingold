@@ -27,6 +27,26 @@
   }
 }
 
+.responsive-width-form {
+  width: 90%;
+  margin: auto;
+  @include media('>sm') {
+    width: 90%;
+  }
+  @include media('>md') {
+    width: 75%;
+  }
+  @include media('>lg') {
+    width: 65%;
+  }
+  @include media('>xl') {
+    width: 50%;
+  }
+  @include media('>3xl') {
+    max-width: 55rem;
+  }
+}
+
 // .tapContainer {
 //   display: flex;
 //   flex-direction: column;
