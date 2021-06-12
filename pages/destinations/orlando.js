@@ -57,10 +57,11 @@ export default function Orlando() {
       </div>
 
       <button
+        className='responsive-width destination__showButton'
         onClick={() => {
           setShowMap(!showMap);
         }}>
-        Show Map
+        Show Interactive Map
       </button>
       {/* <p className='responsive-width destination__description'>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad

@@ -130,6 +130,17 @@
     outline: 2px solid $primary-color;
   }
 
+  &__showButton {
+    display: block;
+    margin: 0rem auto;
+    background-color: $secondary-color;
+    color: white;
+    border-radius: 10px;
+    padding: 0.4rem 0rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
   @include media('>sm') {
     &__item {
       font-size: 0.85rem;

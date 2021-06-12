@@ -240,6 +240,17 @@ object {
   outline: 2px solid #1e3a8a;
 }
 
+.destination__showButton {
+  display: block;
+  margin: 0rem auto;
+  background-color: #ff7f00;
+  color: white;
+  border-radius: 10px;
+  padding: 0.4rem 0rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 @media (min-width: 481px) {
   .destination__item {
     font-size: 0.85rem;
