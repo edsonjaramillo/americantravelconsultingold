@@ -1,6 +1,6 @@
 .form {
   border: 1px solid lightgrey;
-  padding: 1.5rem;
+  padding: 0.75rem;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
@@ -10,6 +10,7 @@
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     resize: none;
+    padding: 0.15rem 0.2rem;
   }
 
   &__inputContainer {
