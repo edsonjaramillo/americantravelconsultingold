@@ -24,6 +24,7 @@ export default function Map({ dataMarkers, lat, lon, zoom }) {
           <img
             className='pin'
             src='/images/destinations/pin.png'
+            alt='black pin marker on map'
             onClick={() => {
               viewDetails(String(data.name).toLowerCase().replace(' ', '-'));
               setViewport({
