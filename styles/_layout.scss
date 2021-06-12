@@ -25,3 +25,124 @@
 //     background-color: red;
 //   }
 // }
+
+.map,
+.mapWrapper,
+.map__locations {
+  height: 300px;
+}
+.mapWrapper {
+  // padding: 1rem;
+  margin: 1rem auto;
+  width: 100%;
+}
+
+.pin {
+  width: 20px;
+  cursor: pointer;
+}
+
+.city {
+  font-size: 0.75rem;
+  background-color: rgba(230, 228, 224, 1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 10px;
+  border: 2px solid $secondary-color;
+  outline: 2px solid $primary-color;
+  // font-weight: bold;
+  // position: absolute;
+  // inset: 0;
+  // right: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+.map__locations {
+  // background-color: rgb(50, 50, 50);
+  background-color: $primary-color;
+  width: 35%;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+
+  scrollbar-color: $primary-color;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 3px;
+}
+
+.map__item {
+  all: unset;
+  background-color: rgb(117, 207, 240);
+  padding: 0.3rem 0rem;
+  font-size: 0.7rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.map {
+  // padding: ;
+  // margin-bottom: 1rem;
+}
+
+.destination {
+  &__titleContainer {
+    padding: 0.5rem 0rem;
+    // background-color: lightgray;
+  }
+
+  &__location {
+    font-weight: bold;
+    font-size: 2rem;
+    // margin-bottom: 0.25rem;
+  }
+
+  &__country {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  &__description {
+    // color: red;
+    // text-align: center;
+  }
+
+  &__attractionContent {
+    padding: 0rem 0.15rem;
+  }
+
+  &__item {
+    font-size: 0.75rem;
+  }
+
+  &__list {
+    list-style: square;
+    list-style-position: inside;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    background-color: rgb(240, 238, 234);
+    padding: 1rem 0rem 1rem 1.5rem;
+    border-radius: 10px;
+    margin: 1rem auto;
+    border: 2px solid $secondary-color;
+    outline: 2px solid $primary-color;
+  }
+
+  @include media('>sm') {
+    &__item {
+      font-size: 0.85rem;
+    }
+
+    &__list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+  }
+  // @include media('>=md') {
+  //   &__list {
+  //     grid-template-columns: repeat(3, minmax(0, 1fr));
+  //   }
+  // }
+}
