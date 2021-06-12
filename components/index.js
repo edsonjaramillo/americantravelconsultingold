@@ -5,9 +5,6 @@ export { default as Hamburger } from '@/components/shared/NavigationBar/Hamburge
 // Footer Components
 export { default as MobileFooter } from '@/components/shared/Footer/MobileFooter';
 
-// Layout Components
-export { default as Section } from '@/components/shared/Layout/Section';
-
 // Home Components
 export { default as TripType } from '@/components/home/TripType';
 export { default as Location } from '@/components/home/Location';

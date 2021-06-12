@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { Navbar, MobileFooter } from '@/components/index';
-import { useState } from 'react';
 import '@/styles/main.css';
 
 function MyApp({ Component, pageProps }) {

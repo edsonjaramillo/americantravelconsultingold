@@ -1,7 +1,4 @@
 import Head from 'next/head';
-import { Map } from '@/components/index';
-import Data from '@/data/orlando';
-
 export default function Destinations() {
   return (
     <>

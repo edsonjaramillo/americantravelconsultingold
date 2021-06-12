@@ -6,14 +6,8 @@ export default function Hamburger() {
     button.addEventListener('click', () => {
       const burger = document.querySelector('.navbar__hamburger');
       const nav = document.querySelector('.navbar__items');
-      // const links = document.querySelectorAll('.navbar__links');
-      console.log('Clicked');
-
       burger.classList.toggle('menutoggle');
       nav.classList.toggle('open');
-      // for (let index = 0; index < links.length; index++) {
-      //   links[index].classList.toggle('linksToggle');
-      // }
     });
   }, []);
 
