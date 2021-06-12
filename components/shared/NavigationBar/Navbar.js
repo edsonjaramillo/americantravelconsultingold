@@ -1,6 +1,7 @@
 import { Hamburger } from '@/components/index';
 import Link from 'next/link';
-const pages = ['Home', 'Destinations', 'Payment', 'About', 'Contact'];
+// const pages = ['Home', 'Destinations', 'Payment', 'About', 'Contact'];
+const pages = ['Home', 'Destinations', 'Contact'];
 
 export default function Navbar() {
   function closeMobileNavigation() {
@@ -29,8 +30,7 @@ export default function Navbar() {
             {pages.map((lnk) => (
               <Link
                 key={lnk}
-                href={`/${String(lnk === 'Home' ? '' : lnk).toLowerCase()}`}
-              >
+                href={`/${String(lnk === 'Home' ? '' : lnk).toLowerCase()}`}>
                 <a className='navbar__links' onClick={closeMobileNavigation}>
                   {lnk}
                 </a>
