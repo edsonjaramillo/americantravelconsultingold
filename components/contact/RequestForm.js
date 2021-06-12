@@ -49,6 +49,12 @@ export default function RequestForm() {
             name='email'
             example='janedoe@domain.com'
           />
+          <Input
+            label='Preffered Form of Contact'
+            type='text'
+            name='preffered'
+            example='Either/Phone/Email'
+          />
           <div className='form__inputContainer'>
             <label className='form__label' htmlFor='message'>
               Message<span className='form__required'> * Required</span>
@@ -58,8 +64,7 @@ export default function RequestForm() {
               name='message'
               id='message'
               rows='15'
-              required
-            ></textarea>
+              required></textarea>
           </div>
           <button className='form__button' type='submit'>
             Submit Form
