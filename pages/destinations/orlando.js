@@ -2,8 +2,25 @@ import Head from 'next/head';
 import { Map } from '@/components/index';
 import Data from '@/data/orlando';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Orlando() {
+  const [showMap, setShowMap] = useState(false);
+
+  const MapBox = () => {
+    return (
+      <>
+        <div className='responsive-width map'>
+          <Map
+            dataMarkers={Data}
+            lat={28.438336}
+            lon={-81.379234}
+            zoom={8.75}
+          />
+        </div>
+      </>
+    );
+  };
   return (
     <>
       <Head>
@@ -38,15 +55,21 @@ export default function Orlando() {
         </ul>
         {/* </div> */}
       </div>
+
+      <button
+        onClick={() => {
+          setShowMap(!showMap);
+        }}>
+        Show Map
+      </button>
       {/* <p className='responsive-width destination__description'>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad
         consequuntur sunt, quasi nemo animi iste. Eius optio quo sit sint
         similique, nulla ipsum ex maxime recusandae reprehenderit, veritatis
         maiores laborum.
       </p> */}
-      <div className='responsive-width map'>
-        <Map dataMarkers={Data} lat={28.438336} lon={-81.379234} zoom={8.75} />
-      </div>
+
+      {showMap && <MapBox />}
     </>
   );
 }
