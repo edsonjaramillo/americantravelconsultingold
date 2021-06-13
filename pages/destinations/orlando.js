@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Orlando() {
+  const [status, setStatus] = useState('Show');
   const [showMap, setShowMap] = useState(false);
 
   const MapBox = () => {
@@ -44,7 +45,6 @@ export default function Orlando() {
         />
       </div>
       <div className='responsive-width destination__attractions'>
-        {/* <div className='destination__attractionContent'> */}
         <ul className='destination__list'>
           {Data.map((item) => (
             <li className='destination__item' key={item.name}>
@@ -53,23 +53,20 @@ export default function Orlando() {
           ))}
           <li className='destination__item'>and more...</li>
         </ul>
-        {/* </div> */}
       </div>
 
       <button
         className='responsive-width destination__showButton'
         onClick={() => {
           setShowMap(!showMap);
+          if (status === 'Show') {
+            setStatus('Hide');
+          } else {
+            setStatus('Show');
+          }
         }}>
-        Show Interactive Map
+        {status} Interactive Map
       </button>
-      {/* <p className='responsive-width destination__description'>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad
-        consequuntur sunt, quasi nemo animi iste. Eius optio quo sit sint
-        similique, nulla ipsum ex maxime recusandae reprehenderit, veritatis
-        maiores laborum.
-      </p> */}
-
       {showMap && <MapBox />}
     </>
   );
