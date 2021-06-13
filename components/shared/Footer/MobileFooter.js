@@ -1,19 +1,22 @@
+import { useState } from 'react';
+
 const MobileFooter = () => {
-  function openContainer(target) {
+  const [firstFooter, setFirstFooter] = useState('+');
+  const [secondFooter, setSecondFooter] = useState('+');
+
+  const openContainer = (target) => {
     const footerNumber = String(target).replace('menutoggle', '');
-    const verticalLine = document.querySelector(`#verticalLine${footerNumber}`);
     const items = document.querySelectorAll(
       `.mobilefooter_tab${footerNumber}item`
     );
     const content = document.querySelector(`#content${footerNumber}`);
     const list = document.querySelector(`#list${footerNumber}`);
 
-    if (verticalLine.classList.contains('expand')) {
-      verticalLine.classList.remove('expand');
+    if (content.classList.contains('expand-content')) {
+      // verticalLine.classList.remove('expand');
       content.classList.remove('expand-content');
       list.classList.remove('expand-list');
     } else {
-      verticalLine.classList.add('expand');
       content.classList.add('expand-content');
       list.classList.add('expand-list');
     }
@@ -25,7 +28,9 @@ const MobileFooter = () => {
         items[index].classList.add('expand');
       }
     }
-  }
+
+    window.scroll(0, document.body.scrollHeight);
+  };
 
   return (
     <>
@@ -34,12 +39,17 @@ const MobileFooter = () => {
           <div className='mobilefooter__containerTab'>
             <h1 className='mobilefooter__containerHeader'>Navigation</h1>
             <div
-              className='mobilefooter__symbol'
+              className='mobilefooter__icon'
               title='menutoggle1'
-              onClick={(e) => openContainer(e.target.title)}>
-              <div className='mobilefooter__bg'></div>
-              <div className='mobilefooter__vertical' id='verticalLine1'></div>
-              <div className='mobilefooter__horizontal'></div>
+              onClick={(e) => {
+                openContainer(e.target.title);
+                if (firstFooter === '+') {
+                  setFirstFooter('-');
+                } else {
+                  setFirstFooter('+');
+                }
+              }}>
+              {firstFooter}
             </div>
           </div>
           <div className='mobilefooter__content' id='content1'>
@@ -59,21 +69,29 @@ const MobileFooter = () => {
           <div className='mobilefooter__containerTab'>
             <h1 className='mobilefooter__containerHeader'>Contact</h1>
             <div
-              className='mobilefooter__symbol'
+              className='mobilefooter__icon'
               title='menutoggle2'
-              onClick={(e) => openContainer(e.target.title)}>
-              <div className='mobilefooter__vertical' id='verticalLine2'></div>
-              <div className='mobilefooter__horizontal'></div>
+              onClick={(e) => {
+                openContainer(e.target.title);
+                if (secondFooter === '+') {
+                  setSecondFooter('-');
+                } else {
+                  setSecondFooter('+');
+                }
+              }}>
+              {secondFooter}
             </div>
           </div>
           <div className='mobilefooter__content' id='content2'>
             <ul className='mobilefooter__list' id='list2'>
-              <li className='mobilefooter__item mobilefooter_tab2item'>Home</li>
               <li className='mobilefooter__item mobilefooter_tab2item'>
-                Destinations
+                Email
               </li>
               <li className='mobilefooter__item mobilefooter_tab2item'>
-                Contact
+                Phone
+              </li>
+              <li className='mobilefooter__item mobilefooter_tab2item'>
+                PO BOX
               </li>
             </ul>
           </div>
