@@ -481,6 +481,9 @@ object {
 }
 
 .mobilefooter__vertical, .mobilefooter__horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   width: 100%;
   background-color: white;
@@ -493,6 +496,15 @@ object {
           transform-origin: center center;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+.mobilefooter__icon {
+  display: block;
+  margin: auto 0rem;
+  color: white;
+  font-size: 2.5rem;
+  line-height: 0.75rem;
+  cursor: pointer;
 }
 
 .expand {
