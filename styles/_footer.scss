@@ -22,8 +22,8 @@
     // color: red;
   }
 
-  &__content {
-  }
+  // &__content {
+  // }
 
   &__list {
     overflow: hidden;
@@ -53,6 +53,7 @@
 
   &__vertical,
   &__horizontal {
+    display: flex;
     position: absolute;
     width: 100%;
     background-color: white;
@@ -64,6 +65,15 @@
     // background-color: red;
     transform-origin: center center;
     transform: rotate(90deg);
+  }
+
+  &__icon {
+    display: block;
+    margin: auto 0rem;
+    color: white;
+    font-size: 2.5rem;
+    line-height: 0.75rem;
+    cursor: pointer;
   }
 }
 
