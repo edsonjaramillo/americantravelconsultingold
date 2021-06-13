@@ -1,15 +1,15 @@
 import { Hamburger } from '@/components/index';
 import Link from 'next/link';
-// const pages = ['Home', 'Destinations', 'Payment', 'About', 'Contact'];
-const pages = ['Home', 'Destinations', 'Contact'];
 
 export default function Navbar() {
-  function closeMobileNavigation() {
+  const closeMenu = () => {
     const burger = document.querySelector('.navbar__hamburger');
     const nav = document.querySelector('.navbar__items');
-    burger.classList.remove('menutoggle');
-    nav.classList.remove('open');
-  }
+    if (nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      burger.classList.remove('menutoggle');
+    }
+  };
 
   return (
     <>
@@ -20,22 +20,34 @@ export default function Navbar() {
           <Link href='/'>
             <a>
               {/* <img className='navbar__logo' src='images/lbplus.svg' alt='' /> */}
-              <h1>LOGO</h1>
+              <h6>LOGO</h6>
             </a>
           </Link>
 
           <div className='navbar__empty'></div>
 
           <div className='navbar__items'>
-            {pages.map((lnk) => (
-              <Link
-                key={lnk}
-                href={`/${String(lnk === 'Home' ? '' : lnk).toLowerCase()}`}>
-                <a className='navbar__links' onClick={closeMobileNavigation}>
-                  {lnk}
-                </a>
-              </Link>
-            ))}
+            <Link href='/'>
+              <a className='navbar__links' onClick={closeMenu}>
+                Home
+              </a>
+            </Link>
+            <Link href='/destinations'>
+              <a className='navbar__links' onClick={closeMenu}>
+                Destinations
+              </a>
+            </Link>
+            {/* <Link href='/payment'>
+              <a className='navbar__links' onClick={closeMenu}>Payment</a>
+            </Link>
+            <Link href='/about'>
+              <a className='navbar__links' onClick={closeMenu}>About</a>
+            </Link> */}
+            <Link href='/contact'>
+              <a className='navbar__links' onClick={closeMenu}>
+                Contact
+              </a>
+            </Link>
           </div>
         </div>
       </nav>
