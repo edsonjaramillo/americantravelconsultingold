@@ -15,6 +15,7 @@ export default function Map({ dataMarkers, lat, lon, zoom }) {
     latitude: lat,
     longitude: lon,
     zoom: zoom,
+    transitionDuration: 1000,
   });
 
   const markers = useMemo(

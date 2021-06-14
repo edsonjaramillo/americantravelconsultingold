@@ -75,11 +75,13 @@ export default function Home() {
             filename='chicago.jpg'
             place='Chicago, Illinois'
             altDesciption='image of'
+            link='chicago'
           />
           <Location
             filename='washingtondc.jpg'
             place='Washington D.C.'
             altDesciption='image of'
+            link='washingtondc'
           />
           <Location
             filename='nyc.jpg'
