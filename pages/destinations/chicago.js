@@ -37,7 +37,7 @@ export default function Chicago() {
       <div className='responsive-width destination__imageWrapper'>
         <Image
           className='map__image'
-          src={`/images/home/Chicago.jpg`}
+          src={`/images/home/chicago.jpg`}
           height='400'
           width='800'
           layout='responsive'
@@ -55,19 +55,21 @@ export default function Chicago() {
         </ul>
       </div>
 
-      <button
-        className='responsive-width destination__showButton'
-        onClick={() => {
-          setShowMap(!showMap);
-          if (status === 'Show') {
-            setStatus('Hide');
-          } else {
-            setStatus('Show');
-          }
-        }}>
-        {status} Interactive Map
-      </button>
-      {showMap && <MapBox />}
+      <div className='mapSection'>
+        <button
+          className='responsive-width destination__showButton'
+          onClick={() => {
+            setShowMap(!showMap);
+            if (status === 'Show') {
+              setStatus('Hide');
+            } else {
+              setStatus('Show');
+            }
+          }}>
+          {status} Interactive Map
+        </button>
+        {showMap && <MapBox />}
+      </div>
     </>
   );
 }

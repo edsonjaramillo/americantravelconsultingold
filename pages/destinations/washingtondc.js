@@ -14,7 +14,7 @@ export default function WashingtonDC() {
         <div className='responsive-width map'>
           <Map
             dataMarkers={Data}
-            lat={38.905391483059965}
+            lat={38.891391483059965}
             lon={-77.03675921622916}
             zoom={11.5}
           />
@@ -41,7 +41,7 @@ export default function WashingtonDC() {
           height='400'
           width='800'
           layout='responsive'
-          alt='Disney World'
+          alt='DC'
         />
       </div>
       <div className='responsive-width destination__attractions'>
@@ -55,19 +55,21 @@ export default function WashingtonDC() {
         </ul>
       </div>
 
-      <button
-        className='responsive-width destination__showButton'
-        onClick={() => {
-          setShowMap(!showMap);
-          if (status === 'Show') {
-            setStatus('Hide');
-          } else {
-            setStatus('Show');
-          }
-        }}>
-        {status} Interactive Map
-      </button>
-      {showMap && <MapBox />}
+      <div className='mapSection'>
+        <button
+          className='responsive-width destination__showButton'
+          onClick={() => {
+            setShowMap(!showMap);
+            if (status === 'Show') {
+              setStatus('Hide');
+            } else {
+              setStatus('Show');
+            }
+          }}>
+          {status} Interactive Map
+        </button>
+        {showMap && <MapBox />}
+      </div>
     </>
   );
 }
