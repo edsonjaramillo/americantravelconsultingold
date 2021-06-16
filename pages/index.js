@@ -87,16 +87,19 @@ export default function Home() {
             filename='nyc.jpg'
             place='New York City, New York'
             altDesciption='image of'
+            link='newyorkcity'
           />
           <Location
             filename='sanantonio.jpg'
             place='San Antonio, Texas'
             altDesciption='image of'
+            link='sanantonio'
           />
           <Location
             filename='philadelphia.jpg'
             place='Philadelphia, Pennsylvania'
             altDesciption='image of'
+            link='philadelphia'
           />
         </div>
       </div>
