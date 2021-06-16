@@ -34,7 +34,7 @@ const MobileFooter = () => {
 
   return (
     <>
-      <div className='mobilefooter'>
+      <footer className='mobilefooter'>
         <div className='responsive-width mobilefooter__containerList' id='tab1'>
           <div className='mobilefooter__containerTab'>
             <h1 className='mobilefooter__containerHeader'>Navigation</h1>
@@ -96,7 +96,7 @@ const MobileFooter = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </footer>
     </>
   );
 };
