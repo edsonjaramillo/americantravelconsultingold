@@ -1,0 +1,26 @@
+.destinationsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.destinationscard {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 2px solid lightgray;
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__button {
+    background-color: $secondary-color;
+    text-align: center;
+    color: white;
+    padding: 0.25rem 0rem;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+}

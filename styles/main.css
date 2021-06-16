@@ -153,6 +153,10 @@ object {
   font-size: 1.5rem;
 }
 
+.mapSection {
+  margin-bottom: 1rem;
+}
+
 .map,
 .mapWrapper,
 .map__locations {
@@ -683,6 +687,37 @@ object {
     -ms-grid-columns: (minmax(0, 1fr))[2];
         grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+.destinationsGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[1];
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.destinationscard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[1];
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 2px solid lightgray;
+}
+
+.destinationscard__title {
+  font-weight: bold;
+}
+
+.destinationscard__button {
+  background-color: #ff7f00;
+  text-align: center;
+  color: white;
+  padding: 0.25rem 0rem;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
 .testimonialGrid {
