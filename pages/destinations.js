@@ -32,7 +32,7 @@ export default function Destinations() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <div className='responsive-width destinationsGrid'>
+      {/* <div className='responsive-width destinationsGrid'>
         <Site
           title='Atlanta, Georgia'
           desciption='This central Florida region attracts around 60 million visitors every year, who come for the warm climate, the world-famous theme parks, the shopping malls, the golf courses and the nightlife. They come for the beaches too, as some of America’s finest are within easy reach.'
@@ -43,7 +43,7 @@ export default function Destinations() {
           desciption='This central Florida region attracts around 60 million visitors every year, who come for the warm climate, the world-famous theme parks, the shopping malls, the golf courses and the nightlife. They come for the beaches too, as some of America’s finest are within easy reach.'
           link='orlando'
         />
-      </div>
+      </div> */}
     </>
   );
 }

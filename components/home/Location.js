@@ -12,6 +12,8 @@ export default function Location({ filename, place, link, altDesciption }) {
             height='400'
             width='800'
             layout='responsive'
+            // placeholder='blur'
+            // blurDataURL={`/images/home/${filename}`}
             alt={altDesciption}
           />
         </div>

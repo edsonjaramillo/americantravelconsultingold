@@ -510,6 +510,12 @@ object {
   cursor: pointer;
 }
 
+@media (min-width: 769px) {
+  .mobilefooter {
+    display: none;
+  }
+}
+
 .expand {
   opacity: 1;
   height: auto;

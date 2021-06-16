@@ -14,9 +14,9 @@ export default function Philadelphia() {
         <div className='responsive-width map'>
           <Map
             dataMarkers={Data}
-            lat={28.438336}
-            lon={-81.379234}
-            zoom={8.75}
+            lat={39.952524537556734}
+            lon={-75.1636885571183}
+            zoom={11}
           />
         </div>
       </>
