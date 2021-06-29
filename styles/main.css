@@ -703,12 +703,34 @@ object {
   gap: 1rem;
 }
 
+@media (min-width: 481px) {
+  .destinationsGrid {
+    -ms-grid-columns: (minmax(0, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 769px) {
+  .destinationsGrid {
+    -ms-grid-columns: (minmax(0, 1fr))[3];
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1367px) {
+  .destinationsGrid {
+    -ms-grid-columns: (minmax(0, 1fr))[4];
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 .destinationscard {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(0, 1fr))[1];
       grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 0.5rem;
+  gap: 1rem;
   padding: 1rem;
   border: 2px solid lightgray;
 }
@@ -724,6 +746,7 @@ object {
   padding: 0.25rem 0rem;
   border-radius: 10px;
   font-weight: bold;
+  height: 1.25rem;
 }
 
 .testimonialGrid {

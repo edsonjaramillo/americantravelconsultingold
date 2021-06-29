@@ -60,7 +60,7 @@ const Data = [
     lon: -73.97619185978428,
   },
   {
-    name: 'Statue of Libery',
+    name: 'Statue of Liberty',
     lat: 40.68932368494589,
     lon: -74.0443493172971,
   },
