@@ -29,6 +29,10 @@
     font-weight: bold;
   }
 
+  &__description {
+    font-weight: normal;
+  }
+
   &__button {
     background-color: $secondary-color;
     text-align: center;
@@ -37,5 +41,40 @@
     border-radius: 10px;
     font-weight: bold;
     height: 1.25rem;
+  }
+}
+
+.payment {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  font-weight: normal;
+  border: lightgray solid 2px;
+  gap: 0.5rem;
+  font-size: 1rem;
+
+  &__date {
+    // font-weight: bold;
+  }
+  &__organization {
+    font-weight: bold;
+  }
+
+  &__link {
+    background-color: green;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    padding: 0.25rem 0rem;
+    font-weight: bold;
+  }
+}
+
+.paymentgrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
+  @include media('>=md') {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

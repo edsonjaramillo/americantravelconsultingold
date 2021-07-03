@@ -37,10 +37,12 @@ export default function Navbar() {
                 Destinations
               </a>
             </Link>
-            {/* <Link href='/payment'>
-              <a className='navbar__links' onClick={closeMenu}>Payment</a>
+            <Link href='/payment'>
+              <a className='navbar__links' onClick={closeMenu}>
+                Payment
+              </a>
             </Link>
-            <Link href='/about'>
+            {/* <Link href='/about'>
               <a className='navbar__links' onClick={closeMenu}>About</a>
             </Link> */}
             <Link href='/contact'>

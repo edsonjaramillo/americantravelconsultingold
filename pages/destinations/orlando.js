@@ -30,7 +30,6 @@ export default function Orlando() {
           name='description'
           content='This central Florida region attracts around 60 million visitors every year, who come for the warm climate, the world-famous theme parks, the shopping malls, the golf courses and the nightlife. They come for the beaches too, as some of America’s finest are within easy reach.'
         />
-        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <div className='responsive-width destination__titleContainer'>
@@ -40,7 +39,7 @@ export default function Orlando() {
       <div className='responsive-width destination__imageWrapper'>
         <Image
           className='map__image'
-          src={`/images/home/orlando.jpg`}
+          src={`/images/destinations/orlando.jpg`}
           height='400'
           width='800'
           layout='responsive'

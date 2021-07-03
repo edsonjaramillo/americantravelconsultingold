@@ -213,7 +213,7 @@ object {
 
 .destination__location {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 .destination__country {
@@ -739,6 +739,10 @@ object {
   font-weight: bold;
 }
 
+.destinationscard__description {
+  font-weight: normal;
+}
+
 .destinationscard__button {
   background-color: #ff7f00;
   text-align: center;
@@ -747,6 +751,45 @@ object {
   border-radius: 10px;
   font-weight: bold;
   height: 1.25rem;
+}
+
+.payment {
+  padding: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[1];
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+  font-weight: normal;
+  border: lightgray solid 2px;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.payment__organization {
+  font-weight: bold;
+}
+
+.payment__link {
+  background-color: green;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  padding: 0.25rem 0rem;
+  font-weight: bold;
+}
+
+.paymentgrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[1];
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .paymentgrid {
+    -ms-grid-columns: (minmax(0, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .testimonialGrid {
