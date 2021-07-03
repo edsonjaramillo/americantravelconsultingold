@@ -1,26 +1,32 @@
 .cta {
   background-color: rgb(50, 57, 65);
+  background-image: url(../public/cta.jpg);
+  // background-size: contain;
+  background-position: bottom;
   color: white;
-
-  // text-align: center;
-  // text-align: center;
+  height: 45vh;
+  position: relative;
 
   &__boundary {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &__content {
-    margin: auto 0rem;
-    padding: 2rem 0rem;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    // background-color: red;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
   }
 
   &__title {
     font-size: 1.75rem;
     font-weight: bold;
+  }
+
+  &__subtitle {
+    font-size: 1.25rem;
   }
 
   &__link {
@@ -34,5 +40,60 @@
 
   &--newline {
     white-space: pre-line;
+  }
+
+  @include media('>=md') {
+    height: 60vh;
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+    }
+
+    &__link {
+      padding: 1rem 0rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  @include media('>lg') {
+    // height: 50vh;
+
+    height: 60vh;
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+    }
+    &__content {
+      width: 90%;
+    }
+
+    &__link {
+      width: 40%;
+    }
+  }
+  @include media('>xl') {
+    // height: 50vh;
+
+    height: 70vh;
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__subtitle {
+      font-size: 3rem;
+    }
+    &__content {
+      width: 70%;
+    }
+
+    &__link {
+      width: 40%;
+    }
   }
 }
