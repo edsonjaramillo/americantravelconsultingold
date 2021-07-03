@@ -11,16 +11,18 @@ export default function Home() {
       </Head>
       <div className='cta'>
         <div className='responsive-width cta__boundary'>
-          <h1 className='cta__title cta--newline'>
-            {`TRAVEL EASIER.\nTRAVEL STRESS-FREE.\nLET US DO THE WORK.`}
-          </h1>
-          <p className='cta__subtitle'>
-            Enjoy your next group trip from start to finish without a worry in
-            the world.
-          </p>
-          <Link href='/contact'>
-            <a className='cta__link'>REQUEST A QUOTE</a>
-          </Link>
+          <div className='cta__content'>
+            <h1 className='cta__title cta--newline'>
+              {`TRAVEL EASIER.\nTRAVEL STRESS-FREE.\nLET US DO THE WORK.`}
+            </h1>
+            <p className='cta__subtitle'>
+              Enjoy your next group trip from start to finish without a worry in
+              the world.
+            </p>
+            <Link href='/contact'>
+              <a className='cta__link'>REQUEST A QUOTE</a>
+            </Link>
+          </div>
         </div>
       </div>
 

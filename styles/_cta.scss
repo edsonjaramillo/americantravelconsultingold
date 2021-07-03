@@ -1,17 +1,25 @@
 .cta {
   background-color: rgb(50, 57, 65);
   color: white;
+
+  // text-align: center;
   // text-align: center;
 
   &__boundary {
-    padding: 4rem 0rem;
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1.5rem;
+  }
+
+  &__content {
+    margin: auto 0rem;
+    padding: 2rem 0rem;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // background-color: red;
   }
 
   &__title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: bold;
   }
 

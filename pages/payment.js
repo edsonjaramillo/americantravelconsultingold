@@ -12,7 +12,7 @@ export default function Payment({ trips }) {
         <h2 className='responsive-width-form section__header'>Payment Links</h2>
         <div className='responsive-width-form paymentgrid'>
           {trips.map(({ _id, date, organization, location, link }) => (
-            <div key='_id' className='payment'>
+            <div key={_id} className='payment'>
               <p className='payment__organization'>{`${organization}`}</p>
               <p className='payment__location'>{`${location}`}</p>
               <p className='payment__date'>{`${date}`}</p>
@@ -29,7 +29,11 @@ export default function Payment({ trips }) {
 
 export const getServerSideProps = async (ctx) => {
   const { db } = await connectToDatabase();
-  const trips = await db.collection('trips').find({}).toArray();
+  const trips = await db
+    .collection('trips')
+    .find({})
+    .sort({ date: 1 })
+    .toArray();
 
   return {
     props: {

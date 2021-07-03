@@ -1,5 +1,6 @@
 import { Hamburger } from '@/components/index';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   const closeMenu = () => {
@@ -18,9 +19,15 @@ export default function Navbar() {
           <Hamburger />
 
           <Link href='/'>
-            <a>
-              {/* <img className='navbar__logo' src='images/lbplus.svg' alt='' /> */}
-              <h6>LOGO</h6>
+            <a className='logowrapper'>
+              <Image
+                src='/logo.png'
+                height='794'
+                width='1123'
+                layout='responsive'
+                alt='american travel consulting logo'
+                quality='25'
+              />
             </a>
           </Link>
 
