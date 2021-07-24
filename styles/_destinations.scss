@@ -9,7 +9,7 @@
   }
 
   @include media('>md') {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
   }
   @include media('>xl') {
@@ -53,15 +53,12 @@
   gap: 0.5rem;
   font-size: 1rem;
 
-  // &__date {
-  //   // font-weight: bold;
-  // }
   &__organization {
     font-weight: bold;
   }
 
   &__link {
-    background-color: green;
+    background-color: $secondary-color;
     border-radius: 10px;
     text-align: center;
     color: white;
@@ -74,6 +71,7 @@
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
+  min-height: 70vh;
 
   @include media('>=md') {
     grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -108,12 +108,38 @@ export default function Home() {
       <div className='section section--testimonial'>
         <h2 className='responsive-width section__header'>Testimonials</h2>
         <div className='responsive-width testimonialGrid'>
-          <Testimonial />
-          <Testimonial />
-          <Testimonial />
-          <Testimonial />
-          <Testimonial />
-          <Testimonial />
+          <Testimonial
+            quote='“We used American Travel Consulting, LLC for 2 different trips with our band. It was seamless and everything was taken care of. They anticipated any problems & took care of them for us with most of the members not even knowing there had been an issue. I highly recommend American Travel Consulting, LLC for your groups travel! Stacy, Chris, Ken & Curtis are top notch and have a great company, but more importantly they build relationships & help your group make memories for your students & families. You will not be disappointed if you choose this team for your travel plans!!”'
+            name='Tiffany Rogers Martin'
+            position='Booster President'
+            organization='Guntersville High School Band'
+          />
+          <Testimonial
+            quote='“I have been personally involved in 2 trips with American Travel Consulting to Philly and San Antonio - both have been amazing. My daughter also went to Macy’s with this group and had the best trip ever. We have a large band of over 350 kids and moving them is a major undertaking. Every detail of each trip was planned and executed flawlessly. As one of the band Dads that moves the equipment and uniforms, I’ve gotten to see the behind the scenes of what it takes to pull these trips off and these guys are amazing and get it done. Besides being the best professionals, Chris, Stacy, and Curtis are great guys I always look forward to seeing and spending some time with. My daughter has graduated but my son is a freshman in the band so can’t wait for the next great trip!!”'
+            name='Dave Dagostino'
+            position='Parent'
+            organization='Gulf Coast High School Band'
+          />
+          <Testimonial
+            quote='“I used American Travel for two different trips. The first was Pre-COVID and was absolutely seamless. Great customer service and care from beginning to end. The second was supposed to happen and then COVID hit and shut everything down. American Travel was outstanding to work with throughout the process and refunded money without any issues. I highly recommend using them for your travel needs.”	'
+            name='Terry Ownby'
+            position=''
+            organization='Florence High School Band'
+          />
+
+          <Testimonial
+            quote='“I used American Travel for two different trips. The first was Pre-COVID and was absolutely seamless. Great customer service and care from beginning to end. The second was supposed to happen and then COVID hit and shut everything down. American Travel was outstanding to work with throughout the process and refunded money without any issues. I highly recommend using them for your travel needs.”	'
+            name='David Bearden'
+            position=''
+            organization='Oneonta High School Band'
+          />
+
+          <Testimonial
+            quote='“Great organization!! Highly recommend you let them take care of your group’s travel planning!”	'
+            name='James Sewell'
+            position=''
+            organization='Bainbridge High School Band'
+          />
         </div>
       </div>
     </>

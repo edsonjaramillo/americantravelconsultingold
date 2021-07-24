@@ -145,7 +145,7 @@ object {
 }
 
 .section--testimonial {
-  background-color: #e6e6e6;
+  background-color: #f2f2f2;
 }
 
 .section__header {
@@ -427,8 +427,20 @@ object {
   margin: auto 0rem;
 }
 
-.mobilefooter {
+.footer {
   background-color: #1e3a8a;
+  padding: 3rem 0rem;
+}
+
+.footer__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  row-gap: 3rem;
+}
+
+.footer__section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,105 +450,39 @@ object {
           flex-direction: column;
 }
 
-.mobilefooter__containerList {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-bottom: 1px solid lightskyblue;
+.footer__category {
+  color: #ff7f00;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
-.mobilefooter__containerTab {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.mobilefooter__containerHeader {
-  padding: 0.75rem 0rem;
+.footer__link {
+  font-size: 0.875rem;
   color: white;
+  font-weight: 400;
 }
 
-.mobilefooter__list {
-  overflow: hidden;
+.footer__link:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
-.mobilefooter__item {
+.footer__copyright {
+  margin-top: 3rem;
   color: white;
-  top: 0;
-  height: 0;
-  opacity: 0;
-  font-size: 0.8rem;
-  list-style: square;
-  list-style-position: inside;
-}
-
-.mobilefooter__symbol {
+  text-align: center;
   display: block;
-  margin: auto 0rem;
-  position: relative;
-  width: 3px;
-  height: 15px;
-  cursor: pointer;
-  background-color: #1e3a8a;
-  pointer-events: all;
-}
-
-.mobilefooter__vertical, .mobilefooter__horizontal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  width: 100%;
-  background-color: white;
-  height: 100%;
-  pointer-events: none;
-}
-
-.mobilefooter__horizontal {
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.mobilefooter__icon {
-  display: block;
-  margin: auto 0rem;
-  color: white;
-  font-size: 2.5rem;
-  line-height: 0.75rem;
-  cursor: pointer;
 }
 
 @media (min-width: 769px) {
-  .mobilefooter {
-    display: none;
+  .footer__grid {
+    margin: 0rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
-}
-
-.expand {
-  opacity: 1;
-  height: auto;
-  overflow: visible;
-}
-
-.expand-content {
-  padding: 0.25rem 0rem 2rem 0rem;
-}
-
-.expand-list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(0, 1fr))[1];
-      grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 0.75rem;
 }
 
 .cta {
@@ -746,6 +692,13 @@ object {
   margin: 1rem;
 }
 
+@media (min-width: 768px) {
+  .location__link {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
 .locationGrid {
   display: -ms-grid;
   display: grid;
@@ -784,8 +737,8 @@ object {
 
 @media (min-width: 769px) {
   .destinationsGrid {
-    -ms-grid-columns: (minmax(0, 1fr))[3];
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    -ms-grid-columns: (minmax(0, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
   }
 }
@@ -842,7 +795,7 @@ object {
 }
 
 .payment__link {
-  background-color: green;
+  background-color: #ff7f00;
   border-radius: 10px;
   text-align: center;
   color: white;
@@ -856,6 +809,7 @@ object {
   -ms-grid-columns: (minmax(0, 1fr))[1];
       grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
+  min-height: 70vh;
 }
 
 @media (min-width: 768px) {
@@ -889,22 +843,15 @@ object {
   }
 }
 
-@media (min-width: 1367px) {
-  .testimonialGrid {
-    -ms-grid-columns: (minmax(0, 1fr))[3];
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
-  }
-}
-
 .testimonial {
   padding: 2rem;
   background-color: white;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(0, 1fr))[1];
-      grid-template-columns: repeat(1, minmax(0, 1fr));
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .testimonial__citations {
@@ -915,12 +862,16 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: auto 0rem 0rem 0rem;
 }
 
 .testimonial__quote {
   text-align: center;
   font-size: 1rem;
   font-weight: normal;
+  min-height: 140px;
+  max-height: 190px;
+  overflow-y: auto;
 }
 
 .testimonial__author {
@@ -952,6 +903,77 @@ object {
   text-align: center;
 }
 
+.person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.person__child:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.person__name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.person__email {
+  background-color: #ff7f00;
+  padding: 0.5rem 0rem;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.person__quote {
+  font-style: italic;
+}
+
+.person__info {
+  min-height: 25rem;
+}
+
+@media (min-width: 1367px) {
+  .person {
+    width: 44.5rem;
+  }
+}
+
+.personGrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1367px) {
+  .personGrid {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.person:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
 .form {
   border: 1px solid lightgrey;
   padding: 0.75rem;
@@ -960,6 +982,7 @@ object {
   -ms-grid-columns: (minmax(0, 1fr))[1];
       grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .form__input {

@@ -1,0 +1,59 @@
+.person {
+  display: flex;
+  flex-direction: column;
+  //   border: 1px solid lightgray;
+
+  &__child:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  &__email {
+    background-color: $secondary-color;
+    padding: 0.5rem 0rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  &__quote {
+    font-style: italic;
+  }
+
+  &__info {
+    min-height: 25rem;
+  }
+
+  @include media('>xl') {
+    width: 44.5rem;
+  }
+}
+
+.personGrid {
+  display: flex;
+  flex-direction: column;
+  //   display: grid;
+  //   grid-template-columns: repeat(1, fr);
+  //   gap: 1rem;
+
+  //   @include media('>=md') {
+  //     grid-template-columns: repeat(2, 1fr);
+  //     gap: 2rem;
+  //   }
+  margin-bottom: 1rem;
+  @include media('>xl') {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // width: 30rem;
+  }
+}
+
+.person:not(:last-child) {
+  margin-bottom: 3rem;
+}

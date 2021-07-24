@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+
 const Site = ({ title, desciption, link, alt }) => {
   return (
     <>
@@ -12,7 +13,7 @@ const Site = ({ title, desciption, link, alt }) => {
             width='800'
             layout='responsive'
             alt={alt}
-            quality='10'
+            quality='5'
           />
         </div>
         <h2 className='destinationscard__title'>{title}</h2>

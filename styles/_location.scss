@@ -22,6 +22,13 @@
     border-radius: 20px;
     margin: 1rem;
   }
+
+  @include media('>=md') {
+    &__link {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
 }
 
 .locationGrid {

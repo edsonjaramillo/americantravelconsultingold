@@ -1,18 +1,14 @@
-export default function Testimonial() {
+export default function Testimonial({ quote, name, position, organization }) {
   return (
     <>
       <div className='testimonial'>
         <blockquote>
-          <p className='testimonial__quote'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-            veniam inventore alias voluptas deserunt minima perspiciatis
-            quisquam aut et, soluta quas iusto laboriosam. Quis optio laboriosam
-            fuga, maxime soluta laudantium?
-          </p>
+          <p className='testimonial__quote'>{quote}</p>
         </blockquote>
         <div className='testimonial__citations'>
-          <cite className='testimonial__author'>FirstName LastName</cite>
-          <cite className='testimonial__position'>Band Director</cite>
+          <cite className='testimonial__author'>{name}</cite>
+          <cite className='testimonial__position'>{position}</cite>
+          <cite className='testimonial__position'>{organization}</cite>
         </div>
       </div>
     </>

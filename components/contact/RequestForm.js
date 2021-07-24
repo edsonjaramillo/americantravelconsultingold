@@ -5,10 +5,10 @@ export default function RequestForm() {
   function sendEmail(e) {
     try {
       emailjs.sendForm(
-        'service_pdeufkb',
-        'template_e5ir1o2',
+        'service_1ae3hwp',
+        'template_7d6wwdr',
         e.target,
-        'user_nP0ri4IytysxtBiIFWg6M'
+        'user_pUaUDJeHhvMfwKyoMFhFR'
       );
       e.target.reset();
       alert(
@@ -19,7 +19,6 @@ export default function RequestForm() {
     }
     e.preventDefault();
   }
-
   return (
     <>
       <div className='responsive-width-form'>

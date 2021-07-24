@@ -34,11 +34,6 @@ export default function Navbar() {
           <div className='navbar__empty'></div>
 
           <div className='navbar__items'>
-            <Link href='/'>
-              <a className='navbar__links' onClick={closeMenu}>
-                Home
-              </a>
-            </Link>
             <Link href='/destinations'>
               <a className='navbar__links' onClick={closeMenu}>
                 Destinations
@@ -52,6 +47,11 @@ export default function Navbar() {
             {/* <Link href='/about'>
               <a className='navbar__links' onClick={closeMenu}>About</a>
             </Link> */}
+            <Link href='/about'>
+              <a className='navbar__links' onClick={closeMenu}>
+                About
+              </a>
+            </Link>
             <Link href='/contact'>
               <a className='navbar__links' onClick={closeMenu}>
                 Contact

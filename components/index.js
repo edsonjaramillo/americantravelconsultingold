@@ -3,7 +3,7 @@ export { default as Navbar } from '@/components/shared/NavigationBar/Navbar';
 export { default as Hamburger } from '@/components/shared/NavigationBar/Hamburger';
 
 // Footer Components
-export { default as MobileFooter } from '@/components/shared/Footer/MobileFooter';
+export { default as Footer } from '@/components/shared/Footer/Footer';
 
 // Home Components
 export { default as TripType } from '@/components/home/TripType';

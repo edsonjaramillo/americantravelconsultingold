@@ -4,7 +4,7 @@
   border-bottom: 1px solid lightgrey;
 
   &--testimonial {
-    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(0, 0%, 95%);
   }
 
   &__header {
@@ -12,19 +12,6 @@
     font-size: 1.5rem;
   }
 }
-
-// body {
-//   background-color: white;
-//   @include media('>sm') {
-//     background-color: yellow;
-//   }
-//   @include media('>md') {
-//     background-color: orange;
-//   }
-//   @include media('>lg') {
-//     background-color: red;
-//   }
-// }
 
 .mapSection {
   margin-bottom: 1rem;

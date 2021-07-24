@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import { Map } from '@/components/index';
-import Data from '@/data/chicago';
+import Data from '@/data/neworleans';
 import Image from 'next/image';
 import { useState } from 'react';
 
-export default function Chicago() {
+export default function NewOrleans() {
   const [status, setStatus] = useState('Show');
   const [showMap, setShowMap] = useState(false);
 
@@ -14,9 +14,9 @@ export default function Chicago() {
         <div className='responsive-width map'>
           <Map
             dataMarkers={Data}
-            lat={41.8779636747932}
-            lon={-87.62873353527996}
-            zoom={11.5}
+            lat={29.965435907926745}
+            lon={-90.12329753122577}
+            zoom={10.5}
           />
         </div>
       </>
@@ -64,7 +64,8 @@ export default function Chicago() {
             } else {
               setStatus('Show');
             }
-          }}>
+          }}
+        >
           {status} Interactive Map
         </button>
         {showMap && <MapBox />}
