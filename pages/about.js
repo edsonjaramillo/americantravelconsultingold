@@ -32,7 +32,7 @@ export default function About() {
         About Us
       </h1>
       <div className='personGrid responsive-width'>
-        <Person name='Chris Langley' email='chris@americantravelconsulting.com'>
+        <Person name='Chris Lindley' email='chris@americantravelconsulting.com'>
           <p className='person__child'>
             {
               'Chris Lindley became President of American Travel Consulting in January 2021.  He retired in July of 2021 after teaching band in the public schools of Alabama for twenty-five years, most of that time at Albertville High School.  During his career as a band director, he participated in the Macy*s Thanksgiving Day Parade (2007) in New York City, and led the Albertville Band in the Rose Parade (2011, 2018) in Pasadena, California, as well as many other parades in cities such as Chicago, Philadelphia, Gatlinburg, and Washington DC.  Through these experiences, Chris gained a unique insight into student travel planning, having participated in parades/performances across the country as a band director.     '
