@@ -929,6 +929,7 @@ object {
   color: white;
   font-weight: bold;
   border-radius: 10px;
+  margin-top: 1rem;
 }
 
 .person__quote {
