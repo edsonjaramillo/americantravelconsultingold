@@ -37,16 +37,16 @@ const Footer = () => {
       <footer className='footer'>
         <div className='footer__grid responsive-width'>
           <FooterSection category='Navigation'>
-            <Link href='/'>
+            <Link href='/destinations'>
               <a className='footer__link'>Destinations</a>
             </Link>
-            <Link href='/'>
+            <Link href='/payment'>
               <a className='footer__link'>Payment</a>
             </Link>
-            <Link href='/'>
+            <Link href='/about'>
               <a className='footer__link'>About</a>
             </Link>
-            <Link href='/'>
+            <Link href='/contact'>
               <a className='footer__link'>Contact</a>
             </Link>
           </FooterSection>
