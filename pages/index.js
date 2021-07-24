@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>American Travel Consulting | Home</title>
+        <title>American Travel Consulting</title>
       </Head>
       <div className='cta'>
         <div className='responsive-width cta__boundary'>
