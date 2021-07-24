@@ -69,7 +69,7 @@ export default function About() {
             {`“We at ATC truly enjoy helping our clients plan the perfect trip.  We have worked with bands, choirs, and other school groups from fifty to five hundred.  Are you a middle school teacher looking for a great trip to Washington D.C. for your eighth-grade classes?  No problem!  Perhaps you are looking for insight into how to build your band’s resume to be considered for the national parades.  We at ATC can provide that unique perspective because each member of our team has done just that.  We are ready to take your group on its next adventure!”`}
           </p>
         </Person>
-        <Person name='Ken' email='ken@americantravelconsulting.com'>
+        <Person name='Ken Bodiford' email='ken@americantravelconsulting.com'>
           <p className='person__child'>
             {`Ken Bodiford has taught in the public schools of Virginia and Alabama for thirty years and is currently in his twenty-seventh year as Director of Bands at Jacksonville State University.  Ken led the JSU Marching Southerners in the 1996 Macy*s Thanksgiving Day Parade as well as performances in the Lord Mayor’s Parade in London, England, the World Peace Parade in Rome, Italy and has performed as part of the Commemoration of the 75th Anniversary of Pearl Harbor in Hawaii.  He joined the ATC team in 2018 and brings a wealth of knowledge in student travel planning to our clients.`}
           </p>
