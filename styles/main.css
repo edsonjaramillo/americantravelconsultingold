@@ -550,7 +550,7 @@ object {
 
 @media (min-width: 1025px) {
   .cta {
-    height: 70vh;
+    height: 80vh;
   }
   .cta__title {
     font-size: 3rem;
@@ -568,7 +568,7 @@ object {
 
 @media (min-width: 1367px) {
   .cta {
-    height: 70vh;
+    height: 80vh;
   }
   .cta__title {
     font-size: 4rem;
@@ -936,12 +936,12 @@ object {
 }
 
 .person__info {
-  min-height: 25rem;
+  min-height: 32rem;
 }
 
-@media (min-width: 1367px) {
+@media (min-width: 1025px) {
   .person {
-    width: 44.5rem;
+    width: 34rem;
   }
 }
 
@@ -956,7 +956,7 @@ object {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 1367px) {
+@media (min-width: 1025px) {
   .personGrid {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

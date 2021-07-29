@@ -27,12 +27,15 @@
   }
 
   &__info {
-    min-height: 25rem;
+    min-height: 32rem;
   }
 
-  @include media('>xl') {
-    width: 44.5rem;
+  @include media('>lg') {
+    width: 34rem;
   }
+  // @include media('>xl') {
+  //   width: 44.5rem;
+  // }
 }
 
 .personGrid {
@@ -47,7 +50,7 @@
   //     gap: 2rem;
   //   }
   margin-bottom: 1rem;
-  @include media('>xl') {
+  @include media('>lg') {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
