@@ -550,7 +550,7 @@ object {
 
 @media (min-width: 1025px) {
   .cta {
-    height: 60vh;
+    height: 70vh;
   }
   .cta__title {
     font-size: 3rem;
