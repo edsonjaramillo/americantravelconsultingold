@@ -10,20 +10,23 @@ export default function Payment({ trips }) {
       </Head>
       <div className='section'>
         <h2 className='responsive-width-form section__header'>Payment Links</h2>
-        <div className='responsive-width-form paymentgrid'>
-          {isEmpty && <h1>No Trip Links Available</h1>}
-          {trips.map(({ _id, date, organization, location, link }) => (
-            <div key={_id} className='payment'>
-              <p className='payment__organization'>{`${organization}`}</p>
-              <p className='payment__location'>{`${location}`}</p>
-              <p className='payment__date'>{`${new Date(
+        <div style={{ minHeight: '70vh' }}>
+          <div className='responsive-width-form paymentgrid'>
+            {isEmpty && <h1>No Trip Links Available</h1>}
+            {trips.map(({ _id, date, organization, location, link }) => (
+              <div key={_id} className='payment'>
+                <p className='payment__organization'>{`${organization}`}</p>
+                <p className='payment__location'>{`${location}`}</p>
+                <p className='payment__date'>{date}</p>
+                {/* <p className='payment__date'>{`${new Date(
                 date
-              ).toLocaleDateString()}`}</p>
-              <a className='payment__link' href={link}>
-                Pay
-              </a>
-            </div>
-          ))}
+              ).toLocaleDateString()}`}</p> */}
+                <a className='payment__link' href={link}>
+                  Pay
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

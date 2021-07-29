@@ -34,7 +34,6 @@ export default function Orlando() {
 
       <div className='responsive-width destination__titleContainer'>
         <h1 className='destination__location'>Orlando, Florida</h1>
-        <h2 className='destination__country'>United States of America</h2>
       </div>
       <div className='responsive-width destination__imageWrapper'>
         <Image
@@ -67,7 +66,8 @@ export default function Orlando() {
             } else {
               setStatus('Show');
             }
-          }}>
+          }}
+        >
           {status} Interactive Map
         </button>
         {showMap && <MapBox />}

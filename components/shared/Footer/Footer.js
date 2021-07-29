@@ -52,19 +52,25 @@ const Footer = () => {
           </FooterSection>
 
           <FooterSection category='Social'>
-            <Link href='https://www.facebook.com/AmericanTravelConsulting/'>
-              <a className='footer__link'>Facebook</a>
-            </Link>
-            <Link href='#'>
-              <a className='footer__link'>Instagram</a>
-            </Link>
+            <a
+              className='footer__link'
+              href='https://www.facebook.com/AmericanTravelConsulting/'
+            >
+              Facebook
+            </a>
+            <a
+              className='footer__link'
+              href='https://www.facebook.com/AmericanTravelConsulting/'
+            >
+              Instagram
+            </a>
           </FooterSection>
           <FooterSection category='Contact'>
             <a
               href='mailto:chris@americantravelconsulting.com'
               className='footer__link'
             >
-              chris@americantravelcompany.com
+              chris@americantravelconsulting.com
             </a>
             <a href='tel:2565720669' className='footer__link'>
               (256) 572-0669
@@ -91,7 +97,7 @@ const Footer = () => {
           <SocialIcon name='yelp' link='https://yelp.com' />
         </div> */}
         <small className='responsive-width footer__copyright'>
-          &copy; {getYear()}, American Travel Consulting LLC. All Rghts
+          &copy; {getYear()}, American Travel Consulting LLC. All Rights
           Reserved.
         </small>
       </footer>

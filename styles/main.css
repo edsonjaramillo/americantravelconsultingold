@@ -765,6 +765,7 @@ object {
 }
 
 .destinationscard__description {
+  min-height: 12rem;
   font-weight: normal;
 }
 
@@ -775,7 +776,6 @@ object {
   padding: 0.25rem 0rem;
   border-radius: 10px;
   font-weight: bold;
-  height: 1.25rem;
 }
 
 .payment {
@@ -809,7 +809,6 @@ object {
   -ms-grid-columns: (minmax(0, 1fr))[1];
       grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
-  min-height: 70vh;
 }
 
 @media (min-width: 768px) {

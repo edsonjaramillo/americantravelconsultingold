@@ -9,8 +9,7 @@ export default function Contact() {
       <div className='contactheader responsive-width-form'>
         <h1 className='contactheader__title'>Need a quote?</h1>
         <p className='contactheader__subtitle'>
-          Please fill out the form below and our team will be get in contact
-          soon.
+          Please fill out the form below and our team will be in contact soon.
         </p>
       </div>
       <RequestForm />

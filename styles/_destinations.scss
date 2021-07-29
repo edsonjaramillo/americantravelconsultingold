@@ -30,6 +30,7 @@
   }
 
   &__description {
+    min-height: 12rem;
     font-weight: normal;
   }
 
@@ -40,7 +41,7 @@
     padding: 0.25rem 0rem;
     border-radius: 10px;
     font-weight: bold;
-    height: 1.25rem;
+    // height: 1.25rem;
   }
 }
 
@@ -71,7 +72,7 @@
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
-  min-height: 70vh;
+  // min-height: 70vh;
 
   @include media('>=md') {
     grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -15,8 +15,8 @@ export default function Home() {
               {`TRAVEL EASIER.\nTRAVEL STRESS-FREE.\nLET US DO THE WORK.`}
             </h1>
             <p className='cta__subtitle'>
-              Enjoy your next group trip from start to finish without a worry in
-              the world.
+              Enjoy your next student group trup from start to finish without a
+              worry in the world
             </p>
             <Link href='/contact'>
               <a className='cta__link'>REQUEST A QUOTE</a>

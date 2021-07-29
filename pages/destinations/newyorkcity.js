@@ -30,7 +30,6 @@ export default function NewYorkCity() {
 
       <div className='responsive-width destination__titleContainer'>
         <h1 className='destination__location'>New York City, New York</h1>
-        <h2 className='destination__country'>United States of America</h2>
       </div>
       <div className='responsive-width destination__imageWrapper'>
         <Image
