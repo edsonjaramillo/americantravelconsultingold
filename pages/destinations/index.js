@@ -62,7 +62,7 @@ export default function Destinations() {
           />
           <Site
             title='New York City, New York'
-            description={`New York is so big and so diverse a place that you could live here four lifetimes and not experience all the amazing things the city has to offer. Visit the many attractions such as the Statue of Libery, 9/11 Memorial, many museums, or take in one of your favorite Broadwat shows.`}
+            description={`New York is so big and so diverse a place that you could live here four lifetimes and not experience all the amazing things the city has to offer. Visit the many attractions such as the Statue of Liberty, 9/11 Memorial, many museums, or take in one of your favorite Broadway shows.`}
             link='newyorkcity'
           />
           <Site
