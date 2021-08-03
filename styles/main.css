@@ -948,38 +948,39 @@ object {
   font-style: italic;
 }
 
-.person__info {
-  min-height: 32rem;
+@media (min-width: 1024px) {
+  .person__info {
+    min-height: 38rem;
+  }
 }
 
-@media (min-width: 1025px) {
-  .person {
-    width: 34rem;
+@media (min-width: 1367px) {
+  .person__info {
+    min-height: 30rem;
+  }
+}
+
+@media (min-width: 1921px) {
+  .person__info {
+    min-height: 20rem;
   }
 }
 
 .personGrid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (fr)[1];
+      grid-template-columns: repeat(1, fr);
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .personGrid {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 0rem;
   }
 }
 

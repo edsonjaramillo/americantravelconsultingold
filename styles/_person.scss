@@ -26,36 +26,59 @@
     font-style: italic;
   }
 
-  &__info {
-    min-height: 32rem;
+  // &__info {
+  //   min-height: 38rem;
+  // }
+
+  @include media('>=lg') {
+    // width: 15rem;
+    &__info {
+      min-height: 38rem;
+    }
   }
 
-  @include media('>lg') {
-    width: 34rem;
+  @include media('>xl') {
+    // width: 15rem;
+    &__info {
+      min-height: 30rem;
+    }
   }
+
+  @include media('>2xl') {
+    // width: 15rem;
+    &__info {
+      min-height: 20rem;
+    }
+  }
+
+  // @include media('>lg') {
+  //   width: 34rem;
+  // }
   // @include media('>xl') {
   //   width: 44.5rem;
   // }
 }
 
 .personGrid {
-  display: flex;
-  flex-direction: column;
-  //   display: grid;
-  //   grid-template-columns: repeat(1, fr);
-  //   gap: 1rem;
-
-  //   @include media('>=md') {
-  //     grid-template-columns: repeat(2, 1fr);
-  //     gap: 2rem;
-  //   }
+  // display: flex;
+  // flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1, fr);
+  gap: 1rem;
   margin-bottom: 1rem;
-  @include media('>lg') {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    // width: 30rem;
+
+  @include media('>=lg') {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 0rem;
   }
+  // margin-bottom: 1rem;
+  // @include media('>lg') {
+  //   flex-direction: row;
+  //   flex-wrap: wrap;
+  //   justify-content: space-between;
+  //   // width: 30rem;
+  // }
 }
 
 .person:not(:last-child) {
