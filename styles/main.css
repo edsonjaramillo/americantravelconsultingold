@@ -507,11 +507,8 @@ object {
   position: relative;
 }
 
-.cta__company {
-  text-align: center;
-  font-weight: bold;
-  font-size: 2rem;
-  color: white;
+.cta__imagewrapper {
+  display: none;
 }
 
 .cta__boundary {
@@ -589,6 +586,14 @@ object {
 @media (min-width: 1367px) {
   .cta {
     height: 80vh;
+  }
+  .cta__imagewrapper {
+    display: block;
+    position: absolute;
+    width: 375px;
+    right: 0;
+    -webkit-transform: translate(0%, 50%);
+            transform: translate(0%, 50%);
   }
   .cta__title {
     font-size: 4rem;

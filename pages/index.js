@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import { TripType, Location, Testimonial } from '@/components/index';
 
 export default function Home() {
@@ -10,6 +11,14 @@ export default function Home() {
       </Head>
       <div className='cta'>
         <div className='responsive-width cta__boundary'>
+          <div className='cta__imagewrapper'>
+            <Image
+              src='/logo.png'
+              height='794'
+              width='1123'
+              layout='responsive'
+            />
+          </div>
           <div className='cta__content'>
             {/* <p className='cta__company'>American Travel Consulting</p> */}
             <h1 className='cta__title cta--newline'>

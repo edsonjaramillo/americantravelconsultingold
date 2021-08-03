@@ -7,11 +7,8 @@
   height: 45vh;
   position: relative;
 
-  &__company {
-    text-align: center;
-    font-weight: bold;
-    font-size: 2rem;
-    color: white;
+  &__imagewrapper {
+    display: none;
   }
 
   &__boundary {
@@ -69,6 +66,7 @@
     // height: 50vh;
 
     height: 80vh;
+
     &__title {
       font-size: 3rem;
     }
@@ -87,7 +85,16 @@
   @include media('>xl') {
     // height: 50vh;
 
+    &__imagewrapper {
+      display: block;
+      position: absolute;
+      width: 375px;
+      right: 0;
+      transform: translate(0%, 50%);
+    }
+
     height: 80vh;
+
     &__title {
       font-size: 4rem;
     }
