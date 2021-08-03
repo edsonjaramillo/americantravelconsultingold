@@ -318,6 +318,19 @@ object {
   width: 6rem;
 }
 
+.navbar__logogrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar__companyname {
+  margin-left: 1rem;
+  color: white;
+  font-size: 2rem;
+  margin: auto 0rem auto 0rem;
+}
+
 .navbar__hb1, .navbar__hb2, .navbar__hb3 {
   height: 2.75px;
   background-color: white;
