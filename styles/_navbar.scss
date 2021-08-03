@@ -36,6 +36,18 @@
     width: 6rem;
   }
 
+  &__logogrid {
+    display: flex;
+  }
+
+  &__companyname {
+    margin-left: 1rem;
+    color: white;
+    font-size: 2rem;
+    // font-weight: bold;
+    margin: auto 0rem auto 0rem;
+  }
+
   &__hb1,
   &__hb2,
   &__hb3 {
@@ -135,5 +147,6 @@
   // height: 2rem;
   width: 4.5rem;
   margin: auto 0rem;
+
   // background-color: red;
 }
