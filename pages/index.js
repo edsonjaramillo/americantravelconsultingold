@@ -11,6 +11,7 @@ export default function Home() {
       <div className='cta'>
         <div className='responsive-width cta__boundary'>
           <div className='cta__content'>
+            {/* <p className='cta__company'>American Travel Consulting</p> */}
             <h1 className='cta__title cta--newline'>
               {`TRAVEL EASIER\nTRAVEL STRESS-FREE\nLET US DO THE WORK`}
             </h1>

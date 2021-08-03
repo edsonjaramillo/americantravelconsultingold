@@ -507,6 +507,13 @@ object {
   position: relative;
 }
 
+.cta__company {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+}
+
 .cta__boundary {
   position: absolute;
   top: 50%;

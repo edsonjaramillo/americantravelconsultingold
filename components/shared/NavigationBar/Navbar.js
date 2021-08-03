@@ -18,21 +18,18 @@ export default function Navbar() {
         <div className='responsive-width navbar__boundary'>
           <Hamburger />
 
-          <div className='navbar__logogrid'>
-            <Link href='/'>
-              <a className='logowrapper'>
-                <Image
-                  src='/logo.png'
-                  height='794'
-                  width='1123'
-                  layout='responsive'
-                  alt='american travel consulting logo'
-                  quality='25'
-                />
-              </a>
-            </Link>
-            <h1 className='navbar__companyname'>American Travel Consulting</h1>
-          </div>
+          <Link href='/'>
+            <a className='logowrapper'>
+              <Image
+                src='/logo.png'
+                height='794'
+                width='1123'
+                layout='responsive'
+                alt='american travel consulting logo'
+                quality='25'
+              />
+            </a>
+          </Link>
 
           <div className='navbar__empty'></div>
 
