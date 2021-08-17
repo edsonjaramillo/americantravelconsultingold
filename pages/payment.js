@@ -15,7 +15,7 @@ export default function Payment({ trips }) {
           Payment Portal
         </h2>
         <div style={{ minHeight: '70vh' }} className='responsive-width-half'>
-          <form className='form' type='submit'>
+          <form className='form'>
             <div className='form__inputContainer'>
               <label className='form__label' htmlFor='schoolcode'>
                 School Code
