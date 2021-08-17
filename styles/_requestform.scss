@@ -33,6 +33,17 @@
     font-size: 1rem;
   }
 
+  &__buttonpayment {
+    background-color: $secondary-color;
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 0.75rem 1.125rem;
+    font-weight: bold;
+    font-size: 1rem;
+    justify-self: end;
+  }
+
   &__required {
     color: red;
   }

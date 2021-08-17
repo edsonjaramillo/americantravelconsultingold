@@ -1051,6 +1051,20 @@ object {
   font-size: 1rem;
 }
 
+.form__buttonpayment {
+  background-color: #ff7f00;
+  color: white;
+  border-radius: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.75rem 1.125rem;
+  font-weight: bold;
+  font-size: 1rem;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
 .form__required {
   color: red;
 }

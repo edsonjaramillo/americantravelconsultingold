@@ -1,10 +1,18 @@
 // import { connectToDatabase } from '@/utils/mongodb';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Head from 'next/head';
 
 export default function Payment({ trips }) {
-  // const isEmpty = trips.length < 1 ? true : false;
+  const router = useRouter();
   const [code, setCode] = useState('');
+
+  const submit = () => {
+    console.log(code);
+    router.push(`https://americantravelconsulting.grcoll.co/go/${code}
+    `);
+  };
+
   return (
     <>
       <Head>
@@ -15,7 +23,13 @@ export default function Payment({ trips }) {
           Payment Portal
         </h2>
         <div style={{ minHeight: '70vh' }} className='responsive-width-half'>
-          <form className='form'>
+          <form
+            className='form'
+            onSubmit={(e) => {
+              e.preventDefault();
+              submit();
+            }}
+          >
             <div className='form__inputContainer'>
               <label className='form__label' htmlFor='schoolcode'>
                 School Code
@@ -30,13 +44,16 @@ export default function Payment({ trips }) {
                 onChange={(e) => setCode(String(e.target.value).trim())}
               />
             </div>
-            <a
+            <button className='form__buttonpayment' type='submit'>
+              Submit
+            </button>
+            {/* <a
               className='form__link'
               href={`https://americantravelconsulting.grcoll.co/go/${code}
 `}
             >
               Submit
-            </a>
+            </a> */}
           </form>
         </div>
       </div>
