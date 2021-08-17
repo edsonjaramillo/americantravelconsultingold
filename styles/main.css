@@ -609,6 +609,14 @@ object {
   }
 }
 
+@media (min-width: 1921px) {
+  .cta__imagewrapper {
+    width: 525px;
+    -webkit-transform: translate(0%, 15%);
+            transform: translate(0%, 15%);
+  }
+}
+
 .typeGrid {
   display: -ms-grid;
   display: grid;
