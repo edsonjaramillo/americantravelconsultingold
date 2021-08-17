@@ -25,7 +25,7 @@ export default function Payment({ trips }) {
                 name='schoolcode'
                 id='schoolecode'
                 className='form__input'
-                placeholder='School Code'
+                placeholder='ex. schoolhsbandchicago2022'
                 required
                 onChange={(e) => setCode(String(e.target.value).trim())}
               />
