@@ -26,8 +26,9 @@ export default function Payment({ trips }) {
           <form
             className='form'
             onSubmit={(e) => {
-              e.preventDefault();
               submit();
+              e.preventDefault();
+              e.target.reset();
             }}
           >
             <div className='form__inputContainer'>
