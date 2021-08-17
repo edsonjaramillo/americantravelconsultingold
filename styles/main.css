@@ -991,7 +991,7 @@ object {
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   resize: none;
-  padding: 0.15rem 0.2rem;
+  padding: 0.25rem 0.35rem;
 }
 
 .form__inputContainer {
@@ -1019,5 +1019,17 @@ object {
 
 .form__required {
   color: red;
+}
+
+.form__link {
+  background-color: #ff7f00;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.75rem 1.125rem;
+  border-radius: 10px;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 /*# sourceMappingURL=main.css.map */

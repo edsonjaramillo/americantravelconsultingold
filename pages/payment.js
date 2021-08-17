@@ -1,49 +1,60 @@
-import { connectToDatabase } from '@/utils/mongodb';
+// import { connectToDatabase } from '@/utils/mongodb';
+import { useState } from 'react';
 import Head from 'next/head';
 
 export default function Payment({ trips }) {
-  const isEmpty = trips.length < 1 ? true : false;
+  // const isEmpty = trips.length < 1 ? true : false;
+  const [code, setCode] = useState('');
   return (
     <>
       <Head>
         <title>American Travel Consulting | Payment</title>
       </Head>
       <div className='section'>
-        <h2 className='responsive-width-form section__header'>Payment Links</h2>
-        <div style={{ minHeight: '70vh' }}>
-          <div className='responsive-width-form paymentgrid'>
-            {isEmpty && <h1>No Trip Links Available</h1>}
-            {trips.map(({ _id, date, organization, location, link }) => (
-              <div key={_id} className='payment'>
-                <p className='payment__organization'>{`${organization}`}</p>
-                <p className='payment__location'>{`${location}`}</p>
-                <p className='payment__date'>{date}</p>
-                {/* <p className='payment__date'>{`${new Date(
-                date
-              ).toLocaleDateString()}`}</p> */}
-                <a className='payment__link' href={link}>
-                  Pay
-                </a>
-              </div>
-            ))}
-          </div>
+        <h2 className='responsive-width-form section__header'>
+          Payment Portal
+        </h2>
+        <div style={{ minHeight: '70vh' }} className='responsive-width-half'>
+          <form className='form' type='submit'>
+            <div className='form__inputContainer'>
+              <label className='form__label' htmlFor='schoolcode'>
+                School Code
+              </label>
+              <input
+                type='text'
+                name='schoolcode'
+                id='schoolecode'
+                className='form__input'
+                placeholder='School Code'
+                required
+                onChange={(e) => setCode(String(e.target.value).trim())}
+              />
+            </div>
+            <a
+              className='form__link'
+              href={`https://americantravelconsulting.grcoll.co/go/${code}
+`}
+            >
+              Submit
+            </a>
+          </form>
         </div>
       </div>
     </>
   );
 }
 
-export const getServerSideProps = async (ctx) => {
-  const { db } = await connectToDatabase();
-  const trips = await db
-    .collection('trips')
-    .find({ visible: true })
-    .sort({ date: 1 })
-    .toArray();
+// export const getServerSideProps = async (ctx) => {
+//   const { db } = await connectToDatabase();
+//   const trips = await db
+//     .collection('trips')
+//     .find({ visible: true })
+//     .sort({ date: 1 })
+//     .toArray();
 
-  return {
-    props: {
-      trips: JSON.parse(JSON.stringify(trips)),
-    },
-  };
-};
+//   return {
+//     props: {
+//       trips: JSON.parse(JSON.stringify(trips)),
+//     },
+//   };
+// };

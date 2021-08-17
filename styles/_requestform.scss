@@ -11,7 +11,7 @@
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     resize: none;
-    padding: 0.15rem 0.2rem;
+    padding: 0.25rem 0.35rem;
   }
 
   &__inputContainer {
@@ -34,5 +34,14 @@
 
   &__required {
     color: red;
+  }
+
+  &__link {
+    background-color: $secondary-color;
+    color: white;
+    width: fit-content;
+    padding: 0.75rem 1.125rem;
+    border-radius: 10px;
+    justify-self: end;
   }
 }
