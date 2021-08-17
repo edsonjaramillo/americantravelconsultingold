@@ -7,6 +7,10 @@
   height: 45vh;
   position: relative;
 
+  &__imagewrapper {
+    display: none;
+  }
+
   &__boundary {
     position: absolute;
     top: 50%;
@@ -62,6 +66,7 @@
     // height: 50vh;
 
     height: 80vh;
+
     &__title {
       font-size: 3rem;
     }
@@ -80,7 +85,16 @@
   @include media('>xl') {
     // height: 50vh;
 
+    &__imagewrapper {
+      display: block;
+      position: absolute;
+      width: 375px;
+      right: 0;
+      transform: translate(0%, 50%);
+    }
+
     height: 80vh;
+
     &__title {
       font-size: 4rem;
     }

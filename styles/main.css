@@ -318,6 +318,19 @@ object {
   width: 6rem;
 }
 
+.navbar__logogrid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar__companyname {
+  margin-left: 1rem;
+  color: white;
+  font-size: 2rem;
+  margin: auto 0rem auto 0rem;
+}
+
 .navbar__hb1, .navbar__hb2, .navbar__hb3 {
   height: 2.75px;
   background-color: white;
@@ -494,6 +507,10 @@ object {
   position: relative;
 }
 
+.cta__imagewrapper {
+  display: none;
+}
+
 .cta__boundary {
   position: absolute;
   top: 50%;
@@ -569,6 +586,14 @@ object {
 @media (min-width: 1367px) {
   .cta {
     height: 80vh;
+  }
+  .cta__imagewrapper {
+    display: block;
+    position: absolute;
+    width: 375px;
+    right: 0;
+    -webkit-transform: translate(0%, 50%);
+            transform: translate(0%, 50%);
   }
   .cta__title {
     font-size: 4rem;
