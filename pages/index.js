@@ -137,7 +137,8 @@ export default function Home() {
           />
 
           <Testimonial
-            quote='“I used American Travel for two different trips. The first was Pre-COVID and was absolutely seamless. Great customer service and care from beginning to end. The second was supposed to happen and then COVID hit and shut everything down. American Travel was outstanding to work with throughout the process and refunded money without any issues. I highly recommend using them for your travel needs.”	'
+            quote='“These folks are a band director’s “Dream Team” in organization. Our band went to NYC & Philly with them, and it was the best trip I have ever been on with my bands in 40 years of teaching. From preparation to scheduling & everything in between, we could not have asked for any better of an experience. My kids & parents still talk about what a great time it was. I was able to relax & enjoy myself because I knew they had it all covered. I am more than happy to share about our experience- contact me.”
+            '
             name='David Bearden'
             position=''
             organization='Oneonta High School Band'
