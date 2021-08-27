@@ -3,14 +3,16 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { GraphQLClient, gql } from 'graphql-request';
 import { Map } from '@/components/index';
+import { getPlaiceholder } from 'plaiceholder';
 
 const client = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPHCMS_URL);
 
-export default function Destination({ destination }) {
+export default function Destination({ destination, blurhashes }) {
   const [status, setStatus] = useState('Show');
   const [showMap, setShowMap] = useState(false);
 
   const {
+    id,
     name,
     slug,
     description,
@@ -26,6 +28,9 @@ export default function Destination({ destination }) {
     zoomlevel,
     viewport,
   } = destination;
+
+  const { [id]: blur } = blurhashes;
+  const quality = 25;
 
   const MapBox = () => {
     return (
@@ -86,9 +91,11 @@ export default function Destination({ destination }) {
             src={main.url}
             height='400'
             width='800'
+            placeholder='blur'
+            blurDataURL={blur.b64main}
             layout='responsive'
-            // objectFit='contain'
             alt={mainalt}
+            quality={quality}
           />
         </div>
         <div className='destination__imagesecond' id='second'>
@@ -98,7 +105,10 @@ export default function Destination({ destination }) {
             height='400'
             width='800'
             layout='responsive'
+            placeholder='blur'
+            blurDataURL={blur.b64second}
             alt={secondalt}
+            quality={quality}
           />
         </div>
         <div className='destination__imagethird' id='third'>
@@ -108,7 +118,10 @@ export default function Destination({ destination }) {
             height='400'
             width='800'
             layout='responsive'
+            placeholder='blur'
+            blurDataURL={blur.b64third}
             alt={thirdalt}
+            quality={quality}
           />
         </div>
         <div className='destination__imagefourth' id='fourth'>
@@ -118,7 +131,10 @@ export default function Destination({ destination }) {
             height='400'
             width='800'
             layout='responsive'
+            placeholder='blur'
+            blurDataURL={blur.b64fourth}
             alt={fourthalt}
+            quality={quality}
           />
         </div>
       </div>
@@ -202,9 +218,28 @@ export const getStaticProps = async ({ params }) => {
 
   const { destination } = await client.request(query);
 
+  let blurhashes = {};
+
+  const { id, main, secondimage, thirdimage, fourthimage } = destination;
+  const { base64: b64main } = await getPlaiceholder(main.url);
+  const { base64: b64second } = await getPlaiceholder(secondimage.url);
+  const { base64: b64third } = await getPlaiceholder(thirdimage.url);
+  const { base64: b64fourth } = await getPlaiceholder(fourthimage.url);
+
+  blurhashes = {
+    ...blurhashes,
+    [id]: {
+      b64main: b64main,
+      b64second: b64second,
+      b64third: b64third,
+      b64fourth: b64fourth,
+    },
+  };
+
   return {
     props: {
       destination: destination,
+      blurhashes: blurhashes,
     },
   };
 };
@@ -219,7 +254,6 @@ export const getStaticPaths = async () => {
   `;
 
   const { destinations } = await client.request(query);
-  console.log(destinations);
 
   return {
     paths: destinations.map(({ slug }) => ({ params: { slug: slug } })),

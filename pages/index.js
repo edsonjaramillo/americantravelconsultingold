@@ -3,10 +3,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Location, Testimonial } from '@/components/index';
 import { GraphQLClient, gql } from 'graphql-request';
+import { getPlaiceholder } from 'plaiceholder';
 
 const client = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPHCMS_URL);
 
-export default function Home({ destinations, testimonials }) {
+export default function Home({ destinations, testimonials, blurhashes }) {
   return (
     <>
       <Head>
@@ -48,6 +49,7 @@ export default function Home({ destinations, testimonials }) {
               url={main.url}
               name={name}
               mainalt={mainalt}
+              blurhash={blurhashes[id]}
               slug={slug}
             />
           ))}
@@ -99,10 +101,23 @@ export const getStaticProps = async (ctx) => {
   const { testimonials } = data;
   const { destinations } = data;
 
+  let blurhashes = {};
+
+  for (let index = 0; index < destinations.length; index++) {
+    const { id, main } = destinations[index];
+    const { base64: b64main } = await getPlaiceholder(main.url);
+
+    blurhashes = {
+      ...blurhashes,
+      [id]: { b64main: b64main },
+    };
+  }
+
   return {
     props: {
       destinations: destinations,
       testimonials: testimonials,
+      blurhashes: blurhashes,
     },
   };
 };

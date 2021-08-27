@@ -8,7 +8,6 @@ export default function Payment({ trips }) {
   const [code, setCode] = useState('');
 
   const submit = () => {
-    console.log(code);
     router.push(`https://americantravelconsulting.grcoll.co/go/${code}
     `);
   };
