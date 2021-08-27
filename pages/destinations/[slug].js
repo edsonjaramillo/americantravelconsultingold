@@ -58,6 +58,21 @@ export default function Destination({ destination }) {
         />
         <meta property='og:description' content={`${description}`} />
         <meta property='og:image' content={main.url}></meta>
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta
+          property='twitter:domain'
+          content={`https://americantravelconsulting.com/destinations/${slug}`}
+        />
+        <meta
+          property='twitter:url'
+          content={`https://americantravelconsulting.com/destinations/${slug}`}
+        />
+        <meta
+          name='twitter:title'
+          content={`American Travel Consulting | ${(Atlanta, Georgia)}`}
+        />
+        <meta name='twitter:description' content={description} />
+        <meta name='twitter:image' content={main.url}></meta>
       </Head>
 
       <div className='responsive-width destination__titleContainer'>
@@ -207,6 +222,6 @@ export const getStaticPaths = async () => {
 
   return {
     paths: destinations.map(({ slug }) => ({ params: { slug: slug } })),
-    fallback: 'blocking',
+    fallback: false,
   };
 };
