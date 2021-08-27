@@ -45,7 +45,7 @@ export default function Map({ mapitems, latitude, longitude, zoom }) {
               id={String(name).toLowerCase().replace(' ', '-')}>
               <p className='cityname'>{name}</p>
               {link && (
-                <a href={link} className='citylink'>
+                <a href={link} className='citylink' target='_blank'>
                   Visit Website
                 </a>
               )}

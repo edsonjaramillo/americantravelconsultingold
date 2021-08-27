@@ -29,8 +29,7 @@ export default function Payment({ trips }) {
               submit();
               e.preventDefault();
               e.target.reset();
-            }}
-          >
+            }}>
             <div className='form__inputContainer'>
               <label className='form__label' htmlFor='schoolcode'>
                 School Code
@@ -62,7 +61,7 @@ export default function Payment({ trips }) {
   );
 }
 
-// export const getServerSideProps = async (ctx) => {
+// export const getStaticProps = async (ctx) => {
 //   const { db } = await connectToDatabase();
 //   const trips = await db
 //     .collection('trips')
