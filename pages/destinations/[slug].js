@@ -69,7 +69,7 @@ export default function Destination({ destination }) {
         />
         <meta
           name='twitter:title'
-          content={`American Travel Consulting | ${(Atlanta, Georgia)}`}
+          content={`American Travel Consulting | ${name}`}
         />
         <meta name='twitter:description' content={description} />
         <meta name='twitter:image' content={main.url}></meta>
@@ -219,6 +219,7 @@ export const getStaticPaths = async () => {
   `;
 
   const { destinations } = await client.request(query);
+  console.log(destinations);
 
   return {
     paths: destinations.map(({ slug }) => ({ params: { slug: slug } })),
