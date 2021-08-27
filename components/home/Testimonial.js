@@ -7,7 +7,9 @@ export default function Testimonial({ quote, name, position, organization }) {
         </blockquote>
         <div className='testimonial__citations'>
           <cite className='testimonial__author'>{name}</cite>
-          <cite className='testimonial__position'>{position}</cite>
+          {position && (
+            <cite className='testimonial__position'>{position}</cite>
+          )}
           <cite className='testimonial__position'>{organization}</cite>
         </div>
       </div>

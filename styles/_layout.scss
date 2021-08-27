@@ -33,17 +33,27 @@
   cursor: pointer;
 }
 
-.city {
-  font-size: 0.75rem;
-  background-color: rgba(230, 228, 224, 1);
-  padding: 0.2rem 0.4rem;
-  // border-radius: 10px;
+.citybox {
+  padding: 0.5rem 1rem;
   border: 2px solid $secondary-color;
   outline: 2px solid $primary-color;
-  // font-weight: bold;
-  // position: absolute;
-  // inset: 0;
-  // right: 0px;
+  display: flex;
+  background-color: rgba(230, 228, 224, 1);
+}
+
+.cityname {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-right: 1.25rem;
+}
+
+.citylink {
+  background-color: $secondary-color;
+  color: white;
+  font-weight: 500;
+  @include button-size(0.75rem);
+  border-radius: 10px;
 }
 
 .hidden {

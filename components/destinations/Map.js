@@ -1,10 +1,10 @@
 import { useState, useMemo } from 'react';
 import ReactMapGL, { Marker } from 'react-map-gl';
 
-export default function Map({ dataMarkers, lat, lon, zoom }) {
+export default function Map({ mapitems, latitude, longitude, zoom }) {
   function viewDetails(name) {
     const place = document.getElementById(name);
-    const removePlaces = document.getElementsByClassName('city');
+    const removePlaces = document.getElementsByClassName('citybox');
     for (let index = 0; index < removePlaces.length; index++) {
       removePlaces[index].classList.add('hidden');
     }
@@ -12,38 +12,49 @@ export default function Map({ dataMarkers, lat, lon, zoom }) {
   }
 
   const [viewport, setViewport] = useState({
-    latitude: lat,
-    longitude: lon,
+    latitude: latitude,
+    longitude: longitude,
     zoom: zoom,
     transitionDuration: 1000,
   });
 
   const markers = useMemo(
     () =>
-      dataMarkers.map((data) => (
-        <Marker key={data.lon} longitude={data.lon} latitude={data.lat}>
-          <img
-            className='pin'
-            src='/images/destinations/pin.png'
-            alt='black pin marker on map'
-            onClick={() => {
-              viewDetails(String(data.name).toLowerCase().replace(' ', '-'));
-              setViewport({
-                ...viewport,
-                latitude: data.lat,
-                longitude: data.lon,
-                zoom: 13.5,
-              });
-            }}
-          />
-          <p
-            id={String(data.name).toLowerCase().replace(' ', '-')}
-            className='city hidden'>
-            {data.name}
-          </p>
-        </Marker>
-      )),
-    [dataMarkers]
+      mapitems.map(({ id, name, coordinate, link }) => {
+        console.log(coordinate);
+        return (
+          <Marker
+            key={id}
+            longitude={coordinate.longitude}
+            latitude={coordinate.latitude}>
+            <img
+              className='pin'
+              src='/images/destinations/pin.png'
+              alt='black pin marker on map'
+              onClick={() => {
+                viewDetails(String(name).toLowerCase().replace(' ', '-'));
+                setViewport({
+                  ...viewport,
+                  latitude: coordinate.latitude,
+                  longitude: coordinate.longitude,
+                  zoom: 13.5,
+                });
+              }}
+            />
+            <div
+              className='citybox hidden'
+              id={String(name).toLowerCase().replace(' ', '-')}>
+              <p className='cityname'>{name}</p>
+              {link && (
+                <a href={link} className='citylink'>
+                  Visit Website
+                </a>
+              )}
+            </div>
+          </Marker>
+        );
+      }),
+    [mapitems]
   );
 
   return (

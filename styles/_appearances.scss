@@ -1,0 +1,26 @@
+// $font-family: 'Inter';
+// $button-hover: rgba(
+//   $color: $brand-primary,
+//   $alpha: 0.85,
+// );
+
+// $button-hover-secondary: rgba(
+//   $color: $brand-secondary-400,
+//   $alpha: 0.95,
+// );
+// $border-radius: 7px;
+// $text-lineheight-100: 1.6;
+
+@mixin box-shadow-glow($color) {
+  box-shadow: 0 4px 14px 0 $color;
+}
+
+@mixin button-size($size) {
+  padding: $size $size * 1.5;
+  font-size: $size;
+}
+
+@mixin input-size($size) {
+  padding: ($size * 0.5) $size;
+  font-size: $size;
+}

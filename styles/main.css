@@ -173,12 +173,34 @@ object {
   cursor: pointer;
 }
 
-.city {
-  font-size: 0.75rem;
-  background-color: #e6e4e0;
-  padding: 0.2rem 0.4rem;
+.citybox {
+  padding: 0.5rem 1rem;
   border: 2px solid #ff7f00;
   outline: 2px solid #1e3a8a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #e6e4e0;
+}
+
+.cityname {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  margin-right: 1.25rem;
+}
+
+.citylink {
+  background-color: #ff7f00;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1.125rem;
+  font-size: 0.75rem;
+  border-radius: 10px;
 }
 
 .hidden {
@@ -1080,4 +1102,3 @@ object {
   -ms-grid-column-align: end;
       justify-self: end;
 }
-/*# sourceMappingURL=main.css.map */
