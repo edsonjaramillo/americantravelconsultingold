@@ -93,6 +93,26 @@
     // background-color: lightgray;
   }
 
+  &__imagegrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // background-color: blue;
+    gap: 1rem;
+  }
+
+  &__imagemain {
+  }
+
+  &__imagesecond {
+    // display: none;
+  }
+  &__imagethird {
+    // display: none;
+  }
+  &__imagefourth {
+    // display: none;
+  }
+
   &__location {
     font-weight: bold;
     font-size: 1.75rem;
@@ -150,6 +170,28 @@
     &__list {
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
+    }
+  }
+
+  @include media('>=md') {
+    &__imagegrid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    &__imagemain {
+    }
+
+    &__imagesecond {
+      display: block;
+    }
+    &__imagethird {
+      display: block;
+    }
+
+    &__fourththird {
+      display: block;
     }
   }
   // @include media('>=md') {

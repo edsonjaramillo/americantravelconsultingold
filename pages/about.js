@@ -1,5 +1,8 @@
 import Head from 'next/head';
-import { Children } from 'react';
+import { GraphQLClient, gql } from 'graphql-request';
+
+const client = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPHCMS_URL);
+
 export default function About() {
   const Person = ({ name, email, children }) => {
     return (
@@ -26,8 +29,7 @@ export default function About() {
           marginTop: '1rem',
           marginBottom: '1rem',
           fontSize: '2rem',
-        }}
-      >
+        }}>
         About Us
       </h1>
       <div className='personGrid responsive-width'>
@@ -59,8 +61,7 @@ export default function About() {
         </Person>
         <Person
           name='Curtis Burttram'
-          email='curtis@americantravelconsulting.com'
-        >
+          email='curtis@americantravelconsulting.com'>
           <p className='person__child'>
             {`Curtis Burttram joined the American Travel team after an outstanding thirty-four year career as a band director in Alabama public schools, much of that time at Albertville High School.  Curtis led the Albertville High School Band in the 2007 Macy*s Thanksgiving Day Parade, and participated in the Hollywood Christmas Parade (CA), National Cherry Blossom Parade (Wash DC), and the Magnificent Mile Lights Festival Parade in Chicago.  In addition, Curtis’ bands have performed in the Fiesta Bowl Parade (AZ), the Fiesta Flambeau Parade (TX), and in Nassau, Bahamas.`}
           </p>

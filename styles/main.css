@@ -233,6 +233,14 @@ object {
   padding: 0.5rem 0rem;
 }
 
+.destination__imagegrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
 .destination__location {
   font-weight: bold;
   font-size: 1.75rem;
@@ -285,6 +293,25 @@ object {
     -ms-grid-columns: (minmax(0, 1fr))[3];
         grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .destination__imagegrid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .destination__imagesecond {
+    display: block;
+  }
+  .destination__imagethird {
+    display: block;
+  }
+  .destination__fourththird {
+    display: block;
   }
 }
 

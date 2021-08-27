@@ -21,7 +21,6 @@ export default function Map({ mapitems, latitude, longitude, zoom }) {
   const markers = useMemo(
     () =>
       mapitems.map(({ id, name, coordinate, link }) => {
-        console.log(coordinate);
         return (
           <Marker
             key={id}

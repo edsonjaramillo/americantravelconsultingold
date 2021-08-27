@@ -17,6 +17,12 @@ export default function Destination({ destination }) {
     mapitems,
     main,
     mainalt,
+    secondimage,
+    secondalt,
+    thirdimage,
+    thirdalt,
+    fourthimage,
+    fourthalt,
     zoomlevel,
     viewport,
   } = destination;
@@ -57,15 +63,49 @@ export default function Destination({ destination }) {
       <div className='responsive-width destination__titleContainer'>
         <h1 className='destination__location'>{name}</h1>
       </div>
-      <div className='responsive-width destination__imageWrapper'>
-        <Image
-          className='map__image'
-          src={main.url}
-          height='400'
-          width='800'
-          layout='responsive'
-          alt={mainalt}
-        />
+
+      <div className='destination__imagegrid responsive-width'>
+        <div className='destination__imagemain' id='main'>
+          <Image
+            className='map__image'
+            src={main.url}
+            height='400'
+            width='800'
+            layout='responsive'
+            // objectFit='contain'
+            alt={mainalt}
+          />
+        </div>
+        <div className='destination__imagesecond' id='second'>
+          <Image
+            className='map__image'
+            src={secondimage.url}
+            height='400'
+            width='800'
+            layout='responsive'
+            alt={secondalt}
+          />
+        </div>
+        <div className='destination__imagethird' id='third'>
+          <Image
+            className='map__image'
+            src={thirdimage.url}
+            height='400'
+            width='800'
+            layout='responsive'
+            alt={thirdalt}
+          />
+        </div>
+        <div className='destination__imagefourth' id='fourth'>
+          <Image
+            className='map__image'
+            src={fourthimage.url}
+            height='400'
+            width='800'
+            layout='responsive'
+            alt={fourthalt}
+          />
+        </div>
       </div>
       <div className='responsive-width destination__attractions'>
         <ul className='destination__list'>
@@ -112,12 +152,27 @@ export const getStaticProps = async ({ params }) => {
         url
       }
       mainalt
+      secondimage {
+        id
+        url
+      }
+      secondalt
+      thirdimage {
+        id
+        url
+      }
+      thirdalt
+      fourthimage {
+        id
+        url
+      }
+      fourthalt
       zoomlevel
       viewport {
         latitude
         longitude
       }
-      mapitems {
+      mapitems(orderBy: name_ASC) {
         id
         name
         coordinate {
