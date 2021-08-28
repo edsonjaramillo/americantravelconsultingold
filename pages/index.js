@@ -74,7 +74,7 @@ export default function Home({ destinations, testimonials, blurhashes }) {
   );
 }
 
-export const getStaticProps = async (ctx) => {
+export const getServerSideProps = async (ctx) => {
   const query = gql`
     query MyQuery {
       destinations(orderBy: featuredsort_ASC, where: { featured: true }) {

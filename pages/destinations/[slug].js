@@ -169,8 +169,9 @@ export default function Destination({ destination, blurhashes }) {
   );
 }
 
-export const getStaticProps = async ({ params }) => {
-  const { slug } = params;
+export const getServerSideProps = async (ctx) => {
+  const { slug } = ctx.query;
+  // const { slug } = params;
 
   const query = gql`query MyQuery {
     destination(where: {slug: "${slug}"}) {
@@ -244,19 +245,19 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-export const getStaticPaths = async () => {
-  const query = gql`
-    query MyQuery {
-      destinations {
-        slug
-      }
-    }
-  `;
+// export const getStaticPaths = async () => {
+//   const query = gql`
+//     query MyQuery {
+//       destinations {
+//         slug
+//       }
+//     }
+//   `;
 
-  const { destinations } = await client.request(query);
+//   const { destinations } = await client.request(query);
 
-  return {
-    paths: destinations.map(({ slug }) => ({ params: { slug: slug } })),
-    fallback: false,
-  };
-};
+//   return {
+//     paths: destinations.map(({ slug }) => ({ params: { slug: slug } })),
+//     fallback: false,
+//   };
+// };
