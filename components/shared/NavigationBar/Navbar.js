@@ -34,6 +34,11 @@ export default function Navbar() {
           <div className='navbar__empty'></div>
 
           <div className='navbar__items'>
+            <Link href='/'>
+              <a className='navbar__links' onClick={closeMenu}>
+                Home
+              </a>
+            </Link>
             <Link href='/destinations'>
               <a className='navbar__links' onClick={closeMenu}>
                 Destinations

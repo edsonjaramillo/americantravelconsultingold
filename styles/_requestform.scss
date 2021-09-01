@@ -6,6 +6,7 @@
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
   margin-bottom: 2rem;
+  border-radius: 10px;
 
   &__input {
     outline: 1px solid lightgrey;
