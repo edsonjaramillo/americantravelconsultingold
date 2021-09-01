@@ -3,9 +3,12 @@ module.exports = {
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [
-      { userAgent: '*', disallow: '/about' },
-      { userAgent: '*', disallow: '/contact' },
-      { userAgent: '*', disallow: '/payment' },
+      {
+        userAgent: '*',
+        disallow: ['/about', '/contact', '/payment', '/destinations'],
+      },
+      // { userAgent: '*', disallow: '/contact' },
+      // { userAgent: '*', disallow: '/payment' },
       { userAgent: '*', allow: '/' },
     ],
   },
