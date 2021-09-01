@@ -42,6 +42,7 @@ export default function About({ employees }) {
             name={name}
             biography={biography}
             quote={quote}
+            email={email}
             employees={email}
           />
         ))}
