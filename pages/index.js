@@ -7,11 +7,53 @@ import { getPlaiceholder } from 'plaiceholder';
 
 const client = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPHCMS_URL);
 
-export default function Home({ destinations, testimonials, blurhashes }) {
+export default function Home({
+  asset,
+  destinations,
+  testimonials,
+  blurhashes,
+}) {
   return (
     <>
       <Head>
         <title>American Travel Consulting</title>
+        <meta
+          name='description'
+          content='Specializing in student group travel, American Travel Consulting can customize the perfect trip for your group!  With decades of experience in student group travel, we look forward to working with you to plan your next band, choir, orchestra, or school group trip!'
+        />
+        <meta
+          property='og:url'
+          content='https://www.americantravelconsulting.com/'
+        />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content='American Travel Consulting' />
+        <meta
+          property='og:description'
+          content='Specializing in student group travel, American Travel Consulting can customize the perfect trip for your group!  With decades of experience in student group travel, we look forward to working with you to plan your next band, choir, orchestra, or school group trip!'
+        />
+        <meta
+          property='og:image'
+          content='https://media.graphcms.com/s1jLe0UQqibjOvkDfNCj'
+        />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta
+          property='twitter:domain'
+          content='americantravelconsulting.com'
+        />
+        <meta
+          property='twitter:url'
+          content='https://www.americantravelconsulting.com/'
+        />
+        <meta name='twitter:title' content='American Travel Consulting' />
+        <meta
+          name='twitter:description'
+          content='Specializing in student group travel, American Travel Consulting can customize the perfect trip for your group!  With decades of experience in student group travel, we look forward to working with you to plan your next band, choir, orchestra, or school group trip!
+'
+        />
+        <meta
+          name='twitter:image'
+          content='https://media.graphcms.com/s1jLe0UQqibjOvkDfNCj'
+        />
       </Head>
       <div className='cta'>
         <div className='responsive-width cta__boundary'>
@@ -77,6 +119,9 @@ export default function Home({ destinations, testimonials, blurhashes }) {
 export const getServerSideProps = async (ctx) => {
   const query = gql`
     query MyQuery {
+      asset(where: { id: "ckt0sv8ao7aup0c782lxrmkzg" }) {
+        url
+      }
       destinations(orderBy: featuredsort_ASC, where: { featured: true }) {
         id
         name
@@ -98,9 +143,11 @@ export const getServerSideProps = async (ctx) => {
   `;
 
   const data = await client.request(query);
+  const { asset } = data;
   const { testimonials } = data;
   const { destinations } = data;
 
+  console.log(asset);
   let blurhashes = {};
 
   for (let index = 0; index < destinations.length; index++) {
@@ -115,6 +162,7 @@ export const getServerSideProps = async (ctx) => {
 
   return {
     props: {
+      asset: asset,
       destinations: destinations,
       testimonials: testimonials,
       blurhashes: blurhashes,

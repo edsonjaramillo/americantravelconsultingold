@@ -212,7 +212,7 @@ export const getServerSideProps = async (ctx) => {
           longitude
         }
         link
-      }
+      }]
     }
   }
   `;

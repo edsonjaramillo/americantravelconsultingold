@@ -14,7 +14,7 @@ export default function Location({ url, name, slug, mainalt, blurhash }) {
             layout='responsive'
             placeholder='blur'
             blurDataURL={blurhash}
-            mainalt={mainalt}
+            alt={mainalt}
             quality='25'
           />
         </div>

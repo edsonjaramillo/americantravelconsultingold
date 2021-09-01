@@ -11,7 +11,7 @@ const Footer = () => {
     return (
       <>
         <div className='footer__section'>
-          <h2 className='footer__category'>{category}</h2>
+          <p className='footer__category'>{category}</p>
           {children}
         </div>
       </>
@@ -54,22 +54,19 @@ const Footer = () => {
           <FooterSection category='Social'>
             <a
               className='footer__link'
-              href='https://www.facebook.com/AmericanTravelConsulting/'
-            >
+              href='https://www.facebook.com/AmericanTravelConsulting/'>
               Facebook
             </a>
             <a
               className='footer__link'
-              href='https://www.facebook.com/AmericanTravelConsulting/'
-            >
+              href='https://www.facebook.com/AmericanTravelConsulting/'>
               Instagram
             </a>
           </FooterSection>
           <FooterSection category='Contact'>
             <a
               href='mailto:chris@americantravelconsulting.com'
-              className='footer__link'
-            >
+              className='footer__link'>
               chris@americantravelconsulting.com
             </a>
             <a href='tel:2565720669' className='footer__link'>

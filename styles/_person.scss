@@ -1,62 +1,49 @@
 .person {
   display: flex;
   flex-direction: column;
-  //   border: 1px solid lightgray;
-
-  &__child:not(:last-child) {
-    margin-bottom: 1rem;
-  }
+  padding: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 10px;
 
   &__name {
     font-size: 1.25rem;
     font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__bio {
+    white-space: pre-line;
+    margin-bottom: 1rem;
   }
 
   &__email {
     background-color: $secondary-color;
-    padding: 0.5rem 0rem;
+    @include button-size(1rem);
     text-align: center;
     color: white;
     font-weight: bold;
     border-radius: 10px;
-    margin-top: 1rem;
+    width: fit-content;
+    height: fit-content;
+    margin: 0rem 0rem 0rem auto;
   }
 
   &__quote {
     font-style: italic;
+    margin-bottom: 1rem;
   }
-
-  // &__info {
-  //   min-height: 38rem;
-  // }
 
   @include media('>=lg') {
-    // width: 15rem;
-    &__info {
-      min-height: 38rem;
+    &__content {
+      min-height: 45rem;
     }
   }
 
-  @include media('>xl') {
-    // width: 15rem;
-    &__info {
-      min-height: 30rem;
+  @include media('>=xl') {
+    &__content {
+      min-height: 25rem;
     }
   }
-
-  @include media('>2xl') {
-    // width: 15rem;
-    &__info {
-      min-height: 20rem;
-    }
-  }
-
-  // @include media('>lg') {
-  //   width: 34rem;
-  // }
-  // @include media('>xl') {
-  //   width: 44.5rem;
-  // }
 }
 
 .personGrid {
@@ -64,23 +51,11 @@
   // flex-direction: column;
   display: grid;
   grid-template-columns: repeat(1, fr);
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
 
   @include media('>=lg') {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    margin-bottom: 0rem;
   }
-  // margin-bottom: 1rem;
-  // @include media('>lg') {
-  //   flex-direction: row;
-  //   flex-wrap: wrap;
-  //   justify-content: space-between;
-  //   // width: 30rem;
-  // }
-}
-
-.person:not(:last-child) {
-  margin-bottom: 3rem;
 }
