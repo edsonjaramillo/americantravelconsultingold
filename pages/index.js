@@ -134,7 +134,6 @@ export const getStaticProps = async (ctx) => {
   `;
 
   const data = await client.request(query);
-  const { asset } = data;
   const { testimonials } = data;
   const { destinations } = data;
   let blurhashes = {};
@@ -151,7 +150,6 @@ export const getStaticProps = async (ctx) => {
 
   return {
     props: {
-      asset: asset,
       destinations: destinations,
       testimonials: testimonials,
       blurhashes: blurhashes,
