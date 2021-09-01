@@ -30,7 +30,7 @@ export default function Destination({ destination, blurhashes }) {
   } = destination;
 
   const { [id]: blur } = blurhashes;
-  const quality = 25;
+  const quality = 15;
 
   const MapBox = () => {
     return (

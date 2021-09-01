@@ -70,6 +70,7 @@ export default function Home({ destinations, testimonials, blurhashes }) {
               height='794'
               width='1123'
               layout='responsive'
+              quality='25'
             />
           </div>
         </div>

@@ -15,7 +15,7 @@ export default function Location({ url, name, slug, mainalt, blurhash }) {
             placeholder='blur'
             blurDataURL={blurhash}
             alt={mainalt}
-            quality='25'
+            quality='15'
           />
         </div>
         <h3 className='location__header'>{name}</h3>
