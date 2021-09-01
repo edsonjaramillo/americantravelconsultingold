@@ -7,12 +7,7 @@ import { getPlaiceholder } from 'plaiceholder';
 
 const client = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPHCMS_URL);
 
-export default function Home({
-  asset,
-  destinations,
-  testimonials,
-  blurhashes,
-}) {
+export default function Home({ destinations, testimonials, blurhashes }) {
   return (
     <>
       <Head>
@@ -55,31 +50,6 @@ export default function Home({
           content='https://media.graphcms.com/s1jLe0UQqibjOvkDfNCj'
         />
       </Head>
-      {/* <div className='cta'>
-        <div className='responsive-width cta__boundary'>
-          <div className='cta__imagewrapper'>
-            <Image
-              src='/logo.png'
-              height='794'
-              width='1123'
-              layout='responsive'
-            />
-          </div>
-          <div className='cta__content'>
-            <h1 className='cta__title cta--newline'>
-              {`TRAVEL EASIER\nTRAVEL STRESS-FREE\nLET US DO THE WORK`}
-            </h1>
-            <p className='cta__subtitle'>
-              Enjoy your next student group trip from start to finish without a
-              worry in the world
-            </p>
-            <Link href='/contact'>
-              <a className='cta__link'>REQUEST A QUOTE</a>
-            </Link>
-          </div>
-        </div>
-      </div> */}
-
       <header className='cta'>
         <div className='cta__grid responsive-width'>
           <div className='cta__info'>
@@ -143,9 +113,6 @@ export default function Home({
 export const getStaticProps = async (ctx) => {
   const query = gql`
     query MyQuery {
-      asset(where: { id: "ckt0sv8ao7aup0c782lxrmkzg" }) {
-        url
-      }
       destinations(orderBy: featuredsort_ASC, where: { featured: true }) {
         id
         name
