@@ -164,7 +164,6 @@ export default function Destination({ destination, blurhashes }) {
         </button>
         {showMap && <MapBox />}
       </div>
-      {/* <pre>{JSON.stringify(destination, null, 2)}</pre> */}
     </>
   );
 }
