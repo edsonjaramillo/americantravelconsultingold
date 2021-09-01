@@ -75,6 +75,7 @@ export default function Home({ destinations, testimonials, blurhashes }) {
               width='1123'
               layout='responsive'
               quality='25'
+              alt='american travel consulting logo'
             />
           </div>
         </div>
