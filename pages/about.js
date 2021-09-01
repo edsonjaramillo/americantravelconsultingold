@@ -24,6 +24,7 @@ export default function About({ employees }) {
     <>
       <Head>
         <title>American Travel Consulting | About</title>
+        <meta name='robots' content='noindex' />
       </Head>
       <h1
         className='responsive-width'

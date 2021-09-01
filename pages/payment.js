@@ -16,6 +16,7 @@ export default function Payment({ trips }) {
     <>
       <Head>
         <title>American Travel Consulting | Payment</title>
+        <meta name='robots' content='noindex' />
       </Head>
       <div className='section'>
         <h2 className='responsive-width-form section__header'>

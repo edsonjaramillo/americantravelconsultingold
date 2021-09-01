@@ -5,6 +5,7 @@ export default function Contact() {
     <>
       <Head>
         <title>American Travel Consulting | Contact</title>
+        <meta name='robots' content='noindex' />
       </Head>
       <div className='contactheader responsive-width-form'>
         <h1 className='contactheader__title'>Need a quote?</h1>

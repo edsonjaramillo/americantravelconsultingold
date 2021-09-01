@@ -36,6 +36,7 @@ export default function Destinations({ destinations, blurhashes }) {
     <>
       <Head>
         <title>American Travel Consulting | Destinations</title>
+        <meta name='robots' content='noindex' />
       </Head>
 
       <div className='section'>
