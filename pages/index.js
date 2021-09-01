@@ -49,6 +49,10 @@ export default function Home({ destinations, testimonials, blurhashes }) {
           name='twitter:image'
           content='https://media.graphcms.com/s1jLe0UQqibjOvkDfNCj'
         />
+        <meta
+          name='keywords'
+          content='americantravelconsulting, american travel consulting'
+        />
       </Head>
       <header className='cta'>
         <div className='cta__grid responsive-width'>
