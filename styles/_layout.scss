@@ -54,6 +54,7 @@
   font-weight: 500;
   @include button-size(0.75rem);
   border-radius: 10px;
+  width: fit-content;
 }
 
 .hidden {

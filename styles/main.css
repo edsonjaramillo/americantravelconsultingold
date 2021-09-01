@@ -201,6 +201,9 @@ object {
   padding: 0.75rem 1.125rem;
   font-size: 0.75rem;
   border-radius: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .hidden {
