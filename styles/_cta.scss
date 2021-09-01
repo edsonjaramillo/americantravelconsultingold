@@ -1,31 +1,26 @@
 .cta {
   background-color: rgb(50, 57, 65);
   background-image: url(../public/cta.jpg);
-  // background-size: contain;
-  background-position: bottom;
-  color: white;
-  height: 45vh;
-  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 6rem 0rem;
 
-  &__imagewrapper {
-    display: none;
-  }
-
-  &__boundary {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &__content {
+  &__grid {
     display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: repeat(1, 1fr);
+    color: white;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
   }
 
   &__title {
     font-size: 1.75rem;
+    white-space: pre-line;
     font-weight: bold;
   }
 
@@ -34,89 +29,82 @@
   }
 
   &__link {
-    padding: 0.5rem 0rem;
-    background-color: $secondary-color;
+    @include button-size(1rem);
     color: white;
+    background-color: $secondary-color;
     text-align: center;
     border-radius: 10px;
-    font-weight: bold;
+    font-weight: 700;
+    height: fit-content;
   }
 
-  &--newline {
-    white-space: pre-line;
+  &__image {
+    display: none;
   }
 
-  @include media('>=md') {
-    height: 60vh;
-    &__title {
-      font-size: 3rem;
+  @include media('>sm') {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
     }
-
-    &__subtitle {
+    &__title {
       font-size: 2rem;
     }
 
-    &__link {
-      padding: 1rem 0rem;
+    &__subtitle {
       font-size: 1.5rem;
+      // width: 75%;
+    }
+
+    &__link {
+      width: fit-content;
+      margin: 0rem auto 0rem 0rem;
+    }
+
+    &__image {
+      margin: auto 0rem;
+      display: block;
+    }
+  }
+  @include media('>=md') {
+    &__info {
+      gap: 1rem;
+      // background-color: red;
+    }
+
+    &__title {
+      // font-size: 2.5rem;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__subtitle {
+      font-size: 1.5rem;
+      width: auto;
+      margin: 0rem 0rem 0rem 0rem;
+      // background-color: blue;
+    }
+    &__image {
+      display: block;
+    }
+
+    &__link {
+      margin: 0rem 0rem auto 0rem;
     }
   }
 
   @include media('>lg') {
-    // height: 50vh;
-
-    height: 80vh;
-
     &__title {
-      font-size: 3rem;
+      font-size: 3.5rem;
     }
 
     &__subtitle {
-      font-size: 2rem;
-    }
-    &__content {
-      width: 90%;
+      font-size: 2.75rem;
     }
 
     &__link {
-      width: 40%;
-    }
-  }
-
-  @include media('>xl') {
-    // height: 50vh;
-
-    &__imagewrapper {
-      display: block;
-      position: absolute;
-      width: 375px;
-      right: 0;
-      transform: translate(0%, 50%);
-    }
-
-    height: 80vh;
-
-    &__title {
-      font-size: 4rem;
-    }
-
-    &__subtitle {
-      font-size: 3rem;
-    }
-    &__content {
-      width: 70%;
-    }
-
-    &__link {
-      width: 40%;
-    }
-  }
-
-  @include media('>2xl') {
-    &__imagewrapper {
-      // border: 1px solid;
-      width: 525px;
-      transform: translate(0%, 15%);
+      @include button-size(1.5rem);
     }
   }
 }

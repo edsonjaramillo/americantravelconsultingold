@@ -173,48 +173,49 @@ export const getServerSideProps = async (ctx) => {
   const { slug } = ctx.query;
   // const { slug } = params;
 
-  const query = gql`query MyQuery {
-    destination(where: {slug: "${slug}"}) {
-      id
-      slug
-      name
-      description
-      main {
+  const query = gql`
+    query MyQuery {
+      destination(where: { slug: "orlando" }) {
         id
-        url
-      }
-      mainalt
-      secondimage {
-        id
-        url
-      }
-      secondalt
-      thirdimage {
-        id
-        url
-      }
-      thirdalt
-      fourthimage {
-        id
-        url
-      }
-      fourthalt
-      zoomlevel
-      viewport {
-        latitude
-        longitude
-      }
-      mapitems(orderBy: name_ASC) {
-        id
+        slug
         name
-        coordinate {
+        description
+        main {
+          id
+          url
+        }
+        mainalt
+        secondimage {
+          id
+          url
+        }
+        secondalt
+        thirdimage {
+          id
+          url
+        }
+        thirdalt
+        fourthimage {
+          id
+          url
+        }
+        fourthalt
+        zoomlevel
+        viewport {
           latitude
           longitude
         }
-        link
-      }]
+        mapitems(orderBy: name_ASC) {
+          id
+          name
+          coordinate {
+            latitude
+            longitude
+          }
+          link
+        }
+      }
     }
-  }
   `;
 
   const { destination } = await client.request(query);

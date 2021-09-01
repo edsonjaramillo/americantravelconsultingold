@@ -55,7 +55,7 @@ export default function Home({
           content='https://media.graphcms.com/s1jLe0UQqibjOvkDfNCj'
         />
       </Head>
-      <div className='cta'>
+      {/* <div className='cta'>
         <div className='responsive-width cta__boundary'>
           <div className='cta__imagewrapper'>
             <Image
@@ -66,7 +66,6 @@ export default function Home({
             />
           </div>
           <div className='cta__content'>
-            {/* <p className='cta__company'>American Travel Consulting</p> */}
             <h1 className='cta__title cta--newline'>
               {`TRAVEL EASIER\nTRAVEL STRESS-FREE\nLET US DO THE WORK`}
             </h1>
@@ -79,7 +78,32 @@ export default function Home({
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <header className='cta'>
+        <div className='cta__grid responsive-width'>
+          <div className='cta__info'>
+            <h1 className='cta__title'>
+              {`TRAVEL EASIER\nTRAVEL STRESS-FREE\nLET US DO THE WORK`}
+            </h1>
+            <p className='cta__subtitle'>
+              Enjoy your next student group trip from start to finish without a
+              worry in the world
+            </p>
+            <Link href='/contact'>
+              <a className='cta__link'>REQUEST A QUOTE</a>
+            </Link>
+          </div>
+          <div className='cta__image'>
+            <Image
+              src='/logo.png'
+              height='794'
+              width='1123'
+              layout='responsive'
+            />
+          </div>
+        </div>
+      </header>
       <div className='section'>
         <h2 className='responsive-width section__header'>
           Popular Destinations

@@ -59,7 +59,7 @@ const Footer = () => {
             </a>
             <a
               className='footer__link'
-              href='https://www.facebook.com/AmericanTravelConsulting/'>
+              href='https://www.instagram.com/americantravelconsulting/'>
               Instagram
             </a>
           </FooterSection>
