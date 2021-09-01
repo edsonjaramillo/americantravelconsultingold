@@ -28,7 +28,7 @@ export default function Map({ mapitems, latitude, longitude, zoom }) {
             latitude={coordinate.latitude}>
             <img
               className='pin'
-              src='/images/destinations/pin.png'
+              src='/pin.png'
               alt='black pin marker on map'
               onClick={() => {
                 viewDetails(String(name).toLowerCase().replace(' ', '-'));
