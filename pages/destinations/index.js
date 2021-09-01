@@ -62,7 +62,7 @@ export default function Destinations({ destinations, blurhashes }) {
   );
 }
 
-export const getServerSideProps = async (ctx) => {
+export const getStaticProps = async (ctx) => {
   const query = gql`
     query MyQuery {
       destinations(orderBy: name_ASC) {

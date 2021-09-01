@@ -169,13 +169,13 @@ export default function Destination({ destination, blurhashes }) {
   );
 }
 
-export const getServerSideProps = async (ctx) => {
-  const { slug } = ctx.query;
-  // const { slug } = params;
+export const getStaticProps = async ({ params }) => {
+  // const { slug } = ctx.query;
+  const { slug } = params;
 
   const query = gql`
     query MyQuery {
-      destination(where: { slug: "orlando" }) {
+      destination(where: { slug: "${slug}" }) {
         id
         slug
         name
@@ -246,19 +246,19 @@ export const getServerSideProps = async (ctx) => {
   };
 };
 
-// export const getStaticPaths = async () => {
-//   const query = gql`
-//     query MyQuery {
-//       destinations {
-//         slug
-//       }
-//     }
-//   `;
+export const getStaticPaths = async () => {
+  const query = gql`
+    query MyQuery {
+      destinations {
+        slug
+      }
+    }
+  `;
 
-//   const { destinations } = await client.request(query);
+  const { destinations } = await client.request(query);
 
-//   return {
-//     paths: destinations.map(({ slug }) => ({ params: { slug: slug } })),
-//     fallback: false,
-//   };
-// };
+  return {
+    paths: destinations.map(({ slug }) => ({ params: { slug: slug } })),
+    fallback: false,
+  };
+};

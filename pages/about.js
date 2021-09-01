@@ -50,7 +50,7 @@ export default function About({ employees }) {
   );
 }
 
-export const getServerSideProps = async (ctx) => {
+export const getStaticProps = async (ctx) => {
   const query = gql`
     query MyQuery {
       employees {

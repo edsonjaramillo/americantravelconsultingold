@@ -60,7 +60,7 @@ export default function Payment({ trips }) {
   );
 }
 
-// export const getServerSideProps = async (ctx) => {
+// export const getStaticProps = async (ctx) => {
 //   const { db } = await connectToDatabase();
 //   const trips = await db
 //     .collection('trips')

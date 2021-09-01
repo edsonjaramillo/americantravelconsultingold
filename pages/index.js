@@ -140,7 +140,7 @@ export default function Home({
   );
 }
 
-export const getServerSideProps = async (ctx) => {
+export const getStaticProps = async (ctx) => {
   const query = gql`
     query MyQuery {
       asset(where: { id: "ckt0sv8ao7aup0c782lxrmkzg" }) {
