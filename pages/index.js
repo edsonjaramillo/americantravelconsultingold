@@ -170,8 +170,6 @@ export const getStaticProps = async (ctx) => {
   const { asset } = data;
   const { testimonials } = data;
   const { destinations } = data;
-
-  console.log(asset);
   let blurhashes = {};
 
   for (let index = 0; index < destinations.length; index++) {
