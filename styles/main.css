@@ -70,7 +70,7 @@ object {
 
 @media (min-width: 1025px) {
   .responsive-width {
-    max-width: 80%;
+    max-width: 90%;
   }
 }
 
@@ -646,6 +646,22 @@ object {
 }
 
 @media (min-width: 1025px) {
+  .cta__title {
+    font-size: 3rem;
+  }
+  .cta__subtitle {
+    font-size: 2.75rem;
+  }
+  .cta__link {
+    padding: 1.5rem 2.25rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1644px) {
+  .cta__grid {
+    gap: 4rem;
+  }
   .cta__title {
     font-size: 3.5rem;
   }
