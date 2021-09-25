@@ -5,7 +5,7 @@
   //     width: 80%;
   // }
   @include media('>lg') {
-    max-width: 90%;
+    max-width: 85%;
   }
 
   @include media('>3xl') {
@@ -30,20 +30,26 @@
 .responsive-width-form {
   width: 90%;
   margin: auto;
-  @include media('>sm') {
-    width: 90%;
+
+  @include media('>=md') {
+    max-width: 50rem;
   }
-  @include media('>md') {
-    width: 75%;
-  }
+}
+
+.responsive-width-footer {
+  width: 90%;
+  margin: auto;
+
   @include media('>lg') {
-    width: 65%;
+    max-width: 70%;
   }
+
   @include media('>xl') {
-    width: 50%;
+    max-width: 50%;
   }
+
   @include media('>3xl') {
-    max-width: 55rem;
+    max-width: 60rem;
   }
 }
 

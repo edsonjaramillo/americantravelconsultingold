@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { Navbar, Footer } from '@/components/index';
 import '@/styles/main.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -8,8 +10,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta
           name='viewport'
-          content='width=device-width, initial-scale=1.0'
-        ></meta>
+          content='width=device-width, initial-scale=1.0'></meta>
 
         <link
           rel='apple-touch-icon'
@@ -42,6 +43,12 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </main>
       <Footer />
+      <ToastContainer
+        theme='colored'
+        closeOnClick
+        pauseOnHover
+        draggable={false}
+      />
     </>
   );
 }

@@ -3,15 +3,16 @@
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
 
-  @include media('>sm') {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    // gap: 2rem;
-  }
-
   @include media('>md') {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
   }
+
+  @include media('>lg') {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
   @include media('>xl') {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     // gap: 2rem;
@@ -24,24 +25,20 @@
   gap: 1rem;
   padding: 1rem;
   border-radius: 10px;
-
-  // box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  // box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-  //   0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  // box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-  //   0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  // border: 2px solid lightgray;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  // border: 2px solid lightgrey;
+
+  &__imageWrapper {
+    border-radius: 10px;
+    overflow: hidden;
+  }
 
   &__title {
     font-weight: bold;
-    margin: 0rem 0rem auto 0rem;
   }
 
   &__description {
     font-weight: normal;
+    margin: 0rem 0rem auto 0rem;
   }
 
   &__button {
@@ -52,25 +49,30 @@
     border-radius: 10px;
     margin: auto 0rem 0rem 0rem;
     height: fit-content;
-    // width: fit-content;
-    // margin: 0rem 0rem 0rem auto;
-  }
-
-  @include media('>sm') {
-    &__description {
-      min-height: 22rem;
-      font-weight: normal;
-    }
   }
 
   @include media('>=md') {
     &__description {
-      min-height: 13rem;
+      min-height: 9rem;
       font-weight: normal;
     }
   }
 
   @include media('>lg') {
+    &__description {
+      min-height: 15rem;
+      font-weight: normal;
+    }
+  }
+
+  @include media('>xl') {
+    &__description {
+      min-height: 14rem;
+      font-weight: normal;
+    }
+  }
+
+  @include media('>2xl') {
     &__description {
       min-height: 11rem;
       font-weight: normal;

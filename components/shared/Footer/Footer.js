@@ -35,7 +35,7 @@ const Footer = () => {
   return (
     <>
       <footer className='footer'>
-        <div className='footer__grid responsive-width'>
+        <div className='footer__grid responsive-width-footer'>
           <FooterSection category='Navigation'>
             <Link href='/destinations'>
               <a className='footer__link'>Destinations</a>

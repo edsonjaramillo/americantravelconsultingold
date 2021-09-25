@@ -3,25 +3,30 @@
   padding: 3rem 0rem;
 
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 3rem;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // row-gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0rem auto;
+    text-align: center;
   }
 
   &__section {
     display: flex;
     flex-direction: column;
+    margin-bottom: 3rem;
   }
 
   &__category {
     color: $secondary-color;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 500;
     margin-bottom: 1rem;
   }
 
   &__link {
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: white;
     font-weight: 400;
   }
@@ -39,9 +44,9 @@
 
   @include media('>md') {
     &__grid {
-      margin: 0rem auto;
-      display: flex;
+      flex-direction: row;
       justify-content: space-around;
+      text-align: left;
     }
   }
 }

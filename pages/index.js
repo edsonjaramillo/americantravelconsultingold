@@ -58,7 +58,11 @@ export default function Home({ destinations, testimonials, blurhashes }) {
         <div className='cta__grid responsive-width'>
           <div className='cta__info'>
             <h1 className='cta__title'>
-              {`TRAVEL EASIER\nTRAVEL STRESS-FREE\nLET US DO THE WORK`}
+              TRAVEL EASIER
+              <br />
+              TRAVEL STRESS-FREE
+              <br />
+              LET US DO THE WORK
             </h1>
             <p className='cta__subtitle'>
               Enjoy your next student group trip from start to finish without a
@@ -71,9 +75,8 @@ export default function Home({ destinations, testimonials, blurhashes }) {
           <div className='cta__image'>
             <Image
               src='/logo.png'
-              height='794'
-              width='1123'
-              layout='responsive'
+              layout='fill'
+              objectFit='contain'
               quality='25'
               alt='american travel consulting logo'
             />

@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
+
   @include media('>sm') {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 2rem;
@@ -44,8 +45,6 @@
     text-align: center;
     font-size: 1rem;
     font-weight: normal;
-    min-height: 140px;
-    max-height: 190px;
     overflow-y: auto;
   }
 
@@ -57,5 +56,11 @@
   &__position {
     margin: 0rem auto;
     text-align: center;
+  }
+
+  @include media('>=md') {
+    &__quote {
+      min-height: 8.75rem;
+    }
   }
 }
