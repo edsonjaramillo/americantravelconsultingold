@@ -12,17 +12,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
   }
-
-  // @include media('>lg') {
-  //   grid-template-columns: repeat(2, minmax(0, 1fr));
-  //   gap: 2rem;
-  // }
-
-  // display: flex;
-  // flex-direction: column;
-
-  // justify-content: space-between;
-  // flex-wrap: wrap;
 }
 
 .testimonial {
@@ -44,7 +33,7 @@
   &__quote {
     text-align: center;
     font-size: 1rem;
-    font-weight: normal;
+    font-weight: 400;
     overflow-y: auto;
   }
 

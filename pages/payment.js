@@ -55,11 +55,7 @@ export default function Payment() {
                   })}
                 />
               </div>
-              <input
-                className='form__button'
-                type='submit'
-                value='Send Message'
-              />
+              <input className='form__button' type='submit' value='Submit' />
             </div>
           </form>
         </div>

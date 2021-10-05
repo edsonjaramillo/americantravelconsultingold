@@ -23,19 +23,22 @@ export default function RequestForm() {
       choice: data.choice,
       message: data.message,
     };
-    // const { status } = await emailjs.send(
-    //   process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-    //   process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-    //   templateParameters,
-    //   process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-    // );
+    const { status } = await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      templateParameters,
+      process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+    );
 
-    // if (status == 200) {
-    //   toastNotification('success', `Your message was sent, ${name}!`);
-    //   reset();
-    // } else {
-    //   toastNotification('error', 'Error occured. Try again.');
-    // }
+    if (status == 200) {
+      toastNotification(
+        'success',
+        `Thank your for your message, ${name}! We will be in contact soon.`
+      );
+      reset();
+    } else {
+      toastNotification('error', 'Error occured. Try again.');
+    }
   };
 
   const ErrorMessage = ({ message }) => (
@@ -156,7 +159,7 @@ export default function RequestForm() {
             {/* Choice */}
             <div className='form__inputgroup'>
               <label className='form__label' htmlFor='phoneNumber'>
-                Contact Choice
+                Preffered Form of Contact
                 {errors.choice?.type === 'required' && (
                   <ErrorMessage message='Required' />
                 )}
@@ -187,6 +190,19 @@ export default function RequestForm() {
                   />
                   Phone
                 </label>
+                <label className='form__radiolabel'>
+                  <input
+                    className='form__radioinput'
+                    type='radio'
+                    name='choice'
+                    id='Phone'
+                    value='Phone'
+                    {...register('choice', {
+                      required: true,
+                    })}
+                  />
+                  Either
+                </label>
               </div>
             </div>
             <input
@@ -197,6 +213,16 @@ export default function RequestForm() {
           </div>
         </form>
       </div>
+      {/* <button
+        onClick={() => {
+          toastNotification(
+            'success',
+            `Thank your for your message, Chris Lindley! We will be in contact soon.`,
+            5000
+          );
+        }}>
+        Success Button
+      </button> */}
     </>
   );
 }

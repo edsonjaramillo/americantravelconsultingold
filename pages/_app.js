@@ -48,6 +48,8 @@ function MyApp({ Component, pageProps }) {
         closeOnClick
         pauseOnHover
         draggable={false}
+        bodyStyle={{ width: '1000px' }}
+        style={{ whiteSpace: 'pre-line' }}
       />
     </>
   );

@@ -33,11 +33,11 @@
   }
 
   &__title {
-    font-weight: bold;
+    font-weight: 700;
   }
 
   &__description {
-    font-weight: normal;
+    font-weight: 400;
     margin: 0rem 0rem auto 0rem;
   }
 
@@ -54,28 +54,28 @@
   @include media('>=md') {
     &__description {
       min-height: 9rem;
-      font-weight: normal;
+      font-weight: 400;
     }
   }
 
   @include media('>lg') {
     &__description {
       min-height: 15rem;
-      font-weight: normal;
+      font-weight: 400;
     }
   }
 
   @include media('>xl') {
     &__description {
       min-height: 14rem;
-      font-weight: normal;
+      font-weight: 400;
     }
   }
 
   @include media('>2xl') {
     &__description {
       min-height: 11rem;
-      font-weight: normal;
+      font-weight: 400;
     }
   }
 }
@@ -84,13 +84,13 @@
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  font-weight: normal;
+  font-weight: 400;
   border: lightgray solid 2px;
   gap: 0.5rem;
   font-size: 1rem;
 
   &__organization {
-    font-weight: bold;
+    font-weight: 700;
   }
 
   &__link {
@@ -99,7 +99,7 @@
     text-align: center;
     color: white;
     padding: 0.25rem 0rem;
-    font-weight: bold;
+    font-weight: 700;
   }
 }
 

@@ -77,7 +77,7 @@ export default function Home({ destinations, testimonials, blurhashes }) {
               src='/logo.png'
               layout='fill'
               objectFit='contain'
-              quality='25'
+              quality='15'
               alt='american travel consulting logo'
             />
           </div>
@@ -149,7 +149,7 @@ export const getStaticProps = async (ctx) => {
 
   for (let index = 0; index < destinations.length; index++) {
     const { id, main } = destinations[index];
-    const { base64: b64main } = await getPlaiceholder(main.url);
+    const { base64: b64main } = await getPlaiceholder(main.url, { size: 4 });
 
     blurhashes = {
       ...blurhashes,

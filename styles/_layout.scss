@@ -1,6 +1,6 @@
 .section {
   padding: 2rem 0rem;
-  font-weight: bold;
+  font-weight: 700;
   border-bottom: 1px solid lightgrey;
 
   &--testimonial {
@@ -109,7 +109,7 @@
   }
 
   &__location {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.75rem;
     // margin-bottom: 0.25rem;
   }
@@ -147,7 +147,7 @@
     color: white;
     border-radius: 10px;
     @include button-size(1rem);
-    font-weight: bold;
+    font-weight: 700;
   }
 
   @include media('>sm') {

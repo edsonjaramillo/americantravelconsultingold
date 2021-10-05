@@ -23,7 +23,7 @@
   &__title {
     font-size: 1.75rem;
     white-space: pre-line;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
   }
 
@@ -55,24 +55,6 @@
     }
   }
   @include media('>=md') {
-    &__info {
-      gap: 2rem;
-    }
-
-    &__title {
-      font-size: 3rem;
-    }
-
-    &__subtitle {
-      font-size: 2.25rem;
-    }
-  }
-
-  @include media('>lg') {
-    &__info {
-      gap: 2rem;
-    }
-
     &__grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -82,13 +64,17 @@
       display: block;
     }
 
+    &__info {
+      gap: 2rem;
+    }
+
     &__title {
-      font-size: 2.5rem;
+      font-size: 1.8rem;
       text-align: left;
     }
 
     &__subtitle {
-      font-size: 2rem;
+      font-size: 1.7rem;
       text-align: left;
     }
 
@@ -105,7 +91,23 @@
     }
 
     &__title {
-      font-size: 3rem;
+      font-size: 2.5rem;
+      text-align: left;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+      text-align: left;
+    }
+  }
+
+  @include media('>lg') {
+    &__info {
+      gap: 2rem;
+    }
+
+    &__title {
+      font-size: 2.8rem;
       text-align: left;
     }
 

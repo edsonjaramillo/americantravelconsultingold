@@ -1,65 +1,3 @@
-// .form {
-//   // border: 1px solid lightgrey;
-//   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-//   padding: 1rem;
-//   display: grid;
-//   grid-template-columns: repeat(1, minmax(0, 1fr));
-//   gap: 1rem;
-//   margin-bottom: 2rem;
-//   border-radius: 10px;
-
-//   &__input {
-//     outline: 1px solid lightgrey;
-//     font-size: 1rem;
-//     font-family: 'Montserrat', sans-serif;
-//     resize: none;
-//     padding: 0.25rem 0.35rem;
-//   }
-
-//   &__inputContainer {
-//     display: flex;
-//     flex-direction: column;
-//   }
-
-//   &__label {
-//     font-size: 1rem;
-//     font-weight: 400;
-//   }
-
-//   &__button {
-//     background-color: $secondary-color;
-//     color: white;
-//     border-radius: 10px;
-//     padding: 0.75rem 0rem;
-//     font-weight: bold;
-//     font-size: 1rem;
-//   }
-
-//   &__buttonpayment {
-//     background-color: $secondary-color;
-//     color: white;
-//     border-radius: 10px;
-//     width: fit-content;
-//     padding: 0.75rem 1.125rem;
-//     font-weight: bold;
-//     font-size: 1rem;
-//     justify-self: end;
-//   }
-
-//   &__required {
-//     color: red;
-//   }
-
-//   &__link {
-//     background-color: $secondary-color;
-//     color: white;
-//     width: fit-content;
-//     padding: 0.75rem 1.125rem;
-//     border-radius: 10px;
-//     justify-self: end;
-//   }
-// }
-
 .form {
   background-color: white;
   position: relative;
@@ -102,7 +40,7 @@
 
   &__radioinput {
     accent-color: $primary-color;
-    margin-right: 0.1rem;
+    margin-right: 0.25rem;
     background-color: white;
   }
 
