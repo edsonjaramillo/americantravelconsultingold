@@ -39,6 +39,16 @@
     display: block;
   }
 
+  @include media('>sm') {
+    // &__category {
+    //   font-size: 1.25rem;
+    // }
+
+    // &__link {
+    //   font-size: 1.25rem;
+    // }
+  }
+
   @include media('>md') {
     &__grid {
       justify-content: center;

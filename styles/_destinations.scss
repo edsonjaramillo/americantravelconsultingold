@@ -14,15 +14,17 @@
   }
 
   @include media('>xl') {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     // gap: 2rem;
   }
 }
 
 .destinationscard {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 1rem;
+  // display: grid;
+  // grid-template-columns: repeat(1, minmax(0, 1fr));
+  // gap: 1rem;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -30,15 +32,18 @@
   &__imageWrapper {
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 1rem;
   }
 
   &__title {
     font-weight: 700;
+    margin-bottom: 1rem;
   }
 
   &__description {
     font-weight: 400;
-    margin: 0rem 0rem auto 0rem;
+    margin-bottom: 2rem;
+    // margin: 0rem 0rem auto 0rem;
   }
 
   &__button {
@@ -53,29 +58,25 @@
 
   @include media('>=md') {
     &__description {
-      min-height: 9rem;
-      font-weight: 400;
+      // min-height: 9rem;
     }
   }
 
   @include media('>lg') {
     &__description {
-      min-height: 15rem;
-      font-weight: 400;
+      // min-height: 15rem;
     }
   }
 
   @include media('>xl') {
     &__description {
-      min-height: 14rem;
-      font-weight: 400;
+      // min-height: 14rem;
     }
   }
 
   @include media('>2xl') {
     &__description {
-      min-height: 11rem;
-      font-weight: 400;
+      // min-height: 11rem;
     }
   }
 }

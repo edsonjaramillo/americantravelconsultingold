@@ -47,11 +47,11 @@
 
   @include media('>sm') {
     &__title {
-      font-size: 2rem;
+      font-size: 2.25rem;
     }
 
     &__subtitle {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
     }
   }
   @include media('>=md') {

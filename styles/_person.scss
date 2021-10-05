@@ -24,29 +24,12 @@
     font-weight: 700;
     border-radius: 10px;
     height: fit-content;
+    margin: auto 0rem 0rem 0rem;
   }
 
   &__quote {
     font-style: italic;
-    margin-bottom: 1rem;
-  }
-
-  @include media('>=lg') {
-    &__content {
-      min-height: 43rem;
-    }
-  }
-
-  @include media('>xl') {
-    &__content {
-      min-height: 35rem;
-    }
-  }
-
-  @include media('>2xl') {
-    &__content {
-      min-height: 26rem;
-    }
+    margin-bottom: 2rem;
   }
 }
 

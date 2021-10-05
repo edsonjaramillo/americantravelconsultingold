@@ -153,7 +153,7 @@ export const getStaticProps = async (ctx) => {
 
     blurhashes = {
       ...blurhashes,
-      [id]: { b64main: b64main },
+      [id]: { b64main: b64main }
     };
   }
 
@@ -161,7 +161,7 @@ export const getStaticProps = async (ctx) => {
     props: {
       destinations: destinations,
       testimonials: testimonials,
-      blurhashes: blurhashes,
-    },
+      blurhashes: blurhashes
+    }
   };
 };
