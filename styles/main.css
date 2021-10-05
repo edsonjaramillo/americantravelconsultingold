@@ -875,7 +875,7 @@ html ::-webkit-scrollbar-thumb {
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1367px) {
   .destinationsGrid {
     -ms-grid-columns: (minmax(0, 1fr))[3];
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -883,10 +883,10 @@ html ::-webkit-scrollbar-thumb {
   }
 }
 
-@media (min-width: 1367px) {
+@media (min-width: 1644px) {
   .destinationsGrid {
-    -ms-grid-columns: (minmax(0, 1fr))[3];
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    -ms-grid-columns: (minmax(0, 1fr))[4];
+        grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 

@@ -8,13 +8,13 @@
     gap: 2rem;
   }
 
-  @include media('>lg') {
+  @include media('>xl') {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
   }
 
-  @include media('>xl') {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  @include media('>2xl') {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     // gap: 2rem;
   }
 }
