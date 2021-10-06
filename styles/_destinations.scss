@@ -43,7 +43,6 @@
   &__description {
     font-weight: 400;
     margin-bottom: 2rem;
-    // margin: 0rem 0rem auto 0rem;
   }
 
   &__button {
@@ -54,30 +53,6 @@
     border-radius: 10px;
     margin: auto 0rem 0rem 0rem;
     height: fit-content;
-  }
-
-  @include media('>=md') {
-    &__description {
-      // min-height: 9rem;
-    }
-  }
-
-  @include media('>lg') {
-    &__description {
-      // min-height: 15rem;
-    }
-  }
-
-  @include media('>xl') {
-    &__description {
-      // min-height: 14rem;
-    }
-  }
-
-  @include media('>2xl') {
-    &__description {
-      // min-height: 11rem;
-    }
   }
 }
 

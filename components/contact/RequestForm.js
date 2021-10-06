@@ -213,16 +213,6 @@ export default function RequestForm() {
           </div>
         </form>
       </div>
-      {/* <button
-        onClick={() => {
-          toastNotification(
-            'success',
-            `Thank your for your message, Chris Lindley! We will be in contact soon.`,
-            5000
-          );
-        }}>
-        Success Button
-      </button> */}
     </>
   );
 }
