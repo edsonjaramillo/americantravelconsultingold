@@ -1,0 +1,30 @@
+.error {
+  min-height: 80vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__message {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 2rem 0rem;
+  }
+
+  &__button {
+    background-color: $secondary-color;
+    color: white;
+    @include button-size(1rem);
+    border-radius: 10px;
+    font-weight: 500;
+  }
+
+  @include media('>sm') {
+    &__message {
+      font-weight: 700;
+      font-size: 2rem;
+      margin: 2rem 0rem;
+    }
+  }
+}

@@ -61,3 +61,16 @@ object {
   border-width: 0;
   border-style: solid;
 }
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #b3b3b3 white;
+  ::-webkit-scrollbar {
+    width: 10px;
+    background: white;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #b3b3b3;
+  }
+}

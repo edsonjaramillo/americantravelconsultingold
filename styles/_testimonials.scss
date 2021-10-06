@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
+
   @include media('>sm') {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 2rem;
@@ -11,17 +12,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
   }
-
-  // @include media('>lg') {
-  //   grid-template-columns: repeat(2, minmax(0, 1fr));
-  //   gap: 2rem;
-  // }
-
-  // display: flex;
-  // flex-direction: column;
-
-  // justify-content: space-between;
-  // flex-wrap: wrap;
 }
 
 .testimonial {
@@ -43,9 +33,7 @@
   &__quote {
     text-align: center;
     font-size: 1rem;
-    font-weight: normal;
-    min-height: 140px;
-    max-height: 190px;
+    font-weight: 400;
     overflow-y: auto;
   }
 
@@ -57,5 +45,11 @@
   &__position {
     margin: 0rem auto;
     text-align: center;
+  }
+
+  @include media('>=md') {
+    &__quote {
+      min-height: 8.75rem;
+    }
   }
 }

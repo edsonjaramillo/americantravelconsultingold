@@ -1,73 +1,216 @@
 import emailjs from 'emailjs-com';
 import { Input } from '@/components/index';
+import { useForm } from 'react-hook-form';
+import { toastNotification } from '@/lib/toastNotification';
 
 export default function RequestForm() {
-  function sendEmail(e) {
-    try {
-      emailjs.sendForm(
-        'service_1ae3hwp',
-        'template_7d6wwdr',
-        e.target,
-        'user_pUaUDJeHhvMfwKyoMFhFR'
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+  // console.log(errors);
+
+  const onSubmit = async (data) => {
+    const { name } = data;
+    const templateParameters = {
+      name: data.name,
+      organization: data.organization,
+      destination: data.destination,
+      email: data.email,
+      phone: data.phone,
+      choice: data.choice,
+      message: data.message,
+    };
+    const { status } = await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      templateParameters,
+      process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+    );
+
+    if (status == 200) {
+      toastNotification(
+        'success',
+        `Thank your for your message, ${name}! We will be in contact soon.`
       );
-      e.target.reset();
-      alert(
-        'Thank you for submitting. We will get back to you as soon as we can.'
-      );
-    } catch (error) {
-      alert(error);
+      reset();
+    } else {
+      toastNotification('error', 'Error occured. Try again.');
     }
-    e.preventDefault();
-  }
+  };
+
+  const ErrorMessage = ({ message }) => (
+    <p className='form__errormessage'>{message}</p>
+  );
+
   return (
     <>
       <div className='responsive-width-form'>
-        <form className='form' type='submit' onSubmit={sendEmail}>
-          <Input label='Name' type='text' name='name' example='Jane Doe' />
-          <Input
-            label='School/Organization'
-            type='text'
-            name='organization'
-            example='Jane Doe High School'
-          />
-          <Input
-            label='Destination'
-            type='text'
-            name='destination'
-            example='Orlando, Florida'
-          />
-          <Input
-            label='Phone Number'
-            type='text'
-            name='phone'
-            example='1234567890'
-          />
-          <Input
-            label='Email'
-            type='email'
-            name='email'
-            example='janedoe@domain.com'
-          />
-          <Input
-            label='Preffered Form of Contact'
-            type='text'
-            name='preffered'
-            example='Either/Phone/Email'
-          />
-          <div className='form__inputContainer'>
-            <label className='form__label' htmlFor='message'>
-              Message<span className='form__required'> * Required</span>
-            </label>
-            <textarea
-              className='form__input'
-              name='message'
-              id='message'
-              rows='15'
-              required></textarea>
+        <form
+          className='form'
+          onSubmit={handleSubmit(onSubmit, () => {
+            toastNotification('error', 'Check input requirments.');
+            errors.phone?.type === 'minLength' &&
+              toastNotification(
+                'error',
+                'Phone number must be 10 digits.',
+                4000
+              );
+            errors.phone?.type === 'maxLength' &&
+              toastNotification(
+                'error',
+                'Phone number must be 10 digits.',
+                4000
+              );
+          })}>
+          <div className='form__grid responsive-width-form'>
+            <div className='form__inputgroup'>
+              <label className='form__label'>
+                Name
+                {errors.name?.type === 'required' && (
+                  <ErrorMessage message='Required' />
+                )}
+              </label>
+              <input
+                className='form__input'
+                placeholder='Jane Doe'
+                {...register('name', { required: true })}
+              />
+            </div>
+            <div className='form__inputgroup'>
+              <label className='form__label'>
+                School/Organization
+                {errors.organization?.type === 'required' && (
+                  <ErrorMessage message='Required' />
+                )}
+              </label>
+              <input
+                className='form__input'
+                placeholder='Jane Doe High School'
+                {...register('organization', { required: true })}
+              />
+            </div>
+            <div className='form__inputgroup'>
+              <label className='form__label'>
+                Destination
+                {errors.destination?.type === 'required' && (
+                  <ErrorMessage message='Required' />
+                )}
+              </label>
+              <input
+                className='form__input'
+                placeholder='Orlando, Florida'
+                {...register('destination', { required: true })}
+              />
+            </div>
+            {/* Email */}
+            <div className='form__inputgroup'>
+              <label className='form__label' htmlFor='email'>
+                Email
+                {errors.email?.type === 'required' && (
+                  <ErrorMessage message='Required' />
+                )}
+              </label>
+
+              <input
+                className='form__input'
+                placeholder='janedoe@domain.com'
+                {...register('email', { required: true })}
+              />
+            </div>
+            {/* Phone Number */}
+            <div className='form__inputgroup'>
+              <label className='form__label'>
+                Phone Number
+                {errors.phone?.type === 'required' && (
+                  <ErrorMessage message='Required' />
+                )}
+              </label>
+
+              <input
+                className='form__input'
+                placeholder='1234567890'
+                type='text'
+                {...register('phone', {
+                  required: true,
+                  minLength: 10,
+                  maxLength: 10,
+                })}
+              />
+            </div>
+
+            {/* Message */}
+            <div className='form__inputgroup'>
+              <label className='form__label '>
+                Message
+                {errors.message?.type === 'required' && (
+                  <ErrorMessage message='Required' />
+                )}
+              </label>
+
+              <textarea
+                className='form__input form--textarea'
+                placeholder='Enter message...'
+                rows={10}
+                {...register('message', { required: true })}></textarea>
+            </div>
+            {/* Choice */}
+            <div className='form__inputgroup'>
+              <label className='form__label' htmlFor='phoneNumber'>
+                Preffered Form of Contact
+                {errors.choice?.type === 'required' && (
+                  <ErrorMessage message='Required' />
+                )}
+              </label>
+
+              <div className='form__radiogroup'>
+                <label className='form__radiolabel'>
+                  <input
+                    className='form__radioinput'
+                    type='radio'
+                    name='choice'
+                    id='Email'
+                    value='Email'
+                    {...register('choice', { required: true })}
+                  />
+                  Email
+                </label>
+                <label className='form__radiolabel'>
+                  <input
+                    className='form__radioinput'
+                    type='radio'
+                    name='choice'
+                    id='Phone'
+                    value='Phone'
+                    {...register('choice', {
+                      required: true,
+                    })}
+                  />
+                  Phone
+                </label>
+                <label className='form__radiolabel'>
+                  <input
+                    className='form__radioinput'
+                    type='radio'
+                    name='choice'
+                    id='Phone'
+                    value='Phone'
+                    {...register('choice', {
+                      required: true,
+                    })}
+                  />
+                  Either
+                </label>
+              </div>
+            </div>
+            <input
+              className='form__button'
+              type='submit'
+              value='Send Message'
+            />
           </div>
-          <button className='form__button' type='submit'>
-            Submit Form
-          </button>
         </form>
       </div>
     </>

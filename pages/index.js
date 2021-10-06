@@ -58,7 +58,11 @@ export default function Home({ destinations, testimonials, blurhashes }) {
         <div className='cta__grid responsive-width'>
           <div className='cta__info'>
             <h1 className='cta__title'>
-              {`TRAVEL EASIER\nTRAVEL STRESS-FREE\nLET US DO THE WORK`}
+              TRAVEL EASIER
+              <br />
+              TRAVEL STRESS-FREE
+              <br />
+              LET US DO THE WORK
             </h1>
             <p className='cta__subtitle'>
               Enjoy your next student group trip from start to finish without a
@@ -71,10 +75,9 @@ export default function Home({ destinations, testimonials, blurhashes }) {
           <div className='cta__image'>
             <Image
               src='/logo.png'
-              height='794'
-              width='1123'
-              layout='responsive'
-              quality='25'
+              layout='fill'
+              objectFit='contain'
+              quality='15'
               alt='american travel consulting logo'
             />
           </div>
@@ -146,11 +149,11 @@ export const getStaticProps = async (ctx) => {
 
   for (let index = 0; index < destinations.length; index++) {
     const { id, main } = destinations[index];
-    const { base64: b64main } = await getPlaiceholder(main.url);
+    const { base64: b64main } = await getPlaiceholder(main.url, { size: 4 });
 
     blurhashes = {
       ...blurhashes,
-      [id]: { b64main: b64main },
+      [id]: { b64main: b64main }
     };
   }
 
@@ -158,7 +161,7 @@ export const getStaticProps = async (ctx) => {
     props: {
       destinations: destinations,
       testimonials: testimonials,
-      blurhashes: blurhashes,
-    },
+      blurhashes: blurhashes
+    }
   };
 };

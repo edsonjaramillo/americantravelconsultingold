@@ -1,10 +1,12 @@
 .cta {
+  min-height: calc(100vh - 56px);
   background-color: rgb(50, 57, 65);
   background-image: url(../public/cta.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 6rem 0rem;
+  display: flex;
+  justify-content: center;
 
   &__grid {
     display: grid;
@@ -21,10 +23,12 @@
   &__title {
     font-size: 1.75rem;
     white-space: pre-line;
-    font-weight: bold;
+    font-weight: 700;
+    text-align: center;
   }
 
   &__subtitle {
+    text-align: center;
     font-size: 1.25rem;
   }
 
@@ -35,7 +39,6 @@
     text-align: center;
     border-radius: 10px;
     font-weight: 700;
-    height: fit-content;
   }
 
   &__image {
@@ -43,60 +46,84 @@
   }
 
   @include media('>sm') {
-    &__grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
     &__title {
-      font-size: 2rem;
+      font-size: 2.25rem;
     }
 
     &__subtitle {
-      font-size: 1.5rem;
-      // width: 75%;
-    }
-
-    &__link {
-      width: fit-content;
-      margin: 0rem auto 0rem 0rem;
-    }
-
-    &__image {
-      margin: auto 0rem;
-      display: block;
+      font-size: 1.75rem;
     }
   }
   @include media('>=md') {
-    &__info {
-      gap: 1rem;
-      // background-color: red;
-    }
-
-    &__title {
-      // font-size: 2.5rem;
-    }
-
     &__grid {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    &__subtitle {
-      font-size: 1.5rem;
-      width: auto;
-      margin: 0rem 0rem 0rem 0rem;
-      // background-color: blue;
-    }
     &__image {
+      position: relative;
       display: block;
     }
 
+    &__info {
+      gap: 2rem;
+    }
+
+    &__title {
+      font-size: 1.8rem;
+      text-align: left;
+    }
+
+    &__subtitle {
+      font-size: 1.7rem;
+      text-align: left;
+    }
+
     &__link {
-      margin: 0rem 0rem auto 0rem;
+      @include button-size(1.15rem);
+      width: fit-content;
+      margin: 0rem auto 0rem 0rem;
     }
   }
 
   @include media('>lg') {
+    &__info {
+      gap: 2rem;
+    }
+
     &__title {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
+      text-align: left;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+      text-align: left;
+    }
+  }
+
+  @include media('>lg') {
+    &__info {
+      gap: 2rem;
+    }
+
+    &__title {
+      font-size: 2.8rem;
+      text-align: left;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+      text-align: left;
+    }
+  }
+
+  @include media('>2xl') {
+    &__grid {
+      gap: 0rem;
+    }
+
+    &__title {
+      font-size: 4rem;
     }
 
     &__subtitle {
@@ -104,7 +131,7 @@
     }
 
     &__link {
-      @include button-size(1.5rem);
+      @include button-size(1.25rem);
     }
   }
 }

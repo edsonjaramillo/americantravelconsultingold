@@ -19,7 +19,7 @@ const Site = ({ name, description, slug, mainalt, url, blurhash }) => {
             alt={mainalt}
             placeholder='blur'
             blurDataURL={blurhash}
-            quality='25'
+            quality='15'
           />
         </div>
         <h2 className='destinationscard__title'>{name}</h2>
@@ -31,6 +31,7 @@ const Site = ({ name, description, slug, mainalt, url, blurhash }) => {
     </>
   );
 };
+
 export default function Destinations({ destinations, blurhashes }) {
   return (
     <>

@@ -18,24 +18,10 @@ const Footer = () => {
     );
   };
 
-  const SocialIcon = ({ name, link, path }) => {
-    return (
-      <Link href={link}>
-        <a className='footer__sociallink'>
-          <img
-            className='footer__socialicon'
-            src={`/images/social/${name}.svg`}
-            alt={`${name} icon`}
-          />
-        </a>
-      </Link>
-    );
-  };
-
   return (
     <>
       <footer className='footer'>
-        <div className='footer__grid responsive-width'>
+        <div className='footer__grid responsive-width-footer'>
           <FooterSection category='Navigation'>
             <Link href='/destinations'>
               <a className='footer__link'>Destinations</a>
@@ -73,26 +59,7 @@ const Footer = () => {
               (256) 572-0669
             </a>
           </FooterSection>
-          {/* <FooterSection category='Company'>
-            <Link href='/'>
-              <a className='footer__link'>Pricing</a>
-            </Link>
-            <Link href='/'>
-              <a className='footer__link'>Contact</a>
-            </Link>
-          </FooterSection> */}
         </div>
-        {/* <div className='footer__socialgrid responsive-width'>
-          <SocialIcon name='facebook' link='https://facebook.com' />
-          <SocialIcon name='twitter' link='https://twitter.com' />
-          <SocialIcon name='instagram' link='https://instagram.com' />
-          <SocialIcon
-            name='snapchat'
-            link='https://snapchat
-          .com'
-          />
-          <SocialIcon name='yelp' link='https://yelp.com' />
-        </div> */}
         <small className='responsive-width footer__copyright'>
           &copy; {getYear()}, American Travel Consulting LLC. All Rights
           Reserved.

@@ -1,61 +1,103 @@
 .form {
-  // border: 1px solid lightgrey;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 1rem;
+  background-color: white;
+  position: relative;
   margin-bottom: 2rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 2rem 0rem;
   border-radius: 10px;
 
-  &__input {
-    outline: 1px solid lightgrey;
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    resize: none;
-    padding: 0.25rem 0.35rem;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin: 0rem auto;
   }
 
-  &__inputContainer {
+  &__inputgroup {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.25rem;
+  }
+
+  // &--right {
+  // margin: 0rem 0rem 0rem auto;
+  // }
+
+  &__errormessage {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+  }
+
+  &__radiogroup {
     display: flex;
-    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid darkgray;
+    width: fit-content;
+    // margin: 0rem 0rem 0rem auto;
+  }
+
+  &__radioinput {
+    accent-color: $primary-color;
+    margin-right: 0.25rem;
+    background-color: white;
+  }
+
+  &__radiolabel {
+    margin-right: 0.25rem;
+    font-weight: 400;
+    color: $primary-color;
+    padding: 0.5rem;
   }
 
   &__label {
-    font-size: 1rem;
-    font-weight: 400;
+    display: flex;
+    font-size: 0.9rem;
+    color: $primary-color;
+    font-weight: 500;
+  }
+
+  &__input {
+    appearance: none;
+    border-radius: 10px;
+    background-color: white;
+    @include input-size(1rem);
+    border: 1px solid darkgray;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+
+    &:focus {
+      border: 1px solid $primary-color;
+      background-color: #b3cee2;
+    }
+  }
+
+  &--textarea {
+    resize: vertical;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  &__statusgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: min-content;
+    gap: 0.25rem;
+  }
+
+  &__iconblock {
+    margin: auto 0rem;
   }
 
   &__button {
+    appearance: none;
     background-color: $secondary-color;
     color: white;
-    border-radius: 10px;
-    padding: 0.75rem 0rem;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-
-  &__buttonpayment {
-    background-color: $secondary-color;
-    color: white;
-    border-radius: 10px;
-    width: fit-content;
-    padding: 0.75rem 1.125rem;
-    font-weight: bold;
-    font-size: 1rem;
-    justify-self: end;
-  }
-
-  &__required {
-    color: red;
-  }
-
-  &__link {
-    background-color: $secondary-color;
-    color: white;
-    width: fit-content;
-    padding: 0.75rem 1.125rem;
+    font-weight: 600;
+    @include button-size(1rem);
     border-radius: 10px;
     justify-self: end;
+    width: fit-content;
+    cursor: pointer;
   }
 }

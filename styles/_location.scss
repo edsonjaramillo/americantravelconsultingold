@@ -8,12 +8,12 @@
     padding: 1rem;
     position: absolute;
     color: white;
-    font-weight: bold;
+    font-weight: 700;
   }
 
   &__link {
-    padding: 0.35rem 0.75rem;
-    font-size: 0.75rem;
+    @include button-size(0.75rem);
+    // font-size: 0.75rem;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -23,10 +23,15 @@
     margin: 1rem;
   }
 
-  @include media('>=md') {
+  @include media('>sm') {
     &__link {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
+      @include button-size(1rem);
+    }
+  }
+
+  @include media('>=md') {
+    &__header {
+      font-size: 1.25rem;
     }
   }
 }

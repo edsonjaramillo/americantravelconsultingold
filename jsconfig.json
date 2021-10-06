@@ -6,6 +6,7 @@
       "@/utils/*": ["utils/*"],
       "@/models/*": ["models/*"],
       "@/data/*": ["data/*"],
+      "@/lib/*": ["lib/*"],
       "@/styles/*": ["styles/*"]
     }
   }

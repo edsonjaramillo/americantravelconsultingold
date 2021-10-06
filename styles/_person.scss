@@ -21,34 +21,19 @@
     @include button-size(1rem);
     text-align: center;
     color: white;
-    font-weight: bold;
+    font-weight: 700;
     border-radius: 10px;
     height: fit-content;
-    // width: fit-content;
-    // margin: 0rem 0rem 0rem auto;
+    margin: auto 0rem 0rem 0rem;
   }
 
   &__quote {
     font-style: italic;
-    margin-bottom: 1rem;
-  }
-
-  @include media('>=lg') {
-    &__content {
-      min-height: 45rem;
-    }
-  }
-
-  @include media('>=xl') {
-    &__content {
-      min-height: 25rem;
-    }
+    margin-bottom: 2rem;
   }
 }
 
 .personGrid {
-  // display: flex;
-  // flex-direction: column;
   display: grid;
   grid-template-columns: repeat(1, fr);
   gap: 2rem;
