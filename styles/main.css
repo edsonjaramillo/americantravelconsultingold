@@ -578,7 +578,7 @@ html ::-webkit-scrollbar-thumb {
 }
 
 .cta {
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - 112px);
   background-color: #323941;
   background-image: url(../public/cta.jpg);
   background-repeat: no-repeat;
@@ -674,6 +674,9 @@ html ::-webkit-scrollbar-thumb {
 }
 
 @media (min-width: 1025px) {
+  .cta {
+    min-height: calc(100vh - 56px);
+  }
   .cta__info {
     gap: 2rem;
   }
