@@ -19,10 +19,6 @@
     gap: 0.25rem;
   }
 
-  // &--right {
-  // margin: 0rem 0rem 0rem auto;
-  // }
-
   &__errormessage {
     color: #e74c3c;
     font-size: 0.9rem;
@@ -40,12 +36,11 @@
 
   &__radioinput {
     accent-color: $primary-color;
-    margin-right: 0.25rem;
+    margin-right: 0.2rem;
     background-color: white;
   }
 
   &__radiolabel {
-    margin-right: 0.25rem;
     font-weight: 400;
     color: $primary-color;
     padding: 0.5rem;

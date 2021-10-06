@@ -1172,12 +1172,11 @@ html ::-webkit-scrollbar-thumb {
 
 .form__radioinput {
   accent-color: #1e3a8a;
-  margin-right: 0.25rem;
+  margin-right: 0.2rem;
   background-color: white;
 }
 
 .form__radiolabel {
-  margin-right: 0.25rem;
   font-weight: 400;
   color: #1e3a8a;
   padding: 0.5rem;
