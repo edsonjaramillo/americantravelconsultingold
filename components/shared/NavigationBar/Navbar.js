@@ -21,10 +21,12 @@ export default function Navbar() {
           <Link href='/'>
             <a className='logowrapper'>
               <Image
-                src='/logo.png'
+                src='https://media.graphcms.com/iKlq3BmlS67bJPSeyO2Q'
                 height='794'
                 width='1123'
                 layout='responsive'
+                placeholder='blur'
+                blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAIAAAC+zks0AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAvklEQVQImT2OvUrEQACEt/cJxAhB7kyy+eNiDAi+gT5CNm42AQmIpLzrrH0USwtLW18hnWVqA6cRi09zxJtmBuaDGYGxqByaY9QR8ZX4F9eH3EpB7aEjbkJ0zJPLe8qzfLUqtMS4gjL61mfbIuvvE7oVXNJnbGxUwIMtqDy0Q+H/3AUfLy7jBV1Cu0DFuw2VYUJKSeGwPvl6tD9bf1DZYNL9D0GdTETuk0uUO501p3P3Zh3MUBOOzXLO6vzPfgHMv1mmHVx3FgAAAABJRU5ErkJggg=='
                 alt='american travel consulting logo'
                 quality='25'
               />
