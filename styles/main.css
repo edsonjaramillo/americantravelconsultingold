@@ -77,6 +77,10 @@ html ::-webkit-scrollbar-thumb {
   background: #b3b3b3;
 }
 
+.doesnotexist {
+  color: red;
+}
+
 .responsive-width {
   width: 90%;
   margin: auto;
