@@ -162,7 +162,7 @@ html ::-webkit-scrollbar-thumb {
 
 .section__header {
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 5vw, 1.75rem);
 }
 
 .mapSection {
@@ -263,12 +263,7 @@ html ::-webkit-scrollbar-thumb {
 
 .destination__location {
   font-weight: 700;
-  font-size: 1.75rem;
-}
-
-.destination__country {
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
 }
 
 .destination__attractionContent {
@@ -321,7 +316,7 @@ html ::-webkit-scrollbar-thumb {
         grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: (1fr)[2];
         grid-template-rows: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 2rem;
   }
   .destination__imagesecond {
     display: block;
@@ -608,7 +603,7 @@ html ::-webkit-scrollbar-thumb {
 }
 
 .cta__title {
-  font-size: 1.75rem;
+  font-size: clamp(1rem, 6vw, 2.5rem);
   white-space: pre-line;
   font-weight: 700;
   text-align: center;
@@ -616,7 +611,7 @@ html ::-webkit-scrollbar-thumb {
 
 .cta__subtitle {
   text-align: center;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 
 .cta__link {
@@ -633,15 +628,6 @@ html ::-webkit-scrollbar-thumb {
   display: none;
 }
 
-@media (min-width: 481px) {
-  .cta__title {
-    font-size: 2.25rem;
-  }
-  .cta__subtitle {
-    font-size: 1.75rem;
-  }
-}
-
 @media (min-width: 768px) {
   .cta__grid {
     -ms-grid-columns: (1fr)[2];
@@ -655,11 +641,11 @@ html ::-webkit-scrollbar-thumb {
     gap: 2rem;
   }
   .cta__title {
-    font-size: 1.8rem;
+    font-size: clamp(1rem, 3.5vw, 3.75rem);
     text-align: left;
   }
   .cta__subtitle {
-    font-size: 1.7rem;
+    font-size: clamp(1rem, 2.5vw, 2.75rem);
     text-align: left;
   }
   .cta__link {
@@ -679,39 +665,17 @@ html ::-webkit-scrollbar-thumb {
   .cta__info {
     gap: 2rem;
   }
-  .cta__title {
-    font-size: 2.5rem;
-    text-align: left;
-  }
-  .cta__subtitle {
-    font-size: 2rem;
-    text-align: left;
-  }
 }
 
 @media (min-width: 1025px) {
   .cta__info {
     gap: 2rem;
   }
-  .cta__title {
-    font-size: 2.8rem;
-    text-align: left;
-  }
-  .cta__subtitle {
-    font-size: 2rem;
-    text-align: left;
-  }
 }
 
 @media (min-width: 1644px) {
   .cta__grid {
     gap: 0rem;
-  }
-  .cta__title {
-    font-size: 4rem;
-  }
-  .cta__subtitle {
-    font-size: 2.75rem;
   }
   .cta__link {
     padding: 0.9375rem 1.875rem;
@@ -808,7 +772,7 @@ html ::-webkit-scrollbar-thumb {
 }
 
 .location__header {
-  font-size: 1rem;
+  font-size: clamp(1rem, 4vw, 1.35rem);
   padding: 1rem;
   position: absolute;
   color: white;
@@ -831,12 +795,6 @@ html ::-webkit-scrollbar-thumb {
   .location__link {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .location__header {
-    font-size: 1.25rem;
   }
 }
 

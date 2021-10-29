@@ -4,7 +4,7 @@
   position: relative;
 
   &__header {
-    font-size: 1rem;
+    font-size: clamp(1rem, 4vw, 1.35rem);
     padding: 1rem;
     position: absolute;
     color: white;
@@ -13,7 +13,6 @@
 
   &__link {
     @include button-size(0.75rem);
-    // font-size: 0.75rem;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -26,12 +25,6 @@
   @include media('>sm') {
     &__link {
       @include button-size(1rem);
-    }
-  }
-
-  @include media('>=md') {
-    &__header {
-      font-size: 1.25rem;
     }
   }
 }

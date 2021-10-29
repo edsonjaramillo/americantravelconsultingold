@@ -21,7 +21,7 @@
   }
 
   &__title {
-    font-size: 1.75rem;
+    font-size: clamp(1rem, 6vw, 2.5rem);
     white-space: pre-line;
     font-weight: 700;
     text-align: center;
@@ -29,7 +29,7 @@
 
   &__subtitle {
     text-align: center;
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 5vw, 2rem);
   }
 
   &__link {
@@ -45,15 +45,6 @@
     display: none;
   }
 
-  @include media('>sm') {
-    &__title {
-      font-size: 2.25rem;
-    }
-
-    &__subtitle {
-      font-size: 1.75rem;
-    }
-  }
   @include media('>=md') {
     &__grid {
       grid-template-columns: repeat(2, 1fr);
@@ -69,12 +60,12 @@
     }
 
     &__title {
-      font-size: 1.8rem;
+      font-size: clamp(1rem, 3.5vw, 3.75rem);
       text-align: left;
     }
 
     &__subtitle {
-      font-size: 1.7rem;
+      font-size: clamp(1rem, 2.5vw, 2.75rem);
       text-align: left;
     }
 
@@ -91,45 +82,17 @@
     &__info {
       gap: 2rem;
     }
-
-    &__title {
-      font-size: 2.5rem;
-      text-align: left;
-    }
-
-    &__subtitle {
-      font-size: 2rem;
-      text-align: left;
-    }
   }
 
   @include media('>lg') {
     &__info {
       gap: 2rem;
     }
-
-    &__title {
-      font-size: 2.8rem;
-      text-align: left;
-    }
-
-    &__subtitle {
-      font-size: 2rem;
-      text-align: left;
-    }
   }
 
   @include media('>2xl') {
     &__grid {
       gap: 0rem;
-    }
-
-    &__title {
-      font-size: 4rem;
-    }
-
-    &__subtitle {
-      font-size: 2.75rem;
     }
 
     &__link {
