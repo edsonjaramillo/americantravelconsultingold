@@ -76,7 +76,7 @@
 
   scrollbar-color: $primary-color;
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: repeat(1, 1fr);
   gap: 3px;
 }
 
@@ -130,7 +130,7 @@
     list-style: square;
     list-style-position: inside;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
     background-color: rgb(240, 238, 234);
     padding: 1rem 0rem 1rem 1.5rem;
@@ -155,7 +155,7 @@
     }
 
     &__list {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
     }
   }
@@ -183,7 +183,7 @@
   }
   // @include media('>=md') {
   //   &__list {
-  //     grid-template-columns: repeat(3, minmax(0, 1fr));
+  //     grid-template-columns: repeat(3, 1fr);
   //   }
   // }
 }

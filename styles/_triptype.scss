@@ -1,15 +1,15 @@
 .typeGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 
   @include media('>sm') {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 
   @include media('>lg') {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
 }
@@ -17,7 +17,7 @@
 .type {
   display: grid;
   padding: 1rem;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
   border: 2px solid $primary-color;
   border-radius: 10px;
