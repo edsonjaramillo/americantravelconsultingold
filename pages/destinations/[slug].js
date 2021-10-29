@@ -33,7 +33,7 @@ export default function Destination({ destination }) {
     blurfourth,
   } = destination;
 
-  const quality = 40;
+  const quality = 25;
 
   const MapBox = () => {
     return (

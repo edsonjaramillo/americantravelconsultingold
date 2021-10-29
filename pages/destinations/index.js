@@ -19,7 +19,7 @@ const Site = ({ name, description, slug, mainalt, url, blur }) => {
             alt={mainalt}
             placeholder='blur'
             blurDataURL={blur}
-            quality='50'
+            quality='25'
           />
         </div>
         <h2 className='destinationscard__title'>{name}</h2>
