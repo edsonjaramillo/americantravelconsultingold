@@ -6,7 +6,7 @@ import { getPlaiceholder } from 'plaiceholder';
 
 const client = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPHCMS_URL);
 
-const Site = ({ name, description, slug, mainalt, url, blurhash }) => {
+const Site = ({ name, description, slug, mainalt, url, blur }) => {
   return (
     <>
       <div className='destinationscard'>
@@ -18,8 +18,8 @@ const Site = ({ name, description, slug, mainalt, url, blurhash }) => {
             layout='responsive'
             alt={mainalt}
             placeholder='blur'
-            blurDataURL={blurhash}
-            quality='15'
+            blurDataURL={blur}
+            quality='50'
           />
         </div>
         <h2 className='destinationscard__title'>{name}</h2>
@@ -32,7 +32,7 @@ const Site = ({ name, description, slug, mainalt, url, blurhash }) => {
   );
 };
 
-export default function Destinations({ destinations, blurhashes }) {
+export default function Destinations({ destinations }) {
   return (
     <>
       <Head>
@@ -44,7 +44,7 @@ export default function Destinations({ destinations, blurhashes }) {
         <h2 className='responsive-width section__header'>Destinations</h2>
         <div className='responsive-width destinationsGrid'>
           {destinations.map(
-            ({ id, name, description, slug, main, mainalt }) => {
+            ({ id, name, description, slug, main, mainalt, blur }) => {
               return (
                 <Site
                   key={id}
@@ -53,7 +53,7 @@ export default function Destinations({ destinations, blurhashes }) {
                   url={main.url}
                   slug={slug}
                   mainalt={mainalt}
-                  blurhash={blurhashes[id]}
+                  blur={blur}
                 />
               );
             }
@@ -82,23 +82,21 @@ export const getStaticProps = async (ctx) => {
   `;
 
   const { destinations } = await client.request(query);
-
-  let blurhashes = {};
-
   for (let index = 0; index < destinations.length; index++) {
-    const { id, main } = destinations[index];
-    const { base64: b64main } = await getPlaiceholder(main.url);
+    const { base64: blur } = await getPlaiceholder(
+      destinations[index].main.url,
+      { size: 10 }
+    );
 
-    blurhashes = {
-      ...blurhashes,
-      [id]: { b64main: b64main },
+    destinations[index] = {
+      ...destinations[index],
+      blur: blur,
     };
   }
 
   return {
     props: {
       destinations: destinations,
-      blurhashes: blurhashes,
     },
   };
 };

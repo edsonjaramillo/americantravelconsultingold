@@ -7,7 +7,7 @@ import { getPlaiceholder } from 'plaiceholder';
 
 const client = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPHCMS_URL);
 
-export default function Destination({ destination, blurhashes }) {
+export default function Destination({ destination }) {
   const [status, setStatus] = useState('Show');
   const [showMap, setShowMap] = useState(false);
 
@@ -27,10 +27,13 @@ export default function Destination({ destination, blurhashes }) {
     fourthalt,
     zoomlevel,
     viewport,
+    blurmain,
+    blursecond,
+    blurthird,
+    blurfourth,
   } = destination;
 
-  const { [id]: blur } = blurhashes;
-  const quality = 15;
+  const quality = 40;
 
   const MapBox = () => {
     return (
@@ -92,7 +95,7 @@ export default function Destination({ destination, blurhashes }) {
             height='400'
             width='800'
             placeholder='blur'
-            blurDataURL={blur.b64main}
+            blurDataURL={blurmain}
             layout='responsive'
             alt={mainalt}
             quality={quality}
@@ -106,7 +109,7 @@ export default function Destination({ destination, blurhashes }) {
             width='800'
             layout='responsive'
             placeholder='blur'
-            blurDataURL={blur.b64second}
+            blurDataURL={blursecond}
             alt={secondalt}
             quality={quality}
           />
@@ -119,7 +122,7 @@ export default function Destination({ destination, blurhashes }) {
             width='800'
             layout='responsive'
             placeholder='blur'
-            blurDataURL={blur.b64third}
+            blurDataURL={blurthird}
             alt={thirdalt}
             quality={quality}
           />
@@ -132,7 +135,7 @@ export default function Destination({ destination, blurhashes }) {
             width='800'
             layout='responsive'
             placeholder='blur'
-            blurDataURL={blur.b64fourth}
+            blurDataURL={blurfourth}
             alt={fourthalt}
             quality={quality}
           />
@@ -217,30 +220,31 @@ export const getStaticProps = async ({ params }) => {
     }
   `;
 
-  const { destination } = await client.request(query);
+  let { destination } = await client.request(query);
 
-  let blurhashes = {};
+  const { main, secondimage, thirdimage, fourthimage } = destination;
+  const { base64: blurmain } = await getPlaiceholder(main.url, { size: 10 });
+  const { base64: blursecond } = await getPlaiceholder(secondimage.url, {
+    size: 10,
+  });
+  const { base64: blurthird } = await getPlaiceholder(thirdimage.url, {
+    size: 10,
+  });
+  const { base64: blurfourth } = await getPlaiceholder(fourthimage.url, {
+    size: 10,
+  });
 
-  const { id, main, secondimage, thirdimage, fourthimage } = destination;
-  const { base64: b64main } = await getPlaiceholder(main.url);
-  const { base64: b64second } = await getPlaiceholder(secondimage.url);
-  const { base64: b64third } = await getPlaiceholder(thirdimage.url);
-  const { base64: b64fourth } = await getPlaiceholder(fourthimage.url);
-
-  blurhashes = {
-    ...blurhashes,
-    [id]: {
-      b64main: b64main,
-      b64second: b64second,
-      b64third: b64third,
-      b64fourth: b64fourth,
-    },
+  destination = {
+    ...destination,
+    blurmain: blurmain,
+    blursecond: blursecond,
+    blurthird: blurthird,
+    blurfourth: blurfourth,
   };
 
   return {
     props: {
       destination: destination,
-      blurhashes: blurhashes,
     },
   };
 };

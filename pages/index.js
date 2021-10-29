@@ -88,13 +88,13 @@ export default function Home({ destinations, testimonials, blurhashes }) {
           Popular Destinations
         </h2>
         <div className='responsive-width locationGrid'>
-          {destinations.map(({ id, name, main, slug, mainalt }) => (
+          {destinations.map(({ id, name, main, slug, mainalt, blur }) => (
             <Location
               key={id}
               url={main.url}
               name={name}
               mainalt={mainalt}
-              blurhash={blurhashes[id]}
+              blur={blur}
               slug={slug}
             />
           ))}
@@ -145,15 +145,16 @@ export const getStaticProps = async (ctx) => {
   const data = await client.request(query);
   const { testimonials } = data;
   const { destinations } = data;
-  let blurhashes = {};
 
   for (let index = 0; index < destinations.length; index++) {
-    const { id, main } = destinations[index];
-    const { base64: b64main } = await getPlaiceholder(main.url, { size: 4 });
+    const { base64: blur } = await getPlaiceholder(
+      destinations[index].main.url,
+      { size: 10 }
+    );
 
-    blurhashes = {
-      ...blurhashes,
-      [id]: { b64main: b64main }
+    destinations[index] = {
+      ...destinations[index],
+      blur: blur,
     };
   }
 
@@ -161,7 +162,6 @@ export const getStaticProps = async (ctx) => {
     props: {
       destinations: destinations,
       testimonials: testimonials,
-      blurhashes: blurhashes
-    }
+    },
   };
 };

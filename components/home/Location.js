@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Location({ url, name, slug, mainalt, blurhash }) {
+export default function Location({ url, name, slug, mainalt, blur }) {
   return (
     <>
       <div className='location'>
@@ -13,9 +13,9 @@ export default function Location({ url, name, slug, mainalt, blurhash }) {
             width='800'
             layout='responsive'
             placeholder='blur'
-            blurDataURL={blurhash}
+            blurDataURL={blur}
             alt={mainalt}
-            quality='15'
+            quality='45'
           />
         </div>
         <h3 className='location__header'>{name}</h3>

@@ -1,5 +1,4 @@
 import emailjs from 'emailjs-com';
-import { Input } from '@/components/index';
 import { useForm } from 'react-hook-form';
 import { toastNotification } from '@/lib/toastNotification';
 
@@ -10,7 +9,6 @@ export default function RequestForm() {
     formState: { errors },
     reset,
   } = useForm();
-  // console.log(errors);
 
   const onSubmit = async (data) => {
     const { name } = data;
