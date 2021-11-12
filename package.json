@@ -13,7 +13,7 @@
     "emailjs-com": "^2.6.4",
     "graphql": "^15.5.1",
     "graphql-request": "^3.5.0",
-    "next": "^12.0.1",
+    "next": "^12.0.3",
     "next-sitemap": "^1.6.164",
     "plaiceholder": "^2.2.0",
     "react": "^17.0.2",
