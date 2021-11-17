@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Navbar, Footer } from '@/components/index';
-import '@/styles/main.css';
+import '@/styles/style.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
