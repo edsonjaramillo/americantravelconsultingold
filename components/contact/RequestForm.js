@@ -29,19 +29,17 @@ export default function RequestForm() {
     );
 
     if (status == 200) {
-      toastNotification(
-        'success',
-        `Thank your for your message, ${name}! We will be in contact soon.`
-      );
+      // toastNotification(
+      //   'success',
+      //   `Thank your for your message, ${name}! We will be in contact soon.`
+      // );
       reset();
     } else {
       toastNotification('error', 'Error occured. Try again.');
     }
   };
 
-  const ErrorMessage = ({ message }) => (
-    <p className='form__errormessage'>{message}</p>
-  );
+  const ErrorMessage = ({ message }) => <p className='form__errormessage'>{message}</p>;
 
   return (
     <>
@@ -49,27 +47,17 @@ export default function RequestForm() {
         <form
           className='form'
           onSubmit={handleSubmit(onSubmit, () => {
-            toastNotification('error', 'Check input requirments.');
-            errors.phone?.type === 'minLength' &&
-              toastNotification(
-                'error',
-                'Phone number must be 10 digits.',
-                4000
-              );
-            errors.phone?.type === 'maxLength' &&
-              toastNotification(
-                'error',
-                'Phone number must be 10 digits.',
-                4000
-              );
+            // toastNotification('error', 'Check input requirments.');
+            // errors.phone?.type === 'minLength' &&
+            //   toastNotification('error', 'Phone number must be 10 digits.', 4000);
+            // errors.phone?.type === 'maxLength' &&
+            //   toastNotification('error', 'Phone number must be 10 digits.', 4000);
           })}>
           <div className='form__grid responsive-width-form'>
             <div className='form__inputgroup'>
               <label className='form__label'>
                 Name
-                {errors.name?.type === 'required' && (
-                  <ErrorMessage message='Required' />
-                )}
+                {errors.name?.type === 'required' && <ErrorMessage message='Required' />}
               </label>
               <input
                 className='form__input'
@@ -107,9 +95,7 @@ export default function RequestForm() {
             <div className='form__inputgroup'>
               <label className='form__label' htmlFor='email'>
                 Email
-                {errors.email?.type === 'required' && (
-                  <ErrorMessage message='Required' />
-                )}
+                {errors.email?.type === 'required' && <ErrorMessage message='Required' />}
               </label>
 
               <input
@@ -122,9 +108,7 @@ export default function RequestForm() {
             <div className='form__inputgroup'>
               <label className='form__label'>
                 Phone Number
-                {errors.phone?.type === 'required' && (
-                  <ErrorMessage message='Required' />
-                )}
+                {errors.phone?.type === 'required' && <ErrorMessage message='Required' />}
               </label>
 
               <input
@@ -143,9 +127,7 @@ export default function RequestForm() {
             <div className='form__inputgroup'>
               <label className='form__label '>
                 Message
-                {errors.message?.type === 'required' && (
-                  <ErrorMessage message='Required' />
-                )}
+                {errors.message?.type === 'required' && <ErrorMessage message='Required' />}
               </label>
 
               <textarea
@@ -158,9 +140,7 @@ export default function RequestForm() {
             <div className='form__inputgroup'>
               <label className='form__label' htmlFor='phoneNumber'>
                 Preffered Form of Contact
-                {errors.choice?.type === 'required' && (
-                  <ErrorMessage message='Required' />
-                )}
+                {errors.choice?.type === 'required' && <ErrorMessage message='Required' />}
               </label>
 
               <div className='form__radiogroup'>
@@ -203,11 +183,7 @@ export default function RequestForm() {
                 </label>
               </div>
             </div>
-            <input
-              className='form__button'
-              type='submit'
-              value='Send Message'
-            />
+            <input className='form__button' type='submit' value='Send Message' />
           </div>
         </form>
       </div>

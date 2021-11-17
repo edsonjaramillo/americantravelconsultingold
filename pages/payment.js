@@ -19,9 +19,7 @@ export default function Payment() {
     router.push(`https://americantravelconsulting.grcoll.co/go/${schoolcode}`);
   };
 
-  const ErrorMessage = ({ message }) => (
-    <p className='form__errormessage'>{message}</p>
-  );
+  const ErrorMessage = ({ message }) => <p className='form__errormessage'>{message}</p>;
 
   return (
     <>
@@ -30,22 +28,18 @@ export default function Payment() {
         <meta name='robots' content='noindex' />
       </Head>
       <div className='section'>
-        <h2 className='responsive-width-form section__header'>
-          Payment Portal
-        </h2>
+        <h2 className='responsive-width-form section__header'>Payment Portal</h2>
         <div className='responsive-width-form' style={{ minHeight: '70vh' }}>
           <form
             className='form'
             onSubmit={handleSubmit(onSubmit, () => {
-              toastNotification('error', 'Enter school code');
+              // toastNotification('error', 'Enter school code');
             })}>
             <div className='form__grid responsive-width-form'>
               <div className='form__inputgroup'>
                 <label className='form__label'>
                   School Code
-                  {errors.name?.type === 'required' && (
-                    <ErrorMessage message='Required' />
-                  )}
+                  {errors.name?.type === 'required' && <ErrorMessage message='Required' />}
                 </label>
                 <input
                   className='form__input'
